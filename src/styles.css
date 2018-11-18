@@ -1,0 +1,7 @@
+@import "~bootstrap/dist/css/bootstrap.css";
+@import "https://fonts.googleapis.com/css?family=Montserrat";
+
+body {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 14px;
+}
