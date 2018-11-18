@@ -12,6 +12,7 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
 import { NavbarComponent } from './navbar/navbar.component';
 import { HomeSliderComponent } from './home-slider/home-slider.component';
 import { SummerProgramsComponent } from './summer-programs/summer-programs.component';
+import { WinterProgramsComponent } from './winter-programs/winter-programs.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
@@ -20,7 +21,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 		NavbarComponent,
 		HomeSliderComponent,
 		SummerProgramsComponent,
-		DashboardComponent
+		DashboardComponent,
+		WinterProgramsComponent
 	],
 	imports: [
 		BrowserModule,

@@ -1,3 +1,12 @@
 .col-12 {
 	padding: 15px;
 }
+.selected {
+	background: #48B356;
+}
+.selected:hover {
+	background: #48B356;
+}
+.list-group-item {
+	padding: 11px;
+}
