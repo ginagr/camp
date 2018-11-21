@@ -14,6 +14,13 @@ import { HomeSliderComponent } from './home-slider/home-slider.component';
 import { SummerProgramsComponent } from './summer-programs/summer-programs.component';
 import { WinterProgramsComponent } from './winter-programs/winter-programs.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { OverviewComponent } from './overview/overview.component';
+import { MissionComponent } from './mission/mission.component';
+import { BoardComponent } from './board/board.component';
+import { StaffComponent } from './staff/staff.component';
+import { LodgingComponent } from './lodging/lodging.component';
+import { DiningComponent } from './dining/dining.component';
+import { MedicalComponent } from './medical/medical.component';
 
 @NgModule({
 	declarations: [
@@ -22,7 +29,14 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 		HomeSliderComponent,
 		SummerProgramsComponent,
 		DashboardComponent,
-		WinterProgramsComponent
+		WinterProgramsComponent,
+		OverviewComponent,
+		MissionComponent,
+		BoardComponent,
+		StaffComponent,
+		LodgingComponent,
+		DiningComponent,
+		MedicalComponent
 	],
 	imports: [
 		BrowserModule,

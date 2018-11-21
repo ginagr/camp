@@ -25,6 +25,7 @@ a:hover {
 .card-img-top {
 	width: 80px;
 	padding-top: 15px;
+	margin: 0 auto;
 }
 .card {
 	background-color: rgba(72, 179, 86, 0.12);
@@ -68,4 +69,9 @@ a:hover {
 .card:hover .card-description {
 	visibility: visible;
 	opacity: 1;
+}
+img {
+	width: 40%;
+	margin-right: 15px;
+	margin-bottom: 8px;
 }
