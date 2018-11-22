@@ -1,0 +1,10 @@
+.rows {
+	background: rgba(72, 179, 86, 0.37);
+	padding: 8px;
+}
+.row {
+	margin-bottom: 10px;
+}
+.email {
+	color:#27974E;
+}

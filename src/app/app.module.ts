@@ -21,6 +21,11 @@ import { StaffComponent } from './staff/staff.component';
 import { LodgingComponent } from './lodging/lodging.component';
 import { DiningComponent } from './dining/dining.component';
 import { MedicalComponent } from './medical/medical.component';
+import { FormsComponent } from './forms/forms.component';
+import { SummerFeesComponent } from './summer-fees/summer-fees.component';
+import { WinterFeesComponent } from './winter-fees/winter-fees.component';
+import { CampaignComponent } from './campaign/campaign.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
 	declarations: [
@@ -36,7 +41,12 @@ import { MedicalComponent } from './medical/medical.component';
 		StaffComponent,
 		LodgingComponent,
 		DiningComponent,
-		MedicalComponent
+		MedicalComponent,
+		FormsComponent,
+		SummerFeesComponent,
+		WinterFeesComponent,
+		CampaignComponent,
+		FooterComponent
 	],
 	imports: [
 		BrowserModule,

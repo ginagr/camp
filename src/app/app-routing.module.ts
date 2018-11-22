@@ -11,6 +11,10 @@ import { StaffComponent }   from './staff/staff.component';
 import { LodgingComponent }   from './lodging/lodging.component';
 import { DiningComponent }   from './dining/dining.component';
 import { MedicalComponent }   from './medical/medical.component';
+import { FormsComponent }   from './forms/forms.component';
+import { SummerFeesComponent }   from './summer-fees/summer-fees.component';
+import { WinterFeesComponent }   from './winter-fees/winter-fees.component';
+import { CampaignComponent }   from './campaign/campaign.component';
 
 const routes: Routes = [
 	{ path: 'summer-programs', component: SummerProgramsComponent },
@@ -23,6 +27,10 @@ const routes: Routes = [
 	{ path: 'lodging', component: LodgingComponent },
 	{ path: 'dining', component: DiningComponent },
 	{ path: 'medical', component: MedicalComponent },
+	{ path: 'forms', component: FormsComponent },
+	{ path: 'summer-fees', component: SummerFeesComponent },
+	{ path: 'winter-fees', component: WinterFeesComponent },
+	{ path: 'campaign', component: CampaignComponent },
 	{ path: '', redirectTo: '/dashboard', pathMatch: 'full' }
 ];
 

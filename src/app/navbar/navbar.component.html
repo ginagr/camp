@@ -1,70 +1,222 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light" style="padding-bottom: 80px; margin-bottom: 30px;">
-	<div class="d-flex flex-grow-1" style="padding-left: 2%">
-		<a class="navbar-brand" href="#">
-			<img routerLink="/dashboard" src="../../assets/camp_logo.png" height="100" alt="">
-		</a>
-		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-			<span class="navbar-toggler-icon"></span>
-		</button>
-	</div>
-	<div class="collapse navbar-collapse ml-auto w-100 justify-content-end" id="navbarNavAltMarkup" style="padding-right: 5%">
-		<ul class="navbar-nav">
-			<li class="nav-item active dropdown">
-				<a class="nav-link dropdown-toggle" href="#" id="aboutLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-					About<span class="sr-only">(current)</span></a>
-				<div class="dropdown-menu" aria-labelledby="aboutLink">
-					<a class="dropdown-item" routerLink="/overview">Overview</a>
-					<a class="dropdown-item" routerLink="/mission">Mission/History</a>
-					<a class="dropdown-item" routerLink="/board">Board of Directors</a>
-					<a class="dropdown-item" routerLink="/staff">Staff</a>
-					<a class="dropdown-item" routerLink="/lodging">Lodging</a>
-					<a class="dropdown-item" routerLink="/dining">Dining</a>
-					<a class="dropdown-item" routerLink="/medical">Medical</a>
-				</div>
-			</li>
-			<li class="nav-item active dropdown">
-				<a class="nav-link dropdown-toggle" href="#" id="programsLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-					Programs</a>
-				<div class="dropdown-menu" aria-labelledby="programsLink">
-					<a class="dropdown-item" routerLink="/summer-programs">Summer Camp</a>
-					<a class="dropdown-item" routerLink="/winter-programs"href="#">Winter Camp</a>
-				</div>
-			</li>
-			<li class="nav-item active dropdown">
-				<a class="nav-link dropdown-toggle" href="#" id="registrationLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-					Registration</a>
-				<div class="dropdown-menu" aria-labelledby="registrationLink">
-					<a class="dropdown-item" href="#">Summer Camp 2019 Registration Coming Soon</a>
-					<a class="dropdown-item" href="#">Dates and Fees</a>
-					<a class="dropdown-item" href="#">Forms</a>
-				</div>
-			</li>
-			<li class="nav-item active dropdown">
-				<a class="nav-link dropdown-toggle" href="#" id="donateLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-					Donate</a>
-				<div class="dropdown-menu" aria-labelledby="donateLink">
-					<a class="dropdown-item" href="#">Donate Online Now</a>
-					<a class="dropdown-item" href="#">Download and Print Mail-In Donation</a>
-					<a class="dropdown-item" href="#">Join the CAMPaign</a>
-					<a class="dropdown-item" href="#">Non-Profit Status</a>
-				</div>
-			</li>
-			<li class="nav-item active dropdown">
-				<a class="nav-link dropdown-toggle" href="#" id="readyLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-					Getting Ready</a>
-				<div class="dropdown-menu" aria-labelledby="readyLink">
-					<a class="dropdown-item" href="#">Directions</a>
-					<a class="dropdown-item" href="#">Weather</a>
-					<a class="dropdown-item" href="#">What to Bring</a>
-					<a class="dropdown-item" href="#">Camp Songs</a>
-				</div>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" href="#">Camp News</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" href="#">Contact Us</a>
-			</li>
-		</ul>
-	</div>
-</nav>
+<div id="cssmenu">
+	<img routerLink="/dashboard" src="../../assets/camp_logo.png" height="100" alt="">
+	<ul>
+		<li class="has-sub {{ actives[0] ? 'active' : '' }}">
+			<a>
+				<span>
+					About
+				</span>
+			</a>
+			<ul>
+				<li>
+					<a routerLink="/overview" (click)="changeActive(0)">
+						<span>
+							Overview
+						</span>
+					</a>
+				</li>
+				<li>
+					<a routerLink="/mission" (click)="changeActive(0)">
+						<span>
+							Mission/History
+						</span>
+					</a>
+				</li>
+				<li>
+					<a routerLink="/board" (click)="changeActive(0)">
+						<span>
+							Board of Directors
+						</span>
+					</a>
+				</li>
+				<li>
+					<a routerLink="/staff" (click)="changeActive(0)">
+						<span>
+							Staff
+						</span>
+					</a>
+				</li>
+				<li>
+					<a routerLink="/lodging" (click)="changeActive(0)">
+						<span>
+							Lodging
+						</span>
+					</a>
+				</li>
+				<li>
+					<a routerLink="/dining" (click)="changeActive(0)">
+						<span>
+							Dining
+						</span>
+					</a>
+				</li>
+				<li>
+					<a routerLink="/medical" (click)="changeActive(0)">
+						<span>
+							Medical
+						</span>
+					</a>
+				</li>
+			</ul>
+		</li>
+		<li class="has-sub {{ actives[1] ? 'active' : '' }}">
+			<a>
+				<span>
+					<i class="fa fa-fw fa-bars"></i>
+					Programs
+				</span>
+			</a>
+			<ul>
+				<li>
+					<a routerLink="/summer-programs" (click)="changeActive(1)">					
+						<span>
+							Summer Camp
+						</span>
+					</a>
+				</li>
+				<li>
+					<a routerLink="/winter-programs" (click)="changeActive(1)">			
+						<span>
+							Winter Camp
+						</span>
+					</a>
+				</li>
+			</ul>
+		</li>
+		<li class="has-sub {{ actives[2] ? 'active' : '' }}">
+			<a>
+				<span>
+					Registration
+				</span>
+			</a>
+			<ul>
+				<li>
+					<a href="https://www.ultracamp.com/info/upcomingsessions.aspx?idCamp=786&campCode=mwf" target="_blank">
+						<span>
+							Summer Camp 2019 Registration Coming Soon!
+						</span>
+					</a>
+				</li>
+				<li class="has-sub">
+					<a>
+						<span>
+							Dates and Fees
+						</span>
+					</a>
+					<ul>
+						<li>
+							<a routerLink="/summer-fees" (click)="changeActive(2)">			
+								<span>
+									Summer Camp
+								</span>
+							</a>
+						</li>
+						<li>
+							<a routerLink="/winter-fees" (click)="changeActive(2)">			
+								<span>
+									Winter Camp
+								</span>
+							</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a routerLink="/forms" (click)="changeActive(2)">			
+						<span>
+							Forms
+						</span>
+					</a>
+				</li>
+			</ul>
+		</li>
+		<li class="has-sub {{ actives[3] ? 'active' : '' }}">
+			<a>
+				<span>
+					<i class="fa fa-fw fa-bars"></i>
+					Donate
+				</span>
+			</a>
+			<ul>
+				<li>
+					<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=WUCZ7ZZ5SE27N" target="_blank">
+						<span>
+							Donate Online Now
+						</span>
+					</a>
+				</li>
+				<li>
+					<a routerLink="/mail-in-donate" (click)="changeActive(3)">			
+						<span>
+							Download and Print Mail-In Donation
+						</span>
+					</a>
+				</li>
+				<li>
+					<a routerLink="/campaign" (click)="changeActive(3)">		
+						<span>
+							Join the CAMPaign
+						</span>
+					</a>
+				</li>
+				<li>
+					<a routerLink="/non-profit" (click)="changeActive(3)">		
+						<span>
+							Non-Profit Status
+						</span>
+					</a>
+				</li>
+			</ul>
+		</li>
+		<li class="has-sub {{ actives[4] ? 'active' : '' }}">
+			<a>
+				<span>
+					Getting Ready
+				</span>
+			</a>
+			<ul>
+				<li>
+					<a routerLink="/directions" (click)="changeActive(4)">		
+						<span>
+							Directions
+						</span>
+					</a>
+				</li>
+				<li>
+					<a routerLink="/weather" (click)="changeActive(4)">		
+						<span>
+							Weather
+						</span>
+					</a>
+				</li>
+				<li>
+					<a routerLink="/what-to-bring" (click)="changeActive(4)">		
+						<span>
+							What To Bring
+						</span>
+					</a>
+				</li>
+				<li>
+					<a routerLink="/songs" (click)="changeActive(4)">		
+						<span>
+							Camp Songs
+						</span>
+					</a>
+				</li>
+			</ul>
+		</li>
+		<li class="{{ actives[5] ? 'active' : '' }}">
+			<a routerLink="/news" (click)="changeActive(5)">		
+				<span>
+					Camp News
+				</span>
+			</a>
+		</li>
+		<li class="{{ actives[6] ? 'active' : '' }}">
+			<a routerLink="/contact" (click)="changeActive(6)">		
+				<span>
+					Contact Us
+				</span>
+			</a>
+		</li>
+	</ul>
+</div>
