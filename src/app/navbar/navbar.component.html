@@ -145,7 +145,7 @@
 					</a>
 				</li>
 				<li>
-					<a routerLink="/mail-in-donate" (click)="changeActive(3)">			
+					<a routerLink="/pledge-form" (click)="changeActive(3)" target="_blank">	
 						<span>
 							Download and Print Mail-In Donation
 						</span>
@@ -182,7 +182,7 @@
 					</a>
 				</li>
 				<li>
-					<a routerLink="/weather" (click)="changeActive(4)">		
+					<a routerLink="/weather" (click)="changeActive(4);reloadWeather()">		
 						<span>
 							Weather
 						</span>

@@ -1,0 +1,7 @@
+a {
+	font-size: 2.5em;
+	padding: 20px 0;
+}
+.fa:before {
+	padding-right: 15px;
+}

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import * as $ from 'jquery';
+import { Router, NavigationExtras } from '@angular/router';
 
 @Component({
 	selector: 'navbar',
@@ -11,7 +12,7 @@ export class NavbarComponent implements OnInit {
 	actives = [ false, false, false, false, false, false, false ];
 	old = 0;
 
-	constructor() { 
+	constructor(private router: Router) { 
 		$('#cssmenu').prepend('<div id="menu-button">Menu</div>');
 		$('#cssmenu #menu-button').on('click', function(){
 			var menu = $(this).next('ul');
@@ -32,4 +33,7 @@ export class NavbarComponent implements OnInit {
 		this.old = active;
 	}
 
+	reloadWeather () {
+		setTimeout(function(){window.location.reload(); }, 100);
+	}
 }

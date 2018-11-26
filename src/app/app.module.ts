@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { environment } from './../environments/environment';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -9,8 +10,9 @@ import { AngularFireModule } from '@angular/fire';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 
+import { PdfViewerModule } from 'ng2-pdf-viewer';
+
 import { NavbarComponent } from './navbar/navbar.component';
-import { HomeSliderComponent } from './home-slider/home-slider.component';
 import { SummerProgramsComponent } from './summer-programs/summer-programs.component';
 import { WinterProgramsComponent } from './winter-programs/winter-programs.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
@@ -26,12 +28,20 @@ import { SummerFeesComponent } from './summer-fees/summer-fees.component';
 import { WinterFeesComponent } from './winter-fees/winter-fees.component';
 import { CampaignComponent } from './campaign/campaign.component';
 import { FooterComponent } from './footer/footer.component';
+import { ConditionsComponent } from './conditions/conditions.component';
+import { NonProfitComponent } from './non-profit/non-profit.component';
+import { DirectionsComponent } from './directions/directions.component';
+import { WeatherComponent } from './weather/weather.component';
+import { WhatToBringComponent } from './what-to-bring/what-to-bring.component';
+import { SongsComponent } from './songs/songs.component';
+import { NewsComponent } from './news/news.component';
+import { ContactComponent } from './contact/contact.component';
+import { PledgeFormComponent } from './pledge-form/pledge-form.component';
 
 @NgModule({
 	declarations: [
 		AppComponent,
 		NavbarComponent,
-		HomeSliderComponent,
 		SummerProgramsComponent,
 		DashboardComponent,
 		WinterProgramsComponent,
@@ -46,14 +56,25 @@ import { FooterComponent } from './footer/footer.component';
 		SummerFeesComponent,
 		WinterFeesComponent,
 		CampaignComponent,
-		FooterComponent
+		FooterComponent,
+		ConditionsComponent,
+		NonProfitComponent,
+		DirectionsComponent,
+		WeatherComponent,
+		WhatToBringComponent,
+		SongsComponent,
+		NewsComponent,
+		ContactComponent,
+		PledgeFormComponent
 	],
 	imports: [
 		BrowserModule,
 		AppRoutingModule,
 		AngularFireModule.initializeApp(environment.firebase),
 		AngularFireDatabaseModule,
-		AngularFireAuthModule
+		AngularFireAuthModule,
+		PdfViewerModule,
+		FormsModule
 	],
 	providers: [],
 	bootstrap: [AppComponent]

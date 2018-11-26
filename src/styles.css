@@ -1,4 +1,3 @@
-/*@import "~bootstrap/dist/css/bootstrap.css";*/
 @import "https://fonts.googleapis.com/css?family=Montserrat";
 
 html, body { 
@@ -14,17 +13,20 @@ h1 {
 	/*	#48B356*/
 	margin-top: 1em;
 	margin-bottom: .3em;
+	font-size: 2em;
 }
 h2 {
 	margin-top: 1em;
 	margin-bottom: .3em;
 	/*	text-decoration: underline*/
 	border-bottom: 1px solid rgba(16, 61, 31, 0.59);
+	font-size: 1.5em;
 }
 h3 {
 	line-height: 1.3;
 	margin-top: 1em;
 	margin-bottom: .3em;
+	font-size: 1.25em;
 }
 a {
 	color: #27974E;
@@ -32,6 +34,19 @@ a {
 a:hover {
 	color: #27974E;
 	text-decoration: none;
+}
+button {
+	background: #27974E;
+	border: #27974E;
+	padding: 10px;
+	border-radius: 5px;
+	cursor: pointer;
+}
+button:hover {
+	opacity: 0.8;
+}
+.clearfix {
+    overflow: auto;
 }
 .card {
 	background-color: rgba(72, 179, 86, 0.12);
@@ -54,4 +69,29 @@ img {
 }
 .list-group-item {
 	padding: 11px;
+}
+.donate-button {
+	background: #27974E;
+	background: -webkit-linear-gradient(top, transparent 0%, rgba(0, 0, 0, 0.3) 100%), -webkit-linear-gradient(left, #48B356 0%, #27974E 50%, #48B356 100%);
+	background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.3) 100%), linear-gradient(to right, #48B356 0%, #27974E 50%, #48B356 100%);
+	background-position: 0 0;
+	background-size: 200% 100%;
+	border-radius: 4px;
+	color: #fff;
+	padding: 10px 0;
+	text-shadow: 1px 1px 5px #666;
+	-webkit-transition: all 800ms;
+	transition: all 800ms;
+}
+.donate-button:hover {
+	background-position: -100% 0;
+}
+.donate-button:hover .fa-heart {
+	color: #fff;
+	text-shadow: 0 0 10px #000;
+}
+.fa-heart {
+	color: #003527;
+	transition: all 600ms 200ms;
+	margin-left: 5px;
 }

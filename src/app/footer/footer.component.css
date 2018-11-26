@@ -1,0 +1,19 @@
+footer {
+	background: #48B356;
+}
+.footer-copyright {
+	background: #27974E;
+	padding: 10px 6%;
+}
+.btn-floating {
+	color: black;
+}
+.btn-floating:hover {
+	color: white;
+}
+.fa {
+	font-size: 2em;
+}
+.row {
+	margin: 0;
+}

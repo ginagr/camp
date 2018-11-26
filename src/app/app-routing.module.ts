@@ -15,6 +15,15 @@ import { FormsComponent }   from './forms/forms.component';
 import { SummerFeesComponent }   from './summer-fees/summer-fees.component';
 import { WinterFeesComponent }   from './winter-fees/winter-fees.component';
 import { CampaignComponent }   from './campaign/campaign.component';
+import { ConditionsComponent }   from './conditions/conditions.component';
+import { NonProfitComponent }   from './non-profit/non-profit.component';
+import { DirectionsComponent }   from './directions/directions.component';
+import { WeatherComponent }   from './weather/weather.component';
+import { WhatToBringComponent }   from './what-to-bring/what-to-bring.component';
+import { SongsComponent }   from './songs/songs.component';
+import { NewsComponent }   from './news/news.component';
+import { ContactComponent }   from './contact/contact.component';
+import { PledgeFormComponent }   from './pledge-form/pledge-form.component';
 
 const routes: Routes = [
 	{ path: 'summer-programs', component: SummerProgramsComponent },
@@ -31,6 +40,15 @@ const routes: Routes = [
 	{ path: 'summer-fees', component: SummerFeesComponent },
 	{ path: 'winter-fees', component: WinterFeesComponent },
 	{ path: 'campaign', component: CampaignComponent },
+	{ path: 'conditions', component: ConditionsComponent },
+	{ path: 'non-profit', component: NonProfitComponent },
+	{ path: 'directions', component: DirectionsComponent },
+	{ path: 'weather', component: WeatherComponent },
+	{ path: 'what-to-bring', component: WhatToBringComponent },
+	{ path: 'songs', component: SongsComponent },
+	{ path: 'news', component: NewsComponent },
+	{ path: 'contact', component: ContactComponent },
+	{ path: 'pledge-form', component: PledgeFormComponent },
 	{ path: '', redirectTo: '/dashboard', pathMatch: 'full' }
 ];
 
