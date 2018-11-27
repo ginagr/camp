@@ -1,7 +1,35 @@
 a {
-	font-size: 2.5em;
-	padding: 20px 0;
+	font-size: 1.5em;
+	color: darkgreen;
 }
 .fa:before {
 	padding-right: 15px;
+}
+.row {
+	text-align: center;
+}
+.icon-contact {
+	color: #ffffff!important;
+	background-color: rgba(0,0,0,0.2);
+	border-width: 2px!important;
+	border-radius: 50%;
+	transition: all ease-in .2s;
+	line-height: 98px;
+	height: 100px;
+	width: 100px;
+	margin: 0 auto;
+}
+.icon-contact:hover {
+	background-color: rgba(39, 151, 78, 0.8);
+}
+.icon-contact:hover .mk-svg-icon {
+	fill: #ffffff !important;
+}
+.col-4 {
+	background: rgba(72, 179, 86, 0.33);
+	padding: 35px;
+	margin: 10px;
+	border-radius: 5px;
+	flex: 0 0 30%;
+	max-width: 30%;
 }
