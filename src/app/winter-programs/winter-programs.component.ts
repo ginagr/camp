@@ -6,8 +6,8 @@ import { Component, OnInit } from '@angular/core';
 	styleUrls: ['./winter-programs.component.css'],
 })
 export class WinterProgramsComponent {
-	lastShowId = 'list-accomodations';
-	lastShowLabel = 'accomodations';
+	lastShowId = 'list-children';
+	lastShowLabel = 'children';
 
 	constructor() { }
 
