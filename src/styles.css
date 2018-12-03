@@ -7,6 +7,20 @@ html, body {
 body {
 	font-family: 'Montserrat', sans-serif;
 	font-size: 14px;
+	/*	background: #E1D9D9;*/
+
+	/*
+	background-color: rgba(0, 89, 89, 0.2) ;
+	background-image: url("assets/quiltback.jpg") no-repeat center;
+	background-size: cover;
+	*/
+
+	/*
+	width: 100vw;
+	height: 100vh;
+	*/
+	background: linear-gradient(rgba(135, 187, 172, 0.69), rgba(135, 187, 172, 0.69));
+	/*	, url('assets/quiltback.jpg') no-repeat center;*/
 }
 h1 {
 	color: #27974E;
@@ -46,18 +60,20 @@ button:hover {
 	opacity: 0.8;
 }
 .clearfix {
-    overflow: auto;
+	overflow: auto;
 }
 .card {
 	background-color: rgba(72, 179, 86, 0.12);
 	border: 1px solid #27974E;
 	margin: 10px;
 }
+/*
 img {
-	width: 40%;
-	margin-right: 15px;
-	margin-bottom: 8px;
+width: 40%;
+margin-right: 15px;
+margin-bottom: 8px;
 }
+*/
 .col-12 {
 	padding: 15px;
 }
@@ -69,6 +85,15 @@ img {
 }
 .list-group-item {
 	padding: 11px;
+	word-wrap: break-word;
+	background: rgba(255, 255, 255, 0.5);
+}
+.list-group-item:hover {
+	background: rgba(72, 179, 86, 0.5);
+	cursor: pointer;
+}
+.list-group .selected {
+	background: #48B356;
 }
 .donate-button {
 	background: #27974E;

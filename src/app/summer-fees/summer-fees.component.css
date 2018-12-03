@@ -11,13 +11,13 @@
 	color:#27974E;
 }
 .calendar .col {
-	border: 1px solid lightgrey;
+	border: 1px solid white;
 	padding-bottom: 10px;
 	padding: 5px 0;
 }
 .grey {
 	color: darkgrey;
-	background: rgba(211, 211, 211, 0.23);
+	background: rgba(211, 211, 211, 0.45);
 }
 .opt-1 {
 	border-bottom: 5px solid #27974E;

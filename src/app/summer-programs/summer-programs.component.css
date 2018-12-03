@@ -31,7 +31,9 @@
 	align-items: center;
 	justify-content: center;
 }
-.card:hover .card-description {
+.card:hover .card-description,
+.card:active .card-description,
+.card:focus .card-description {
 	visibility: visible;
 	opacity: 1;
 }

@@ -13,24 +13,24 @@ export class NavbarComponent implements OnInit {
 	old = 0;
 
 	constructor(private router: Router) { 
-		$('#cssmenu').prepend('<div id="menu-button">Menu</div>');
-		$('#cssmenu #menu-button').on('click', function(){
-			var menu = $(this).next('ul');
-			if (menu.hasClass('open')) {
-				menu.removeClass('open');
-			} else {
-				menu.addClass('open');
-			}
-		});
 	}
 
 	ngOnInit() {
+//		console.log($('.navbar-nav > li'));
+//		$('.navbar-nav > li').hover(function() {
+//		}, function() {
+//			console.log($(this).find('.dropdown-menu'));
+//			$(this).find('.dropdown-menu').stop(true, true).delay(2000).fadeOut();
+//		});
 	}
 
 	changeActive(active) {
+		//		var url = this.router.url.split('/')[1];
+		//		console.log(url);
 		this.actives[this.old] = false;
 		this.actives[active] = true;
 		this.old = active;
+		console.log(this.actives);
 	}
 
 	reloadWeather () {

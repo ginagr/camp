@@ -1,8 +1,8 @@
 .banner {
 	background: rgba(255, 255, 255, 0.75);
-	padding: 20px 25px;
-	position: absolute;
-	z-index: 999; 
+	padding: 1em 2em;
+	z-index: 999;
+	font-size: .75em; 
 }
 .banner h2 {
 	border-bottom: none;
@@ -27,10 +27,8 @@
 	text-shadow: none;
 }
 .carousel-title {
-	font-size: 60px;
-	line-height: 70px;
+	font-size: 5vw;
 	color: #fff;
-	margin-bottom: 50px;
 	text-shadow: black 0.1em 0.1em 0.2em;
 }
 .carousel-title span {
@@ -39,11 +37,9 @@
 .header-signup {
 	display: inline-block;
 	color: #48B356 !important;
-}
-.header-signup {
 	background: #fff;
-	font-size: 20px;
-	padding: 10px 50px;
+	font-size: 2.5vw;
+	padding: .25em 2em;
 	text-transform: uppercase;
 	border-radius: 5px;
 	-webkit-border-radius: 5px;
@@ -57,6 +53,8 @@ img {
 	width: 100%;
 	margin-right: 0;
 	margin-bottom: 0;
+	object-fit: cover;
+	height: 100%;
 }
 .col-6, .col-md-3 {
 	padding: 0;
@@ -110,7 +108,7 @@ img {
 	height: 75%;
 }
 .tCarousel .item {
-	color: #999;
+	color: #000;
 	overflow: hidden;
 	min-height: 120px;
 	font-size: 13px;
@@ -123,11 +121,12 @@ img {
 	-moz-border-radius: 50%;
 	-webkit-border-radius: 50%;
 	background-position: 50% 50%;
-	background-repeat: no-repeat;    
+	background-repeat: no-repeat;   
+	margin: 0 auto;
 }
 .tCarousel .testimonial {
-	padding: 0 15px 0 60px ;
-	position: relative;
+	text-align: center;
+	margin-left: 1vw;
 }
 .tCarousel .testimonial::before {
 	content: '\93';
@@ -161,10 +160,16 @@ img {
 	background: #27974E;    
 	border: 5px double;    
 }
+.sCarousel .carousel-item {
+	height: calc(100vh - 150px);
+}
 @media only screen and (max-width: 768px) {
 	/* For mobile phones: */
 	.carousel-indicators {
 		right: 35%;
 		margin-left: 0;
+	}
+	.sCarousel .carousel-item {
+		height: 100%;
 	}
 }
