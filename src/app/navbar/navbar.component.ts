@@ -16,21 +16,15 @@ export class NavbarComponent implements OnInit {
 	}
 
 	ngOnInit() {
-//		console.log($('.navbar-nav > li'));
-//		$('.navbar-nav > li').hover(function() {
-//		}, function() {
-//			console.log($(this).find('.dropdown-menu'));
-//			$(this).find('.dropdown-menu').stop(true, true).delay(2000).fadeOut();
-//		});
 	}
 
 	changeActive(active) {
-		//		var url = this.router.url.split('/')[1];
-		//		console.log(url);
+		var url = this.router.url.split('/')[1];
+//		console.log(url);
+//		if ()
 		this.actives[this.old] = false;
 		this.actives[active] = true;
 		this.old = active;
-		console.log(this.actives);
 	}
 
 	reloadWeather () {

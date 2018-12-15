@@ -1,3 +1,9 @@
 .list-group-item {
 	padding: 22px;
 }
+img {
+	object-fit: cover;
+	height: 15em;
+	width: 100%;
+	margin-bottom: 10%;
+}

@@ -25,11 +25,11 @@ a {
 .icon-contact:hover .mk-svg-icon {
 	fill: #ffffff !important;
 }
-.col-4 {
+.border-container {
 	background: rgba(72, 179, 86, 0.33);
-	padding: 35px;
-	margin: 10px;
+	padding: 10% 5%;
+	margin: 0%;
 	border-radius: 5px;
-	flex: 0 0 30%;
-	max-width: 30%;
+	height: 100%;
+	word-wrap: break-word;
 }

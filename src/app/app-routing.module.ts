@@ -24,6 +24,14 @@ import { SongsComponent }   from './songs/songs.component';
 import { NewsComponent }   from './news/news.component';
 import { ContactComponent }   from './contact/contact.component';
 import { PledgeFormComponent }   from './pledge-form/pledge-form.component';
+import { FebMovieComponent }   from './blog/feb-movie/feb-movie.component';
+import { WinterCampCancelledComponent }   from './blog/winter-camp-cancelled/winter-camp-cancelled.component';
+import { CuriousComponent }   from './blog/curious/curious.component';
+import { ComingOutComponent }   from './blog/coming-out/coming-out.component';
+import { NoteFromJillComponent }   from './blog/note-from-jill/note-from-jill.component';
+import { DirectorsReportSixteenComponent }   from './blog/directors-report-sixteen/directors-report-sixteen.component';
+import { DirectorsReportFifteenComponent }   from './blog/directors-report-fifteen/directors-report-fifteen.component';
+import { TalentShowFourteenComponent }   from './blog/talent-show-fourteen/talent-show-fourteen.component';
 
 const routes: Routes = [
 	{ path: 'summer-programs', component: SummerProgramsComponent },
@@ -49,6 +57,14 @@ const routes: Routes = [
 	{ path: 'news', component: NewsComponent },
 	{ path: 'contact', component: ContactComponent },
 	{ path: 'pledge-form', component: PledgeFormComponent },
+	{ path: 'blog/feb-movie', component: FebMovieComponent },
+	{ path: 'blog/winter-camp-cancelled', component: WinterCampCancelledComponent },
+	{ path: 'blog/curious', component: CuriousComponent },
+	{ path: 'blog/coming-out', component: ComingOutComponent },
+	{ path: 'blog/note-from-jill', component: NoteFromJillComponent },
+	{ path: 'blog/directors-report-sixteen', component: DirectorsReportSixteenComponent },
+	{ path: 'blog/directors-report-fifteen', component: DirectorsReportFifteenComponent },
+	{ path: 'blog/talent-show-fourteen', component: TalentShowFourteenComponent },
 	{ path: '', redirectTo: '/dashboard', pathMatch: 'full' }
 ];
 

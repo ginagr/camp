@@ -38,7 +38,7 @@
 	display: inline-block;
 	color: #48B356 !important;
 	background: #fff;
-	font-size: 2.5vw;
+	font-size: 2vw;
 	padding: .25em 2em;
 	text-transform: uppercase;
 	border-radius: 5px;
@@ -163,6 +163,14 @@ img {
 .sCarousel .carousel-item {
 	height: calc(100vh - 150px);
 }
+a {
+	cursor: pointer;
+}
+/*
+.testimonial {
+	padding-top: 3% !important;
+}
+*/
 @media only screen and (max-width: 768px) {
 	/* For mobile phones: */
 	.carousel-indicators {

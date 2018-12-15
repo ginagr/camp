@@ -24,7 +24,7 @@ ul.stepper {
 	counter-reset: section;
 	overflow-y: auto;
 	overflow-x: hidden;
-	padding: 0 1.5rem;
+	padding: 0 1.5em 0 0;
 }
 .stepper-vertical {
 	position: relative;
@@ -79,7 +79,7 @@ ul.stepper {
 .stepper-vertical li .step-content {
 	display: block;
 	margin-top: 0;
-	margin-left: 3.13rem;
+	margin-left: 2.5em;
 	padding: 5px;
 	padding-left: 15px;
 	width: 95%;

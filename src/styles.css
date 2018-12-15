@@ -103,7 +103,7 @@ margin-bottom: 8px;
 	background-size: 200% 100%;
 	border-radius: 4px;
 	color: #fff;
-	padding: 10px 0;
+	padding: 10px;
 	text-shadow: 1px 1px 5px #666;
 	-webkit-transition: all 800ms;
 	transition: all 800ms;
@@ -119,4 +119,7 @@ margin-bottom: 8px;
 	color: #003527;
 	transition: all 600ms 200ms;
 	margin-left: 5px;
+}
+[data-toggle~="collapse"] {
+	cursor: pointer;
 }

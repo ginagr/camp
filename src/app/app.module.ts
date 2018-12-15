@@ -37,6 +37,14 @@ import { SongsComponent } from './songs/songs.component';
 import { NewsComponent } from './news/news.component';
 import { ContactComponent } from './contact/contact.component';
 import { PledgeFormComponent } from './pledge-form/pledge-form.component';
+import { FebMovieComponent } from './blog/feb-movie/feb-movie.component';
+import { WinterCampCancelledComponent } from './blog/winter-camp-cancelled/winter-camp-cancelled.component';
+import { CuriousComponent } from './blog/curious/curious.component';
+import { ComingOutComponent } from './blog/coming-out/coming-out.component';
+import { NoteFromJillComponent } from './blog/note-from-jill/note-from-jill.component';
+import { DirectorsReportSixteenComponent } from './blog/directors-report-sixteen/directors-report-sixteen.component';
+import { DirectorsReportFifteenComponent } from './blog/directors-report-fifteen/directors-report-fifteen.component';
+import { TalentShowFourteenComponent } from './blog/talent-show-fourteen/talent-show-fourteen.component';
 
 @NgModule({
 	declarations: [
@@ -65,7 +73,15 @@ import { PledgeFormComponent } from './pledge-form/pledge-form.component';
 		SongsComponent,
 		NewsComponent,
 		ContactComponent,
-		PledgeFormComponent
+		PledgeFormComponent,
+		FebMovieComponent,
+		WinterCampCancelledComponent,
+		CuriousComponent,
+		ComingOutComponent,
+		NoteFromJillComponent,
+		DirectorsReportSixteenComponent,
+		DirectorsReportFifteenComponent,
+		TalentShowFourteenComponent
 	],
 	imports: [
 		BrowserModule,
