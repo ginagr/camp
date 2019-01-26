@@ -45,6 +45,7 @@ import { NoteFromJillComponent } from './blog/note-from-jill/note-from-jill.comp
 import { DirectorsReportSixteenComponent } from './blog/directors-report-sixteen/directors-report-sixteen.component';
 import { DirectorsReportFifteenComponent } from './blog/directors-report-fifteen/directors-report-fifteen.component';
 import { TalentShowFourteenComponent } from './blog/talent-show-fourteen/talent-show-fourteen.component';
+import { SearchTermsComponent } from './search-terms/search-terms.component';
 
 @NgModule({
 	declarations: [
@@ -81,7 +82,8 @@ import { TalentShowFourteenComponent } from './blog/talent-show-fourteen/talent-
 		NoteFromJillComponent,
 		DirectorsReportSixteenComponent,
 		DirectorsReportFifteenComponent,
-		TalentShowFourteenComponent
+		TalentShowFourteenComponent,
+		SearchTermsComponent
 	],
 	imports: [
 		BrowserModule,

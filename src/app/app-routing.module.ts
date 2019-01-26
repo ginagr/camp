@@ -32,11 +32,11 @@ import { NoteFromJillComponent }   from './blog/note-from-jill/note-from-jill.co
 import { DirectorsReportSixteenComponent }   from './blog/directors-report-sixteen/directors-report-sixteen.component';
 import { DirectorsReportFifteenComponent }   from './blog/directors-report-fifteen/directors-report-fifteen.component';
 import { TalentShowFourteenComponent }   from './blog/talent-show-fourteen/talent-show-fourteen.component';
+import { SearchTermsComponent }   from './search-terms/search-terms.component';
 
 const routes: Routes = [
 	{ path: 'summer-programs', component: SummerProgramsComponent },
 	{ path: 'winter-programs', component: WinterProgramsComponent },
-	{ path: 'dashboard', component: DashboardComponent },
 	{ path: 'overview', component: OverviewComponent },
 	{ path: 'mission', component: MissionComponent },
 	{ path: 'board', component: BoardComponent },
@@ -65,11 +65,13 @@ const routes: Routes = [
 	{ path: 'blog/directors-report-sixteen', component: DirectorsReportSixteenComponent },
 	{ path: 'blog/directors-report-fifteen', component: DirectorsReportFifteenComponent },
 	{ path: 'blog/talent-show-fourteen', component: TalentShowFourteenComponent },
-	{ path: '', redirectTo: '/dashboard', pathMatch: 'full' }
+	{ path: 'search-terms', component: SearchTermsComponent },
+	{ path: '/', component: DashboardComponent },
+	{ path: '', redirectTo: '/', pathMatch: 'full' }
 ];
 
 @NgModule({
-	imports: [RouterModule.forRoot(routes)],
+	imports: [RouterModule.forRoot(routes, { useHash: true })],
 	exports: [RouterModule]
 })
 export class AppRoutingModule { }
