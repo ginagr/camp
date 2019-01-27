@@ -20,8 +20,6 @@ export class NavbarComponent implements OnInit {
 
 	changeActive(active) {
 		var url = this.router.url.split('/')[1];
-//		console.log(url);
-//		if ()
 		this.actives[this.old] = false;
 		this.actives[active] = true;
 		this.old = active;

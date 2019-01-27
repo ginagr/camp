@@ -14,7 +14,7 @@ export class AppComponent {
 		router.events.forEach((event) => {
 			if (event instanceof ActivationEnd) {
 				var url = this.router.url.split('/')[1];
-				if (url == 'dashboard') { 
+				if (!url || url == '') { 
 					document.getElementsByTagName('nav')[0].classList.remove('banner-img');
 				} else if (!document.getElementsByTagName('nav')[0].classList.contains('banner-img')) {
 					document.getElementsByTagName('nav')[0].classList.add('banner-img');

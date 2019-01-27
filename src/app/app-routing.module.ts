@@ -66,8 +66,8 @@ const routes: Routes = [
 	{ path: 'blog/directors-report-fifteen', component: DirectorsReportFifteenComponent },
 	{ path: 'blog/talent-show-fourteen', component: TalentShowFourteenComponent },
 	{ path: 'search-terms', component: SearchTermsComponent },
-	{ path: '/', component: DashboardComponent },
-	{ path: '', redirectTo: '/', pathMatch: 'full' }
+	{ path: '', component: DashboardComponent },
+	{ path: '**', redirectTo: '/' }
 ];
 
 @NgModule({
