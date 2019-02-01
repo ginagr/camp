@@ -10,18 +10,33 @@ export class DashboardComponent implements OnInit {
 
 	i = 0;
 	txt = [
-		"  is for families like yours",
-		" is a LGBTQ friendly family vacation",
-		" is a place to be yourself",
+		"  is a LGBTIQA+ family vacation",
+		" is for families like yours",
+		" a place to be yourself",
+		//		" where fun and friendships last forever",
 		" Summer Dates: July 27 - August 4, 2019", 
 	];
-	first = true;
 	index = 0;
-	speed = 70;
+	speed = 50;
+	timeouts = [];
 
-	constructor() {  
-		this.typeWriter();
-	}
+	slides = [
+		'./../assets/front-image-2.jpg',
+		'./../assets/front-image-1.jpg',
+		'./../assets/front-image-3.jpg',
+		'./../assets/front-image-4.jpg'
+	];
+	gallery = [
+		'../../assets/gallery-1.jpg',
+		'../../assets/gallery-2.jpg',
+		'../../assets/gallery-3.jpg',
+		'../../assets/gallery-4.jpg',
+		'../../assets/gallery-5.jpg',
+		'../../assets/gallery-6.jpg',
+		'../../assets/gallery-7.jpg',
+		'../../assets/gallery-8.jpg'
+	]
+	constructor() {   }
 
 	ngOnInit() {
 		var $videoSrc;  
@@ -33,6 +48,26 @@ export class DashboardComponent implements OnInit {
 		$('.close').click(function () {
 			$("#video").attr('src', $videoSrc); 
 		});
+		$(".carousel.lazy").on("slide", function(ev) {
+			console.log('in');
+			var lazy = $(ev.relatedTarget).find("img[data-src]");
+			lazy.attr("src", lazy.data('src'));
+			lazy.removeAttr("data-src");
+		});
+		$('.carousel.lazy').on('slide.bs.carousel', function () {
+			console.log("Slide Event");
+			//console.log('slid event');
+		});
+		setTimeout(this.typeWriter.bind(this), 1000);
+	}
+
+	ngOnDestroy() {
+		if (this.timeouts.length > 0) {
+			console.log('clearing timeouts');
+			for (var t of this.timeouts) {
+				clearTimeout(t);
+			}
+		}
 	}
 
 	typeWriter() {
@@ -41,34 +76,29 @@ export class DashboardComponent implements OnInit {
 			$('.type').each(function() {
 				$(this).append(t.txt[t.index].charAt(t.i));
 			});
-			//			document.getElementById("type").innerHTML += this.txt[this.index].charAt(this.i);
 			this.i++;
-			setTimeout(this.typeWriter.bind(this), this.speed);
+			this.timeouts[0] = setTimeout(this.typeWriter.bind(this), this.speed);
 		} else {
 			this.i = 0;
-			setTimeout(this.deleteWriter.bind(this), 2000);
+			this.timeouts[1] = setTimeout(this.deleteWriter.bind(this), 2000);
 		}
 	}
 
 	deleteWriter() {
 		if (this.i < this.txt[this.index].length) {
-			//			$('#type').html
 			$('.type').each(function() {
 				$(this).html($(this).html().slice(0, -1));
 			});
-			//			document.getElementById("type").innerHTML = document.getElementById("type").innerHTML.slice(0, -1);
 			this.i++;
-			setTimeout(this.deleteWriter.bind(this), this.speed);
+			this.timeouts[2] = setTimeout(this.deleteWriter.bind(this), this.speed);
 		} else if (this.index == this.txt.length-1) {
 			this.index = 0;
 			this.i = 0;
-			this.typeWriter();
+			this.timeouts[3] = setTimeout(this.typeWriter.bind(this), 1500);
 		} else {
 			this.index++;
 			this.i = 0;
-			this.typeWriter();
+			this.timeouts[4] = setTimeout(this.typeWriter.bind(this), 1500);
 		}
 	}
-
-
 }

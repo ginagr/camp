@@ -168,9 +168,13 @@ a {
 }
 /*
 .testimonial {
-	padding-top: 3% !important;
+padding-top: 3% !important;
 }
 */
+#background-img {
+	position: absolute;
+/*	top: 100px;*/
+}
 @media only screen and (max-width: 768px) {
 	/* For mobile phones: */
 	.carousel-indicators {
