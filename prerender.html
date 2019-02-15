@@ -1,0 +1,431 @@
+<html><head><style ng-transition="serverApp">.content[_ngcontent-sc0] {
+	min-height: 100%;
+}
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYXBwLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7Q0FDQyxpQkFBaUI7Q0FDakIiLCJmaWxlIjoic3JjL2FwcC9hcHAuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5jb250ZW50IHtcblx0bWluLWhlaWdodDogMTAwJTtcbn0iXX0= */</style><style ng-transition="serverApp">.navbar[_ngcontent-sc1] {
+	padding: 0 1rem;
+}
+.navbar-brand[_ngcontent-sc1] {
+	margin-left: 1%;
+	width: auto;
+	margin-bottom: 0;
+	cursor: pointer;
+	height: 100px;
+	padding: 1em;
+}
+img[_ngcontent-sc1] {
+	-webkit-transform: translate(0%,-20%);
+	        transform: translate(0%,-20%);
+	height: auto;
+	width: 150px;
+}
+nav[_ngcontent-sc1] {
+	background-color: #27974E !important;
+	
+}
+.banner-img[_ngcontent-sc1] {
+	background: linear-gradient(rgba(39, 151, 78, 0.45), rgba(39, 151, 78, 0.45)), url('welcome-banner.png') no-repeat;
+	background-size: cover;
+}
+.navbar-nav[_ngcontent-sc1] {
+	padding: 25px 0;
+}
+.navbar-nav[_ngcontent-sc1]   li[_ngcontent-sc1] {
+	margin: 0;
+	padding: 0;
+	display: block;
+	position: relative;
+}
+.navbar-nav[_ngcontent-sc1]   li[_ngcontent-sc1]   a[_ngcontent-sc1] {
+	text-decoration: none;
+	display: block;
+	margin: 0;
+	transition: color .2s ease;
+	box-sizing: border-box;
+}
+.navbar-nav[_ngcontent-sc1]   li[_ngcontent-sc1]   ul[_ngcontent-sc1] {
+	position: absolute;
+	left: -9999px;
+	top: auto;
+	z-index: 999;
+}
+.navbar-nav[_ngcontent-sc1]   li[_ngcontent-sc1]   ul[_ngcontent-sc1]   li[_ngcontent-sc1] {
+	max-height: 0;
+	position: absolute;
+	transition: max-height 0.4s ease-out;
+	
+	background: #fff;
+}
+.navbar-nav[_ngcontent-sc1]   li[_ngcontent-sc1]   ul[_ngcontent-sc1]   li.dropdown-submenu[_ngcontent-sc1]:after {
+	display: block;
+	position: absolute;
+	content: "";
+	height: 10px;
+	width: 10px;
+	border-radius: 5px;
+	background: #000;
+	z-index: 1;
+	top: 13px;
+	right: 15px;
+}
+.navbar-nav[_ngcontent-sc1]   li[_ngcontent-sc1]   ul[_ngcontent-sc1]   li.dropdown-submenu[_ngcontent-sc1]:before {
+	display: block;
+	position: absolute;
+	content: "";
+	height: 0;
+	width: 0;
+	border: 3px solid transparent;
+	border-left-color: #fff;
+	z-index: 2;
+	top: 15px;
+	right: 15px;
+}
+.navbar-nav[_ngcontent-sc1]   li[_ngcontent-sc1]   ul[_ngcontent-sc1]   li[_ngcontent-sc1]   a[_ngcontent-sc1] {
+	font-size: 14px;
+	letter-spacing: 1;
+	display: block;
+	width: 170px;
+	padding: 7px 15px;
+	color: #000;
+	font-weight: 500;
+	text-transform: uppercase;
+	white-space: normal;
+}
+.navbar-nav[_ngcontent-sc1]   li[_ngcontent-sc1]   ul[_ngcontent-sc1]   li[_ngcontent-sc1]:hover    > a[_ngcontent-sc1] {
+	color: white;
+}
+.navbar-nav[_ngcontent-sc1]   li[_ngcontent-sc1]   ul[_ngcontent-sc1]   li[_ngcontent-sc1]:hover:after {
+	background: #4fc55f;
+}
+.navbar-nav[_ngcontent-sc1]   li[_ngcontent-sc1]   ul[_ngcontent-sc1]   li[_ngcontent-sc1]:hover    > ul[_ngcontent-sc1], .navbar-nav[_ngcontent-sc1]   li[_ngcontent-sc1]   ul[_ngcontent-sc1]   li[_ngcontent-sc1]:active    > ul[_ngcontent-sc1] {
+	left: 79%;
+	top: 0;
+}
+.navbar-nav[_ngcontent-sc1]   li[_ngcontent-sc1]   ul[_ngcontent-sc1]   li[_ngcontent-sc1]:hover    > ul[_ngcontent-sc1]    > li[_ngcontent-sc1], .navbar-nav[_ngcontent-sc1]   li[_ngcontent-sc1]   ul[_ngcontent-sc1]   li[_ngcontent-sc1]:active    > ul[_ngcontent-sc1]    > li[_ngcontent-sc1] {
+	max-height: 72px;
+	position: relative;
+	background: #4fc55f;
+}
+.navbar-nav[_ngcontent-sc1]    > li[_ngcontent-sc1]:after {
+	content: "";
+	display: block;
+	position: absolute;
+	width: 100%;
+	height: 0;
+	top: 0;
+	z-index: 0;
+	background: #fff;
+	transition: height .2s;
+}
+.navbar-nav[_ngcontent-sc1]    > li.dropdown[_ngcontent-sc1]    > a[_ngcontent-sc1] {
+	padding-right: 30px;
+}
+.navbar-nav[_ngcontent-sc1]    > li.dropdown[_ngcontent-sc1]    > a[_ngcontent-sc1]:after {
+	display: block;
+	content: "";
+	background: #fff;
+	height: 12px;
+	width: 12px;
+	position: absolute;
+	border-radius: 13px;
+	right: 14px;
+	top: 16px;
+}
+.navbar-nav[_ngcontent-sc1]    > li.dropdown[_ngcontent-sc1]    > a[_ngcontent-sc1]:before {
+	display: block;
+	content: "";
+	border: 4px solid transparent;
+	border-top-color: #4fc55f;
+	z-index: 2;
+	height: 0;
+	width: 0;
+	position: absolute;
+	right: 16px;
+	top: 21px;
+}
+.navbar-nav[_ngcontent-sc1]    > li[_ngcontent-sc1]    > a[_ngcontent-sc1] {
+	color: #fff;
+	padding: 15px 20px;
+	font-weight: bolder;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	font-size: 16px;
+	text-shadow: black 0.1em 0.1em 0.2em;
+	z-index: 2;
+	position: relative;
+}
+.navbar-nav[_ngcontent-sc1]    > li[_ngcontent-sc1]:hover:after, .navbar-nav[_ngcontent-sc1]    > li.active[_ngcontent-sc1]:after {
+	height: 100%;
+}
+.navbar-nav[_ngcontent-sc1]    > li[_ngcontent-sc1]:hover    > a[_ngcontent-sc1], .navbar-nav[_ngcontent-sc1]    > li.active[_ngcontent-sc1]    > a[_ngcontent-sc1]{
+	color: #000;
+	text-shadow: none;
+}
+.navbar-nav[_ngcontent-sc1]    > li[_ngcontent-sc1]:hover    > a[_ngcontent-sc1]:after, .navbar-nav[_ngcontent-sc1]    > li.active[_ngcontent-sc1]    > a[_ngcontent-sc1]:after{
+	background: #000;
+}
+.navbar-nav[_ngcontent-sc1]    > li[_ngcontent-sc1]:hover    > a[_ngcontent-sc1]:before, .navbar-nav[_ngcontent-sc1]    > li.active[_ngcontent-sc1]    > a[_ngcontent-sc1]:before{
+	border-top-color: #fff;
+}
+.navbar-nav[_ngcontent-sc1]    > li[_ngcontent-sc1]:hover    > ul[_ngcontent-sc1], .navbar-nav[_ngcontent-sc1]    > li[_ngcontent-sc1]:active    > ul[_ngcontent-sc1] {
+	left: 0;
+	z-index: 99999;
+}
+.navbar-nav[_ngcontent-sc1]    > li[_ngcontent-sc1]:hover    > ul[_ngcontent-sc1]    > li[_ngcontent-sc1], .navbar-nav[_ngcontent-sc1]    > li[_ngcontent-sc1]:active    > ul[_ngcontent-sc1]    > li[_ngcontent-sc1] {
+	max-height: 72px;
+	position: relative;
+	background: #4fc55f;
+}
+.navbar-nav[_ngcontent-sc1]    > li[_ngcontent-sc1]    > a[_ngcontent-sc1] {
+	display: block;
+}
+.navbar-nav[_ngcontent-sc1] > li[_ngcontent-sc1] {
+	width: auto;
+}
+.navbar-nav[_ngcontent-sc1]    > li[_ngcontent-sc1]    > ul[_ngcontent-sc1] {
+	width: 170px;
+	display: block;
+}
+.navbar-nav[_ngcontent-sc1]    > li[_ngcontent-sc1]    > ul[_ngcontent-sc1]    > li[_ngcontent-sc1] {
+	width: 170px;
+	display: block;
+}
+.dropdown-item[_ngcontent-sc1]:hover, .dropdown-item[_ngcontent-sc1]:active {
+	background-color: transparent;
+}
+.dropdown-menu[_ngcontent-sc1] {
+	border: none;
+	background-color: transparent;
+	padding: 0.15rem 0;
+	margin: 0;
+}
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvbmF2YmFyL25hdmJhci5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0NBQ0MsZ0JBQWdCO0NBQ2hCO0FBQ0Q7Q0FDQyxnQkFBZ0I7Q0FDaEIsWUFBWTtDQUNaLGlCQUFpQjtDQUNqQixnQkFBZ0I7Q0FDaEIsY0FBYztDQUNkLGFBQWE7Q0FDYjtBQUNEO0NBQ0Msc0NBQThCO1NBQTlCLDhCQUE4QjtDQUM5QixhQUFhO0NBQ2IsYUFBYTtDQUNiO0FBQ0Q7Q0FDQyxxQ0FBcUM7Q0FDckMscUlBQXFJO0NBQ3JJO0FBQ0Q7Q0FDQyxtSEFBZ0k7Q0FDaEksdUJBQXVCO0NBQ3ZCO0FBQ0Q7Q0FDQyxnQkFBZ0I7Q0FDaEI7QUFDRDtDQUNDLFVBQVU7Q0FDVixXQUFXO0NBQ1gsZUFBZTtDQUNmLG1CQUFtQjtDQUNuQjtBQUNEO0NBQ0Msc0JBQXNCO0NBQ3RCLGVBQWU7Q0FDZixVQUFVO0NBS1YsMkJBQTJCO0NBRzNCLHVCQUF1QjtDQUN2QjtBQUNEO0NBQ0MsbUJBQW1CO0NBQ25CLGNBQWM7Q0FDZCxVQUFVO0NBQ1YsYUFBYTtDQUNiO0FBQ0Q7Q0FDQyxjQUFjO0NBQ2QsbUJBQW1CO0NBS25CLHFDQUFxQztDQUNyQzs7Ozs7O0dBTUU7Q0FDRixpQkFBaUI7Q0FDakI7QUFDRDtDQUNDLGVBQWU7Q0FDZixtQkFBbUI7Q0FDbkIsWUFBWTtDQUNaLGFBQWE7Q0FDYixZQUFZO0NBQ1osbUJBQW1CO0NBQ25CLGlCQUFpQjtDQUNqQixXQUFXO0NBQ1gsVUFBVTtDQUNWLFlBQVk7Q0FDWjtBQUNEO0NBQ0MsZUFBZTtDQUNmLG1CQUFtQjtDQUNuQixZQUFZO0NBQ1osVUFBVTtDQUNWLFNBQVM7Q0FDVCw4QkFBOEI7Q0FDOUIsd0JBQXdCO0NBQ3hCLFdBQVc7Q0FDWCxVQUFVO0NBQ1YsWUFBWTtDQUNaO0FBQ0Q7Q0FDQyxnQkFBZ0I7Q0FDaEIsa0JBQWtCO0NBQ2xCLGVBQWU7Q0FDZixhQUFhO0NBQ2Isa0JBQWtCO0NBQ2xCLFlBQVk7Q0FDWixpQkFBaUI7Q0FDakIsMEJBQTBCO0NBQzFCLG9CQUFvQjtDQUNwQjtBQUNEO0NBQ0MsYUFBYTtDQUNiO0FBQ0Q7Q0FDQyxvQkFBb0I7Q0FDcEI7QUFDRDs7Q0FFQyxVQUFVO0NBQ1YsT0FBTztDQUNQO0FBQ0Q7O0NBRUMsaUJBQWlCO0NBQ2pCLG1CQUFtQjtDQUNuQixvQkFBb0I7Q0FDcEI7QUFDRDtDQUNDLFlBQVk7Q0FDWixlQUFlO0NBQ2YsbUJBQW1CO0NBQ25CLFlBQVk7Q0FDWixVQUFVO0NBQ1YsT0FBTztDQUNQLFdBQVc7Q0FDWCxpQkFBaUI7Q0FLakIsdUJBQXVCO0NBQ3ZCO0FBQ0Q7Q0FDQyxvQkFBb0I7Q0FDcEI7QUFDRDtDQUNDLGVBQWU7Q0FDZixZQUFZO0NBQ1osaUJBQWlCO0NBQ2pCLGFBQWE7Q0FDYixZQUFZO0NBQ1osbUJBQW1CO0NBQ25CLG9CQUFvQjtDQUNwQixZQUFZO0NBQ1osVUFBVTtDQUNWO0FBQ0Q7Q0FDQyxlQUFlO0NBQ2YsWUFBWTtDQUNaLDhCQUE4QjtDQUM5QiwwQkFBMEI7Q0FDMUIsV0FBVztDQUNYLFVBQVU7Q0FDVixTQUFTO0NBQ1QsbUJBQW1CO0NBQ25CLFlBQVk7Q0FDWixVQUFVO0NBQ1Y7QUFDRDtDQUNDLFlBQVk7Q0FDWixtQkFBbUI7Q0FDbkIsb0JBQW9CO0NBQ3BCLG9CQUFvQjtDQUNwQiwwQkFBMEI7Q0FDMUIsZ0JBQWdCO0NBQ2hCLHFDQUFxQztDQUNyQyxXQUFXO0NBQ1gsbUJBQW1CO0NBQ25CO0FBQ0Q7O0NBRUMsYUFBYTtDQUNiO0FBQ0Q7O0NBRUMsWUFBWTtDQUNaLGtCQUFrQjtDQUNsQjtBQUNEOztDQUVDLGlCQUFpQjtDQUNqQjtBQUNEOztDQUVDLHVCQUF1QjtDQUN2QjtBQUNEOztDQUVDLFFBQVE7Q0FDUixlQUFlO0NBQ2Y7QUFDRDs7Q0FFQyxpQkFBaUI7Q0FDakIsbUJBQW1CO0NBQ25CLG9CQUFvQjtDQUNwQjtBQUNEO0NBQ0MsZUFBZTtDQUNmO0FBQ0Q7Q0FDQyxZQUFZO0NBQ1o7QUFDRDtDQUNDLGFBQWE7Q0FDYixlQUFlO0NBQ2Y7QUFDRDtDQUNDLGFBQWE7Q0FDYixlQUFlO0NBQ2Y7QUFDRDs7Q0FFQyw4QkFBOEI7Q0FDOUI7QUFDRDtDQUNDLGFBQWE7Q0FDYiw4QkFBOEI7Q0FDOUIsbUJBQW1CO0NBQ25CLFVBQVU7Q0FDViIsImZpbGUiOiJzcmMvYXBwL25hdmJhci9uYXZiYXIuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5uYXZiYXIge1xuXHRwYWRkaW5nOiAwIDFyZW07XG59XG4ubmF2YmFyLWJyYW5kIHtcblx0bWFyZ2luLWxlZnQ6IDElO1xuXHR3aWR0aDogYXV0bztcblx0bWFyZ2luLWJvdHRvbTogMDtcblx0Y3Vyc29yOiBwb2ludGVyO1xuXHRoZWlnaHQ6IDEwMHB4O1xuXHRwYWRkaW5nOiAxZW07XG59XG5pbWcge1xuXHR0cmFuc2Zvcm06IHRyYW5zbGF0ZSgwJSwtMjAlKTtcblx0aGVpZ2h0OiBhdXRvO1xuXHR3aWR0aDogMTUwcHg7XG59XG5uYXYge1xuXHRiYWNrZ3JvdW5kLWNvbG9yOiAjMjc5NzRFICFpbXBvcnRhbnQ7XG5cdC8qXHRiYWNrZ3JvdW5kOiBsaW5lYXItZ3JhZGllbnQocmdiYSgzOSwgMTUxLCA3OCwgMC40NSksIHJnYmEoMzksIDE1MSwgNzgsIDAuNDUpKSwgdXJsKCcuLi8uLi9hc3NldHMvd2VsY29tZS1iYW5uZXIucG5nJykgbm8tcmVwZWF0OyovXG59XG4uYmFubmVyLWltZyB7XG5cdGJhY2tncm91bmQ6IGxpbmVhci1ncmFkaWVudChyZ2JhKDM5LCAxNTEsIDc4LCAwLjQ1KSwgcmdiYSgzOSwgMTUxLCA3OCwgMC40NSkpLCB1cmwoJy4uLy4uL2Fzc2V0cy93ZWxjb21lLWJhbm5lci5wbmcnKSBuby1yZXBlYXQ7XG5cdGJhY2tncm91bmQtc2l6ZTogY292ZXI7XG59XG4ubmF2YmFyLW5hdiB7XG5cdHBhZGRpbmc6IDI1cHggMDtcbn1cbi5uYXZiYXItbmF2IGxpIHtcblx0bWFyZ2luOiAwO1xuXHRwYWRkaW5nOiAwO1xuXHRkaXNwbGF5OiBibG9jaztcblx0cG9zaXRpb246IHJlbGF0aXZlO1xufVxuLm5hdmJhci1uYXYgbGkgYSB7XG5cdHRleHQtZGVjb3JhdGlvbjogbm9uZTtcblx0ZGlzcGxheTogYmxvY2s7XG5cdG1hcmdpbjogMDtcblx0LXdlYmtpdC10cmFuc2l0aW9uOiBjb2xvciAuMnMgZWFzZTtcblx0LW1vei10cmFuc2l0aW9uOiBjb2xvciAuMnMgZWFzZTtcblx0LW1zLXRyYW5zaXRpb246IGNvbG9yIC4ycyBlYXNlO1xuXHQtby10cmFuc2l0aW9uOiBjb2xvciAuMnMgZWFzZTtcblx0dHJhbnNpdGlvbjogY29sb3IgLjJzIGVhc2U7XG5cdC13ZWJraXQtYm94LXNpemluZzogYm9yZGVyLWJveDtcblx0LW1vei1ib3gtc2l6aW5nOiBib3JkZXItYm94O1xuXHRib3gtc2l6aW5nOiBib3JkZXItYm94O1xufVxuLm5hdmJhci1uYXYgbGkgdWwge1xuXHRwb3NpdGlvbjogYWJzb2x1dGU7XG5cdGxlZnQ6IC05OTk5cHg7XG5cdHRvcDogYXV0bztcblx0ei1pbmRleDogOTk5O1xufVxuLm5hdmJhci1uYXYgbGkgdWwgbGkge1xuXHRtYXgtaGVpZ2h0OiAwO1xuXHRwb3NpdGlvbjogYWJzb2x1dGU7XG5cdC13ZWJraXQtdHJhbnNpdGlvbjogbWF4LWhlaWdodCAwLjRzIGVhc2Utb3V0O1xuXHQtbW96LXRyYW5zaXRpb246IG1heC1oZWlnaHQgMC40cyBlYXNlLW91dDtcblx0LW1zLXRyYW5zaXRpb246IG1heC1oZWlnaHQgMC40cyBlYXNlLW91dDtcblx0LW8tdHJhbnNpdGlvbjogbWF4LWhlaWdodCAwLjRzIGVhc2Utb3V0O1xuXHR0cmFuc2l0aW9uOiBtYXgtaGVpZ2h0IDAuNHMgZWFzZS1vdXQ7XG5cdC8qXG5cdC13ZWJraXQtdHJhbnNpdGlvbi1kZWxheTogNXM7XG5cdC1tb3otdHJhbnNpdGlvbi1kZWxheTogNXM7XG5cdC1tcy10cmFuc2l0aW9uLWRlbGF5OiA1cztcblx0LW8tdHJhbnNpdGlvbi1kZWxheTogNXM7XG5cdHRyYW5zaXRpb24tZGVsYXk6IDVzO1xuXHQqL1xuXHRiYWNrZ3JvdW5kOiAjZmZmO1xufVxuLm5hdmJhci1uYXYgbGkgdWwgbGkuZHJvcGRvd24tc3VibWVudTphZnRlciB7XG5cdGRpc3BsYXk6IGJsb2NrO1xuXHRwb3NpdGlvbjogYWJzb2x1dGU7XG5cdGNvbnRlbnQ6IFwiXCI7XG5cdGhlaWdodDogMTBweDtcblx0d2lkdGg6IDEwcHg7XG5cdGJvcmRlci1yYWRpdXM6IDVweDtcblx0YmFja2dyb3VuZDogIzAwMDtcblx0ei1pbmRleDogMTtcblx0dG9wOiAxM3B4O1xuXHRyaWdodDogMTVweDtcbn1cbi5uYXZiYXItbmF2IGxpIHVsIGxpLmRyb3Bkb3duLXN1Ym1lbnU6YmVmb3JlIHtcblx0ZGlzcGxheTogYmxvY2s7XG5cdHBvc2l0aW9uOiBhYnNvbHV0ZTtcblx0Y29udGVudDogXCJcIjtcblx0aGVpZ2h0OiAwO1xuXHR3aWR0aDogMDtcblx0Ym9yZGVyOiAzcHggc29saWQgdHJhbnNwYXJlbnQ7XG5cdGJvcmRlci1sZWZ0LWNvbG9yOiAjZmZmO1xuXHR6LWluZGV4OiAyO1xuXHR0b3A6IDE1cHg7XG5cdHJpZ2h0OiAxNXB4O1xufVxuLm5hdmJhci1uYXYgbGkgdWwgbGkgYSB7XG5cdGZvbnQtc2l6ZTogMTRweDtcblx0bGV0dGVyLXNwYWNpbmc6IDE7XG5cdGRpc3BsYXk6IGJsb2NrO1xuXHR3aWR0aDogMTcwcHg7XG5cdHBhZGRpbmc6IDdweCAxNXB4O1xuXHRjb2xvcjogIzAwMDtcblx0Zm9udC13ZWlnaHQ6IDUwMDtcblx0dGV4dC10cmFuc2Zvcm06IHVwcGVyY2FzZTtcblx0d2hpdGUtc3BhY2U6IG5vcm1hbDtcbn1cbi5uYXZiYXItbmF2IGxpIHVsIGxpOmhvdmVyID4gYSB7XG5cdGNvbG9yOiB3aGl0ZTtcbn1cbi5uYXZiYXItbmF2IGxpIHVsIGxpOmhvdmVyOmFmdGVyIHtcblx0YmFja2dyb3VuZDogIzRmYzU1Zjtcbn1cbi5uYXZiYXItbmF2IGxpIHVsIGxpOmhvdmVyID4gdWwsXG4ubmF2YmFyLW5hdiBsaSB1bCBsaTphY3RpdmUgPiB1bCB7XG5cdGxlZnQ6IDc5JTtcblx0dG9wOiAwO1xufVxuLm5hdmJhci1uYXYgbGkgdWwgbGk6aG92ZXIgPiB1bCA+IGxpLFxuLm5hdmJhci1uYXYgbGkgdWwgbGk6YWN0aXZlID4gdWwgPiBsaSB7XG5cdG1heC1oZWlnaHQ6IDcycHg7XG5cdHBvc2l0aW9uOiByZWxhdGl2ZTtcblx0YmFja2dyb3VuZDogIzRmYzU1Zjtcbn1cbi5uYXZiYXItbmF2ID4gbGk6YWZ0ZXIge1xuXHRjb250ZW50OiBcIlwiO1xuXHRkaXNwbGF5OiBibG9jaztcblx0cG9zaXRpb246IGFic29sdXRlO1xuXHR3aWR0aDogMTAwJTtcblx0aGVpZ2h0OiAwO1xuXHR0b3A6IDA7XG5cdHotaW5kZXg6IDA7XG5cdGJhY2tncm91bmQ6ICNmZmY7XG5cdC13ZWJraXQtdHJhbnNpdGlvbjogaGVpZ2h0IC4ycztcblx0LW1vei10cmFuc2l0aW9uOiBoZWlnaHQgLjJzO1xuXHQtbXMtdHJhbnNpdGlvbjogaGVpZ2h0IC4ycztcblx0LW8tdHJhbnNpdGlvbjogaGVpZ2h0IC4ycztcblx0dHJhbnNpdGlvbjogaGVpZ2h0IC4ycztcbn1cbi5uYXZiYXItbmF2ID4gbGkuZHJvcGRvd24gPiBhIHtcblx0cGFkZGluZy1yaWdodDogMzBweDtcbn1cbi5uYXZiYXItbmF2ID4gbGkuZHJvcGRvd24gPiBhOmFmdGVyIHtcblx0ZGlzcGxheTogYmxvY2s7XG5cdGNvbnRlbnQ6IFwiXCI7XG5cdGJhY2tncm91bmQ6ICNmZmY7XG5cdGhlaWdodDogMTJweDtcblx0d2lkdGg6IDEycHg7XG5cdHBvc2l0aW9uOiBhYnNvbHV0ZTtcblx0Ym9yZGVyLXJhZGl1czogMTNweDtcblx0cmlnaHQ6IDE0cHg7XG5cdHRvcDogMTZweDtcbn1cbi5uYXZiYXItbmF2ID4gbGkuZHJvcGRvd24gPiBhOmJlZm9yZSB7XG5cdGRpc3BsYXk6IGJsb2NrO1xuXHRjb250ZW50OiBcIlwiO1xuXHRib3JkZXI6IDRweCBzb2xpZCB0cmFuc3BhcmVudDtcblx0Ym9yZGVyLXRvcC1jb2xvcjogIzRmYzU1Zjtcblx0ei1pbmRleDogMjtcblx0aGVpZ2h0OiAwO1xuXHR3aWR0aDogMDtcblx0cG9zaXRpb246IGFic29sdXRlO1xuXHRyaWdodDogMTZweDtcblx0dG9wOiAyMXB4O1xufVxuLm5hdmJhci1uYXYgPiBsaSA+IGEge1xuXHRjb2xvcjogI2ZmZjtcblx0cGFkZGluZzogMTVweCAyMHB4O1xuXHRmb250LXdlaWdodDogYm9sZGVyO1xuXHRsZXR0ZXItc3BhY2luZzogMXB4O1xuXHR0ZXh0LXRyYW5zZm9ybTogdXBwZXJjYXNlO1xuXHRmb250LXNpemU6IDE2cHg7XG5cdHRleHQtc2hhZG93OiBibGFjayAwLjFlbSAwLjFlbSAwLjJlbTtcblx0ei1pbmRleDogMjtcblx0cG9zaXRpb246IHJlbGF0aXZlO1xufVxuLm5hdmJhci1uYXYgPiBsaTpob3ZlcjphZnRlcixcbi5uYXZiYXItbmF2ID4gbGkuYWN0aXZlOmFmdGVyIHtcblx0aGVpZ2h0OiAxMDAlO1xufVxuLm5hdmJhci1uYXYgPiBsaTpob3ZlciA+IGEsXG4ubmF2YmFyLW5hdiA+IGxpLmFjdGl2ZSA+IGF7XG5cdGNvbG9yOiAjMDAwO1xuXHR0ZXh0LXNoYWRvdzogbm9uZTtcbn1cbi5uYXZiYXItbmF2ID4gbGk6aG92ZXIgPiBhOmFmdGVyLFxuLm5hdmJhci1uYXYgPiBsaS5hY3RpdmUgPiBhOmFmdGVye1xuXHRiYWNrZ3JvdW5kOiAjMDAwO1xufVxuLm5hdmJhci1uYXYgPiBsaTpob3ZlciA+IGE6YmVmb3JlLFxuLm5hdmJhci1uYXYgPiBsaS5hY3RpdmUgPiBhOmJlZm9yZXtcblx0Ym9yZGVyLXRvcC1jb2xvcjogI2ZmZjtcbn1cbi5uYXZiYXItbmF2ID4gbGk6aG92ZXIgPiB1bCxcbi5uYXZiYXItbmF2ID4gbGk6YWN0aXZlID4gdWwge1xuXHRsZWZ0OiAwO1xuXHR6LWluZGV4OiA5OTk5OTtcbn1cbi5uYXZiYXItbmF2ID4gbGk6aG92ZXIgPiB1bCA+IGxpLFxuLm5hdmJhci1uYXYgPiBsaTphY3RpdmUgPiB1bCA+IGxpIHtcblx0bWF4LWhlaWdodDogNzJweDtcblx0cG9zaXRpb246IHJlbGF0aXZlO1xuXHRiYWNrZ3JvdW5kOiAjNGZjNTVmO1xufVxuLm5hdmJhci1uYXYgPiBsaSA+IGEge1xuXHRkaXNwbGF5OiBibG9jaztcbn1cbi5uYXZiYXItbmF2PiBsaSB7XG5cdHdpZHRoOiBhdXRvO1xufVxuLm5hdmJhci1uYXYgPiBsaSA+IHVsIHtcblx0d2lkdGg6IDE3MHB4O1xuXHRkaXNwbGF5OiBibG9jaztcbn1cbi5uYXZiYXItbmF2ID4gbGkgPiB1bCA+IGxpIHtcblx0d2lkdGg6IDE3MHB4O1xuXHRkaXNwbGF5OiBibG9jaztcbn1cbi5kcm9wZG93bi1pdGVtOmhvdmVyLFxuLmRyb3Bkb3duLWl0ZW06YWN0aXZlIHtcblx0YmFja2dyb3VuZC1jb2xvcjogdHJhbnNwYXJlbnQ7XG59XG4uZHJvcGRvd24tbWVudSB7XG5cdGJvcmRlcjogbm9uZTtcblx0YmFja2dyb3VuZC1jb2xvcjogdHJhbnNwYXJlbnQ7XG5cdHBhZGRpbmc6IDAuMTVyZW0gMDtcblx0bWFyZ2luOiAwO1xufSJdfQ== */</style><style ng-transition="serverApp">footer[_ngcontent-sc2] {
+	background: #48B356;
+}
+.footer-copyright[_ngcontent-sc2] {
+	background: #27974E;
+	padding: 10px 6%;
+}
+.btn-floating[_ngcontent-sc2] {
+	color: black;
+}
+.btn-floating[_ngcontent-sc2]:hover {
+	color: white;
+}
+.fa[_ngcontent-sc2] {
+	font-size: 2em;
+}
+.row[_ngcontent-sc2] {
+	margin: 0;
+}
+#clockdiv[_ngcontent-sc2] {
+	color: #fff;
+	display: inline-block;
+	font-weight: 100;
+	text-align: center;
+	font-size: 30px;
+	width: 100%;
+	margin-bottom: 18px;
+}
+#clockdiv[_ngcontent-sc2]    > div[_ngcontent-sc2] {
+
+	background: rgba(255, 255, 255, 0.26);
+	padding: 12px;
+	display: inline-block;
+}
+#clockdiv[_ngcontent-sc2]   div[_ngcontent-sc2]    > span[_ngcontent-sc2]{
+	padding: 15px;
+	border-radius: 3px;
+	background: #27974E;
+	display: inline-block;
+}
+.smalltext[_ngcontent-sc2]{
+	padding-top: 5px;
+	font-size: 16px;
+}
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvZm9vdGVyL2Zvb3Rlci5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0NBQ0Msb0JBQW9CO0NBQ3BCO0FBQ0Q7Q0FDQyxvQkFBb0I7Q0FDcEIsaUJBQWlCO0NBQ2pCO0FBQ0Q7Q0FDQyxhQUFhO0NBQ2I7QUFDRDtDQUNDLGFBQWE7Q0FDYjtBQUNEO0NBQ0MsZUFBZTtDQUNmO0FBQ0Q7Q0FDQyxVQUFVO0NBQ1Y7QUFDRDtDQUNDLFlBQVk7Q0FDWixzQkFBc0I7Q0FDdEIsaUJBQWlCO0NBQ2pCLG1CQUFtQjtDQUNuQixnQkFBZ0I7Q0FDaEIsWUFBWTtDQUNaLG9CQUFvQjtDQUNwQjtBQUNEO0FBQ0Esd0JBQXdCO0NBQ3ZCLHNDQUFzQztDQUN0QyxjQUFjO0NBQ2Qsc0JBQXNCO0NBQ3RCO0FBQ0Q7Q0FDQyxjQUFjO0NBQ2QsbUJBQW1CO0NBQ25CLG9CQUFvQjtDQUNwQixzQkFBc0I7Q0FDdEI7QUFDRDtDQUNDLGlCQUFpQjtDQUNqQixnQkFBZ0I7Q0FDaEIiLCJmaWxlIjoic3JjL2FwcC9mb290ZXIvZm9vdGVyLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyJmb290ZXIge1xuXHRiYWNrZ3JvdW5kOiAjNDhCMzU2O1xufVxuLmZvb3Rlci1jb3B5cmlnaHQge1xuXHRiYWNrZ3JvdW5kOiAjMjc5NzRFO1xuXHRwYWRkaW5nOiAxMHB4IDYlO1xufVxuLmJ0bi1mbG9hdGluZyB7XG5cdGNvbG9yOiBibGFjaztcbn1cbi5idG4tZmxvYXRpbmc6aG92ZXIge1xuXHRjb2xvcjogd2hpdGU7XG59XG4uZmEge1xuXHRmb250LXNpemU6IDJlbTtcbn1cbi5yb3cge1xuXHRtYXJnaW46IDA7XG59XG4jY2xvY2tkaXYge1xuXHRjb2xvcjogI2ZmZjtcblx0ZGlzcGxheTogaW5saW5lLWJsb2NrO1xuXHRmb250LXdlaWdodDogMTAwO1xuXHR0ZXh0LWFsaWduOiBjZW50ZXI7XG5cdGZvbnQtc2l6ZTogMzBweDtcblx0d2lkdGg6IDEwMCU7XG5cdG1hcmdpbi1ib3R0b206IDE4cHg7XG59XG4jY2xvY2tkaXYgPiBkaXYge1xuLypcdGJvcmRlci1yYWRpdXM6IDNweDsqL1xuXHRiYWNrZ3JvdW5kOiByZ2JhKDI1NSwgMjU1LCAyNTUsIDAuMjYpO1xuXHRwYWRkaW5nOiAxMnB4O1xuXHRkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XG59XG4jY2xvY2tkaXYgZGl2ID4gc3Bhbntcblx0cGFkZGluZzogMTVweDtcblx0Ym9yZGVyLXJhZGl1czogM3B4O1xuXHRiYWNrZ3JvdW5kOiAjMjc5NzRFO1xuXHRkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XG59XG4uc21hbGx0ZXh0e1xuXHRwYWRkaW5nLXRvcDogNXB4O1xuXHRmb250LXNpemU6IDE2cHg7XG59Il19 */</style><style ng-transition="serverApp">.banner[_ngcontent-sc3] {
+	background: rgba(255, 255, 255, 0.75);
+	padding: 1em 2em;
+	z-index: 999;
+	font-size: .75em; 
+}
+.banner[_ngcontent-sc3]   h2[_ngcontent-sc3] {
+	border-bottom: none;
+	margin: 0;
+}
+.sCarousel[_ngcontent-sc3] {
+	width: 100%;
+	height: auto;
+	overflow:hidden;
+}
+.sCarousel[_ngcontent-sc3]   .carousel-inner[_ngcontent-sc3] {
+	height:100%;    
+}
+.carousel-caption[_ngcontent-sc3] {
+	left: 10%;
+	right: 10%;
+	bottom: 32%;
+}
+.header-signup[_ngcontent-sc3], .carousel-title[_ngcontent-sc3] {
+	font-weight: 700;
+	text-shadow: none;
+}
+.carousel-title[_ngcontent-sc3] {
+	font-size: 5vw;
+	color: #fff;
+	text-shadow: black 0.1em 0.1em 0.2em;
+}
+.carousel-title[_ngcontent-sc3]   span[_ngcontent-sc3] {
+	color: #48B356
+}
+.header-signup[_ngcontent-sc3] {
+	display: inline-block;
+	color: #48B356 !important;
+	background: #fff;
+	font-size: 2vw;
+	padding: .25em 2em;
+	text-transform: uppercase;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	box-shadow: black 0.1em 0.1em 0.2em;
+}
+.background[_ngcontent-sc3] {
+	background: #27974E;
+}
+img[_ngcontent-sc3] {
+	width: 100%;
+	margin-right: 0;
+	margin-bottom: 0;
+	-o-object-fit: cover;
+	   object-fit: cover;
+	height: 100%;
+}
+.col-6[_ngcontent-sc3], .col-md-3[_ngcontent-sc3] {
+	padding: 0;
+}
+.row[_ngcontent-sc3] {
+	margin: 0;
+}
+.modal-dialog[_ngcontent-sc3] {
+	max-width: 800px;
+	margin: 30px auto;
+}
+.modal-body[_ngcontent-sc3] {
+	position:relative;
+	padding:0px;
+}
+.close[_ngcontent-sc3] {
+	position:absolute;
+	right:-30px;
+	top:0;
+	z-index:999;
+	font-size:2rem;
+	font-weight: normal;
+	color:#fff;
+	opacity:1;
+}
+.testimonials[_ngcontent-sc3]   h2[_ngcontent-sc3] {
+	color: #000;
+	font-size: 26px;
+	font-weight: 300;
+	text-align: center;
+	text-transform: uppercase;
+	position: relative;
+	margin: 30px 0 70px;
+	border-bottom: none;
+}
+.testimonials[_ngcontent-sc3]   h2[_ngcontent-sc3]::after {
+	content: "";
+	width: 200px;
+	position: absolute;
+	margin: 0 auto;
+	height: 4px;
+	border-radius: 1px;
+	background: #27974E;
+	left: 0;
+	right: 0;
+	bottom: -20px;
+}
+.tCarousel[_ngcontent-sc3] {
+	padding: 0 20px;
+	height: 75%;
+}
+.tCarousel[_ngcontent-sc3]   .item[_ngcontent-sc3] {
+	color: #000;
+	overflow: hidden;
+	min-height: 120px;
+	font-size: 13px;
+}
+.tCarousel[_ngcontent-sc3]   .media[_ngcontent-sc3]   img[_ngcontent-sc3] {
+	display: block;
+	width: 150px;
+	height: 150px;
+	background: #E6E7ED;
+	-moz-border-radius: 50%;
+	-webkit-border-radius: 50%;
+	background-position: 50% 50%;
+	background-repeat: no-repeat;   
+	margin: 0 auto;
+}
+.tCarousel[_ngcontent-sc3]   .testimonial[_ngcontent-sc3] {
+	text-align: center;
+	margin-left: 1vw;
+}
+.tCarousel[_ngcontent-sc3]   .testimonial[_ngcontent-sc3]::before {
+	content: '\93';
+	color: #e2e2e2;
+	font-weight: bold;
+	font-size: 68px;
+	line-height: 54px;
+	position: absolute;
+	left: 15px;
+	top: 0;
+}
+.tCarousel[_ngcontent-sc3]   .overview[_ngcontent-sc3]   b[_ngcontent-sc3] {
+	text-transform: uppercase;
+	color: #27974E;
+}
+.tCarousel[_ngcontent-sc3]   .carousel-indicators[_ngcontent-sc3] {
+	bottom: 0;
+}
+.carousel-indicators[_ngcontent-sc3]   li[_ngcontent-sc3], .carousel-indicators[_ngcontent-sc3]   li.active[_ngcontent-sc3] {
+	width: 18px;
+	height: 18px;
+	border-radius: 50%;
+	margin: 1px 3px;
+}
+.carousel-indicators[_ngcontent-sc3]   li[_ngcontent-sc3] {	
+	background: #e2e2e2;
+	border: 4px solid #fff;
+}
+.carousel-indicators[_ngcontent-sc3]   li.active[_ngcontent-sc3] {
+	color: #fff;
+	background: #27974E;    
+	border: 5px double;    
+}
+.sCarousel[_ngcontent-sc3]   .carousel-item[_ngcontent-sc3] {
+	height: calc(100vh - 150px);
+}
+a[_ngcontent-sc3] {
+	cursor: pointer;
+}
+
+#background-img[_ngcontent-sc3] {
+	position: absolute;
+
+}
+@media only screen and (max-width: 768px) {
+	
+	.carousel-indicators[_ngcontent-sc3] {
+		right: 35%;
+		margin-left: 0;
+	}
+	.sCarousel[_ngcontent-sc3]   .carousel-item[_ngcontent-sc3] {
+		height: 100%;
+	}
+}
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvZGFzaGJvYXJkL2Rhc2hib2FyZC5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0NBQ0Msc0NBQXNDO0NBQ3RDLGlCQUFpQjtDQUNqQixhQUFhO0NBQ2IsaUJBQWlCO0NBQ2pCO0FBQ0Q7Q0FDQyxvQkFBb0I7Q0FDcEIsVUFBVTtDQUNWO0FBQ0Q7Q0FDQyxZQUFZO0NBQ1osYUFBYTtDQUNiLGdCQUFnQjtDQUNoQjtBQUNEO0NBQ0MsWUFBWTtDQUNaO0FBQ0Q7Q0FDQyxVQUFVO0NBQ1YsV0FBVztDQUNYLFlBQVk7Q0FDWjtBQUNEOztDQUVDLGlCQUFpQjtDQUNqQixrQkFBa0I7Q0FDbEI7QUFDRDtDQUNDLGVBQWU7Q0FDZixZQUFZO0NBQ1oscUNBQXFDO0NBQ3JDO0FBQ0Q7Q0FDQyxjQUFjO0NBQ2Q7QUFDRDtDQUNDLHNCQUFzQjtDQUN0QiwwQkFBMEI7Q0FDMUIsaUJBQWlCO0NBQ2pCLGVBQWU7Q0FDZixtQkFBbUI7Q0FDbkIsMEJBQTBCO0NBQzFCLG1CQUFtQjtDQUNuQiwyQkFBMkI7Q0FDM0Isd0JBQXdCO0NBQ3hCLG9DQUFvQztDQUNwQztBQUNEO0NBQ0Msb0JBQW9CO0NBQ3BCO0FBQ0Q7Q0FDQyxZQUFZO0NBQ1osZ0JBQWdCO0NBQ2hCLGlCQUFpQjtDQUNqQixxQkFBa0I7SUFBbEIsa0JBQWtCO0NBQ2xCLGFBQWE7Q0FDYjtBQUNEO0NBQ0MsV0FBVztDQUNYO0FBQ0Q7Q0FDQyxVQUFVO0NBQ1Y7QUFDRDtDQUNDLGlCQUFpQjtDQUNqQixrQkFBa0I7Q0FDbEI7QUFDRDtDQUNDLGtCQUFrQjtDQUNsQixZQUFZO0NBQ1o7QUFDRDtDQUNDLGtCQUFrQjtDQUNsQixZQUFZO0NBQ1osTUFBTTtDQUNOLFlBQVk7Q0FDWixlQUFlO0NBQ2Ysb0JBQW9CO0NBQ3BCLFdBQVc7Q0FDWCxVQUFVO0NBQ1Y7QUFFRDtDQUNDLFlBQVk7Q0FDWixnQkFBZ0I7Q0FDaEIsaUJBQWlCO0NBQ2pCLG1CQUFtQjtDQUNuQiwwQkFBMEI7Q0FDMUIsbUJBQW1CO0NBQ25CLG9CQUFvQjtDQUNwQixvQkFBb0I7Q0FDcEI7QUFDRDtDQUNDLFlBQVk7Q0FDWixhQUFhO0NBQ2IsbUJBQW1CO0NBQ25CLGVBQWU7Q0FDZixZQUFZO0NBQ1osbUJBQW1CO0NBQ25CLG9CQUFvQjtDQUNwQixRQUFRO0NBQ1IsU0FBUztDQUNULGNBQWM7Q0FDZDtBQUNEO0NBQ0MsZ0JBQWdCO0NBQ2hCLFlBQVk7Q0FDWjtBQUNEO0NBQ0MsWUFBWTtDQUNaLGlCQUFpQjtDQUNqQixrQkFBa0I7Q0FDbEIsZ0JBQWdCO0NBQ2hCO0FBQ0Q7Q0FDQyxlQUFlO0NBQ2YsYUFBYTtDQUNiLGNBQWM7Q0FDZCxvQkFBb0I7Q0FDcEIsd0JBQXdCO0NBQ3hCLDJCQUEyQjtDQUMzQiw2QkFBNkI7Q0FDN0IsNkJBQTZCO0NBQzdCLGVBQWU7Q0FDZjtBQUNEO0NBQ0MsbUJBQW1CO0NBQ25CLGlCQUFpQjtDQUNqQjtBQUNEO0NBQ0MsZUFBZTtDQUNmLGVBQWU7Q0FDZixrQkFBa0I7Q0FDbEIsZ0JBQWdCO0NBQ2hCLGtCQUFrQjtDQUNsQixtQkFBbUI7Q0FDbkIsV0FBVztDQUNYLE9BQU87Q0FDUDtBQUNEO0NBQ0MsMEJBQTBCO0NBQzFCLGVBQWU7Q0FDZjtBQUNEO0NBQ0MsVUFBVTtDQUNWO0FBQ0Q7Q0FDQyxZQUFZO0NBQ1osYUFBYTtDQUNiLG1CQUFtQjtDQUNuQixnQkFBZ0I7Q0FDaEI7QUFDRDtDQUNDLG9CQUFvQjtDQUNwQix1QkFBdUI7Q0FDdkI7QUFDRDtDQUNDLFlBQVk7Q0FDWixvQkFBb0I7Q0FDcEIsbUJBQW1CO0NBQ25CO0FBQ0Q7Q0FDQyw0QkFBNEI7Q0FDNUI7QUFDRDtDQUNDLGdCQUFnQjtDQUNoQjtBQUNEOzs7O0VBSUU7QUFDRjtDQUNDLG1CQUFtQjtBQUNwQixnQkFBZ0I7Q0FDZjtBQUNEO0NBQ0Msd0JBQXdCO0NBQ3hCO0VBQ0MsV0FBVztFQUNYLGVBQWU7RUFDZjtDQUNEO0VBQ0MsYUFBYTtFQUNiO0NBQ0QiLCJmaWxlIjoic3JjL2FwcC9kYXNoYm9hcmQvZGFzaGJvYXJkLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuYmFubmVyIHtcblx0YmFja2dyb3VuZDogcmdiYSgyNTUsIDI1NSwgMjU1LCAwLjc1KTtcblx0cGFkZGluZzogMWVtIDJlbTtcblx0ei1pbmRleDogOTk5O1xuXHRmb250LXNpemU6IC43NWVtOyBcbn1cbi5iYW5uZXIgaDIge1xuXHRib3JkZXItYm90dG9tOiBub25lO1xuXHRtYXJnaW46IDA7XG59XG4uc0Nhcm91c2VsIHtcblx0d2lkdGg6IDEwMCU7XG5cdGhlaWdodDogYXV0bztcblx0b3ZlcmZsb3c6aGlkZGVuO1xufVxuLnNDYXJvdXNlbCAuY2Fyb3VzZWwtaW5uZXIge1xuXHRoZWlnaHQ6MTAwJTsgICAgXG59XG4uY2Fyb3VzZWwtY2FwdGlvbiB7XG5cdGxlZnQ6IDEwJTtcblx0cmlnaHQ6IDEwJTtcblx0Ym90dG9tOiAzMiU7XG59XG4uaGVhZGVyLXNpZ251cCxcbi5jYXJvdXNlbC10aXRsZSB7XG5cdGZvbnQtd2VpZ2h0OiA3MDA7XG5cdHRleHQtc2hhZG93OiBub25lO1xufVxuLmNhcm91c2VsLXRpdGxlIHtcblx0Zm9udC1zaXplOiA1dnc7XG5cdGNvbG9yOiAjZmZmO1xuXHR0ZXh0LXNoYWRvdzogYmxhY2sgMC4xZW0gMC4xZW0gMC4yZW07XG59XG4uY2Fyb3VzZWwtdGl0bGUgc3BhbiB7XG5cdGNvbG9yOiAjNDhCMzU2XG59XG4uaGVhZGVyLXNpZ251cCB7XG5cdGRpc3BsYXk6IGlubGluZS1ibG9jaztcblx0Y29sb3I6ICM0OEIzNTYgIWltcG9ydGFudDtcblx0YmFja2dyb3VuZDogI2ZmZjtcblx0Zm9udC1zaXplOiAydnc7XG5cdHBhZGRpbmc6IC4yNWVtIDJlbTtcblx0dGV4dC10cmFuc2Zvcm06IHVwcGVyY2FzZTtcblx0Ym9yZGVyLXJhZGl1czogNXB4O1xuXHQtd2Via2l0LWJvcmRlci1yYWRpdXM6IDVweDtcblx0LW1vei1ib3JkZXItcmFkaXVzOiA1cHg7XG5cdGJveC1zaGFkb3c6IGJsYWNrIDAuMWVtIDAuMWVtIDAuMmVtO1xufVxuLmJhY2tncm91bmQge1xuXHRiYWNrZ3JvdW5kOiAjMjc5NzRFO1xufVxuaW1nIHtcblx0d2lkdGg6IDEwMCU7XG5cdG1hcmdpbi1yaWdodDogMDtcblx0bWFyZ2luLWJvdHRvbTogMDtcblx0b2JqZWN0LWZpdDogY292ZXI7XG5cdGhlaWdodDogMTAwJTtcbn1cbi5jb2wtNiwgLmNvbC1tZC0zIHtcblx0cGFkZGluZzogMDtcbn1cbi5yb3cge1xuXHRtYXJnaW46IDA7XG59XG4ubW9kYWwtZGlhbG9nIHtcblx0bWF4LXdpZHRoOiA4MDBweDtcblx0bWFyZ2luOiAzMHB4IGF1dG87XG59XG4ubW9kYWwtYm9keSB7XG5cdHBvc2l0aW9uOnJlbGF0aXZlO1xuXHRwYWRkaW5nOjBweDtcbn1cbi5jbG9zZSB7XG5cdHBvc2l0aW9uOmFic29sdXRlO1xuXHRyaWdodDotMzBweDtcblx0dG9wOjA7XG5cdHotaW5kZXg6OTk5O1xuXHRmb250LXNpemU6MnJlbTtcblx0Zm9udC13ZWlnaHQ6IG5vcm1hbDtcblx0Y29sb3I6I2ZmZjtcblx0b3BhY2l0eToxO1xufVxuXG4udGVzdGltb25pYWxzIGgyIHtcblx0Y29sb3I6ICMwMDA7XG5cdGZvbnQtc2l6ZTogMjZweDtcblx0Zm9udC13ZWlnaHQ6IDMwMDtcblx0dGV4dC1hbGlnbjogY2VudGVyO1xuXHR0ZXh0LXRyYW5zZm9ybTogdXBwZXJjYXNlO1xuXHRwb3NpdGlvbjogcmVsYXRpdmU7XG5cdG1hcmdpbjogMzBweCAwIDcwcHg7XG5cdGJvcmRlci1ib3R0b206IG5vbmU7XG59XG4udGVzdGltb25pYWxzIGgyOjphZnRlciB7XG5cdGNvbnRlbnQ6IFwiXCI7XG5cdHdpZHRoOiAyMDBweDtcblx0cG9zaXRpb246IGFic29sdXRlO1xuXHRtYXJnaW46IDAgYXV0bztcblx0aGVpZ2h0OiA0cHg7XG5cdGJvcmRlci1yYWRpdXM6IDFweDtcblx0YmFja2dyb3VuZDogIzI3OTc0RTtcblx0bGVmdDogMDtcblx0cmlnaHQ6IDA7XG5cdGJvdHRvbTogLTIwcHg7XG59XG4udENhcm91c2VsIHtcblx0cGFkZGluZzogMCAyMHB4O1xuXHRoZWlnaHQ6IDc1JTtcbn1cbi50Q2Fyb3VzZWwgLml0ZW0ge1xuXHRjb2xvcjogIzAwMDtcblx0b3ZlcmZsb3c6IGhpZGRlbjtcblx0bWluLWhlaWdodDogMTIwcHg7XG5cdGZvbnQtc2l6ZTogMTNweDtcbn1cbi50Q2Fyb3VzZWwgLm1lZGlhIGltZyB7XG5cdGRpc3BsYXk6IGJsb2NrO1xuXHR3aWR0aDogMTUwcHg7XG5cdGhlaWdodDogMTUwcHg7XG5cdGJhY2tncm91bmQ6ICNFNkU3RUQ7XG5cdC1tb3otYm9yZGVyLXJhZGl1czogNTAlO1xuXHQtd2Via2l0LWJvcmRlci1yYWRpdXM6IDUwJTtcblx0YmFja2dyb3VuZC1wb3NpdGlvbjogNTAlIDUwJTtcblx0YmFja2dyb3VuZC1yZXBlYXQ6IG5vLXJlcGVhdDsgICBcblx0bWFyZ2luOiAwIGF1dG87XG59XG4udENhcm91c2VsIC50ZXN0aW1vbmlhbCB7XG5cdHRleHQtYWxpZ246IGNlbnRlcjtcblx0bWFyZ2luLWxlZnQ6IDF2dztcbn1cbi50Q2Fyb3VzZWwgLnRlc3RpbW9uaWFsOjpiZWZvcmUge1xuXHRjb250ZW50OiAnXFw5Myc7XG5cdGNvbG9yOiAjZTJlMmUyO1xuXHRmb250LXdlaWdodDogYm9sZDtcblx0Zm9udC1zaXplOiA2OHB4O1xuXHRsaW5lLWhlaWdodDogNTRweDtcblx0cG9zaXRpb246IGFic29sdXRlO1xuXHRsZWZ0OiAxNXB4O1xuXHR0b3A6IDA7XG59XG4udENhcm91c2VsIC5vdmVydmlldyBiIHtcblx0dGV4dC10cmFuc2Zvcm06IHVwcGVyY2FzZTtcblx0Y29sb3I6ICMyNzk3NEU7XG59XG4udENhcm91c2VsIC5jYXJvdXNlbC1pbmRpY2F0b3JzIHtcblx0Ym90dG9tOiAwO1xufVxuLmNhcm91c2VsLWluZGljYXRvcnMgbGksIC5jYXJvdXNlbC1pbmRpY2F0b3JzIGxpLmFjdGl2ZSB7XG5cdHdpZHRoOiAxOHB4O1xuXHRoZWlnaHQ6IDE4cHg7XG5cdGJvcmRlci1yYWRpdXM6IDUwJTtcblx0bWFyZ2luOiAxcHggM3B4O1xufVxuLmNhcm91c2VsLWluZGljYXRvcnMgbGkge1x0XG5cdGJhY2tncm91bmQ6ICNlMmUyZTI7XG5cdGJvcmRlcjogNHB4IHNvbGlkICNmZmY7XG59XG4uY2Fyb3VzZWwtaW5kaWNhdG9ycyBsaS5hY3RpdmUge1xuXHRjb2xvcjogI2ZmZjtcblx0YmFja2dyb3VuZDogIzI3OTc0RTsgICAgXG5cdGJvcmRlcjogNXB4IGRvdWJsZTsgICAgXG59XG4uc0Nhcm91c2VsIC5jYXJvdXNlbC1pdGVtIHtcblx0aGVpZ2h0OiBjYWxjKDEwMHZoIC0gMTUwcHgpO1xufVxuYSB7XG5cdGN1cnNvcjogcG9pbnRlcjtcbn1cbi8qXG4udGVzdGltb25pYWwge1xucGFkZGluZy10b3A6IDMlICFpbXBvcnRhbnQ7XG59XG4qL1xuI2JhY2tncm91bmQtaW1nIHtcblx0cG9zaXRpb246IGFic29sdXRlO1xuLypcdHRvcDogMTAwcHg7Ki9cbn1cbkBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG1heC13aWR0aDogNzY4cHgpIHtcblx0LyogRm9yIG1vYmlsZSBwaG9uZXM6ICovXG5cdC5jYXJvdXNlbC1pbmRpY2F0b3JzIHtcblx0XHRyaWdodDogMzUlO1xuXHRcdG1hcmdpbi1sZWZ0OiAwO1xuXHR9XG5cdC5zQ2Fyb3VzZWwgLmNhcm91c2VsLWl0ZW0ge1xuXHRcdGhlaWdodDogMTAwJTtcblx0fVxufVxuIl19 */</style></head><body><app-root _nghost-sc0="" ng-version="7.0.0"><div _ngcontent-sc0="" class="content"><navbar _ngcontent-sc0="" _nghost-sc1=""><nav _ngcontent-sc1="" class="navbar navbar-expand-xl navbar-light bg-light"><a _ngcontent-sc1="" class="navbar-brand" routerlink="/" ng-reflect-router-link="/" href="#/"><img _ngcontent-sc1="" alt="" height="30" src="../../assets/camp_logo.png"></a><button _ngcontent-sc1="" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-target="#navbarNavDropdown" data-toggle="collapse" type="button"><span _ngcontent-sc1="" class="navbar-toggler-icon"></span></button><div _ngcontent-sc1="" class="collapse navbar-collapse" id="navbarNavDropdown"><ul _ngcontent-sc1="" class="navbar-nav ml-auto"><li _ngcontent-sc1="" class="nav-item dropdown " classname="nav-item dropdown "><a _ngcontent-sc1="" aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle" data-toggle="dropdown" id="aboutDropdownMenuLink"> About </a><ul _ngcontent-sc1="" aria-labelledby="aboutDropdownMenuLink" class="dropdown-menu dropdown-menu-right"><li _ngcontent-sc1=""><a _ngcontent-sc1="" class="dropdown-item" routerlink="/overview" ng-reflect-router-link="/overview" href="#/overview"> Overview </a></li><li _ngcontent-sc1=""><a _ngcontent-sc1="" class="dropdown-item" routerlink="/mission" ng-reflect-router-link="/mission" href="#/mission"> Mission/History </a></li><li _ngcontent-sc1=""><a _ngcontent-sc1="" class="dropdown-item" routerlink="/board" ng-reflect-router-link="/board" href="#/board"> Board of Directors </a></li><li _ngcontent-sc1=""><a _ngcontent-sc1="" class="dropdown-item" routerlink="/staff" ng-reflect-router-link="/staff" href="#/staff"> Staff </a></li><li _ngcontent-sc1=""><a _ngcontent-sc1="" class="dropdown-item" routerlink="/lodging" ng-reflect-router-link="/lodging" href="#/lodging"> Lodging </a></li><li _ngcontent-sc1=""><a _ngcontent-sc1="" class="dropdown-item" routerlink="/dining" ng-reflect-router-link="/dining" href="#/dining"> Dining </a></li><li _ngcontent-sc1=""><a _ngcontent-sc1="" class="dropdown-item" routerlink="/medical" ng-reflect-router-link="/medical" href="#/medical"> Medical </a></li></ul></li><li _ngcontent-sc1="" class="nav-item dropdown " classname="nav-item dropdown "><a _ngcontent-sc1="" aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle" data-toggle="dropdown" id="programsDropdownMenuLink"> Programs </a><ul _ngcontent-sc1="" aria-labelledby="programsDropdownMenuLink" class="dropdown-menu dropdown-menu-right"><li _ngcontent-sc1=""><a _ngcontent-sc1="" class="dropdown-item" routerlink="/summer-programs" ng-reflect-router-link="/summer-programs" href="#/summer-programs"> Summer Camp </a></li><li _ngcontent-sc1=""><a _ngcontent-sc1="" class="dropdown-item" routerlink="/winter-programs" ng-reflect-router-link="/winter-programs" href="#/winter-programs"> Winter Camp </a></li></ul></li><li _ngcontent-sc1="" class="nav-item dropdown " classname="nav-item dropdown "><a _ngcontent-sc1="" aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle" data-toggle="dropdown" id="registrationDropdownMenuLink"> Registration </a><ul _ngcontent-sc1="" aria-labelledby="registrationDropdownMenuLink" class="dropdown-menu dropdown-menu-right"><li _ngcontent-sc1=""><a _ngcontent-sc1="" class="dropdown-item" href="https://www.ultracamp.com/info/upcomingsessions.aspx?idCamp=786&amp;campCode=mwf" target="_blank"> Summer Camp 2019 Registration Coming Soon! </a></li><li _ngcontent-sc1="" class="dropdown-item has-sub"><a _ngcontent-sc1="" aria-haspopup="true"> Dates and Fees </a><ul _ngcontent-sc1=""><li _ngcontent-sc1=""><a _ngcontent-sc1="" routerlink="/summer-fees" ng-reflect-router-link="/summer-fees" href="#/summer-fees"> Summer Camp </a></li><li _ngcontent-sc1=""><a _ngcontent-sc1="" routerlink="/winter-fees" ng-reflect-router-link="/winter-fees" href="#/winter-fees"> Winter Camp </a></li></ul></li><li _ngcontent-sc1="" class="dropdown-item"><a _ngcontent-sc1="" routerlink="/forms" ng-reflect-router-link="/forms" href="#/forms"> Forms </a></li></ul></li><li _ngcontent-sc1="" class="nav-item dropdown " classname="nav-item dropdown "><a _ngcontent-sc1="" aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle" data-toggle="dropdown" id="donateDropdownMenuLink"> Donate </a><ul _ngcontent-sc1="" aria-labelledby="donateDropdownMenuLink" class="dropdown-menu dropdown-menu-right"><li _ngcontent-sc1=""><a _ngcontent-sc1="" class="dropdown-item" href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=WUCZ7ZZ5SE27N" target="_blank"> Donate Online Now </a></li><li _ngcontent-sc1=""><a _ngcontent-sc1="" class="dropdown-item" routerlink="/pledge-form" target="_blank" ng-reflect-target="_blank" ng-reflect-router-link="/pledge-form" href="#/pledge-form"> Download and Print Mail-In Donation </a></li><li _ngcontent-sc1=""><a _ngcontent-sc1="" class="dropdown-item" routerlink="/campaign" ng-reflect-router-link="/campaign" href="#/campaign"> Join the CAMPaign </a></li><li _ngcontent-sc1=""><a _ngcontent-sc1="" class="dropdown-item" routerlink="/non-profit" ng-reflect-router-link="/non-profit" href="#/non-profit"> Non-Profit Status </a></li></ul></li><li _ngcontent-sc1="" class="nav-item dropdown " classname="nav-item dropdown "><a _ngcontent-sc1="" aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle" data-toggle="dropdown" id="readyDropdownMenuLink"> Getting Ready </a><ul _ngcontent-sc1="" aria-labelledby="readyDropdownMenuLink" class="dropdown-menu dropdown-menu-right"><li _ngcontent-sc1=""><a _ngcontent-sc1="" class="dropdown-item" routerlink="/directions" ng-reflect-router-link="/directions" href="#/directions"> Directions </a></li><li _ngcontent-sc1=""><a _ngcontent-sc1="" class="dropdown-item" routerlink="/weather" ng-reflect-router-link="/weather" href="#/weather"> Weather </a></li><li _ngcontent-sc1=""><a _ngcontent-sc1="" class="dropdown-item" routerlink="/what-to-bring" ng-reflect-router-link="/what-to-bring" href="#/what-to-bring"> What To Bring </a></li></ul></li><li _ngcontent-sc1="" class="nav-item " classname="nav-item "><a _ngcontent-sc1="" class="nav-link" routerlink="/news" ng-reflect-router-link="/news" href="#/news"><span _ngcontent-sc1=""> Camp News </span></a></li><li _ngcontent-sc1="" class="nav-item " classname="nav-item "><a _ngcontent-sc1="" class="nav-link" routerlink="/contact" ng-reflect-router-link="/contact" href="#/contact"><span _ngcontent-sc1=""> Contact Us </span></a></li></ul></div></nav></navbar><router-outlet _ngcontent-sc0=""></router-outlet><app-dashboard _nghost-sc3=""><div _ngcontent-sc3="" class="background"><div _ngcontent-sc3="" class="carousel slide lazy carousel-fade sCarousel" data-ride="carousel" id="carouselControls"><div _ngcontent-sc3="" class="carousel-inner" role="listbox"><!--bindings={
+  "ng-reflect-ng-for-of": "./../assets/front-image-2.jpg,"
+}--><div _ngcontent-sc3="" class="carousel-item active"><img _ngcontent-sc3="" alt="Loading image..." class="d-block w-100" src="./../assets/front-image-2.jpg"><div _ngcontent-sc3="" class="container"><div _ngcontent-sc3="" class="carousel-caption"><h1 _ngcontent-sc3="" class="carousel-title type"><span _ngcontent-sc3="">Camp It Up!</span></h1><a _ngcontent-sc3="" class="header-signup video-btn" data-src="https://www.youtube.com/embed/-j9aAV16cFU" data-target="#myModal" data-toggle="modal"> Watch Video </a></div></div></div><div _ngcontent-sc3="" class="carousel-item"><img _ngcontent-sc3="" alt="Loading image..." class="d-block w-100" src="./../assets/front-image-1.jpg"><div _ngcontent-sc3="" class="container"><div _ngcontent-sc3="" class="carousel-caption"><h1 _ngcontent-sc3="" class="carousel-title type"><span _ngcontent-sc3="">Camp It Up!</span></h1><a _ngcontent-sc3="" class="header-signup video-btn" data-src="https://www.youtube.com/embed/-j9aAV16cFU" data-target="#myModal" data-toggle="modal"> Watch Video </a></div></div></div><div _ngcontent-sc3="" class="carousel-item"><img _ngcontent-sc3="" alt="Loading image..." class="d-block w-100" src="./../assets/front-image-3.jpg"><div _ngcontent-sc3="" class="container"><div _ngcontent-sc3="" class="carousel-caption"><h1 _ngcontent-sc3="" class="carousel-title type"><span _ngcontent-sc3="">Camp It Up!</span></h1><a _ngcontent-sc3="" class="header-signup video-btn" data-src="https://www.youtube.com/embed/-j9aAV16cFU" data-target="#myModal" data-toggle="modal"> Watch Video </a></div></div></div><div _ngcontent-sc3="" class="carousel-item"><img _ngcontent-sc3="" alt="Loading image..." class="d-block w-100" src="./../assets/front-image-4.jpg"><div _ngcontent-sc3="" class="container"><div _ngcontent-sc3="" class="carousel-caption"><h1 _ngcontent-sc3="" class="carousel-title type"><span _ngcontent-sc3="">Camp It Up!</span></h1><a _ngcontent-sc3="" class="header-signup video-btn" data-src="https://www.youtube.com/embed/-j9aAV16cFU" data-target="#myModal" data-toggle="modal"> Watch Video </a></div></div></div></div><a _ngcontent-sc3="" class="carousel-control-prev" data-slide="prev" href="#carouselControls" role="button"><span _ngcontent-sc3="" aria-hidden="true" class="carousel-control-prev-icon"></span><span _ngcontent-sc3="" class="sr-only">Previous</span></a><a _ngcontent-sc3="" class="carousel-control-next" data-slide="next" href="#carouselControls" role="button"><span _ngcontent-sc3="" aria-hidden="true" class="carousel-control-next-icon"></span><span _ngcontent-sc3="" class="sr-only">Next</span></a></div><div _ngcontent-sc3="" class="row"><!--bindings={
+  "ng-reflect-ng-for-of": "../../assets/gallery-1.jpg,../"
+}--><div _ngcontent-sc3="" class="col-6 col-md-3"><img _ngcontent-sc3="" src="../../assets/gallery-1.jpg"></div><div _ngcontent-sc3="" class="col-6 col-md-3"><img _ngcontent-sc3="" src="../../assets/gallery-2.jpg"></div><div _ngcontent-sc3="" class="col-6 col-md-3"><img _ngcontent-sc3="" src="../../assets/gallery-3.jpg"></div><div _ngcontent-sc3="" class="col-6 col-md-3"><img _ngcontent-sc3="" src="../../assets/gallery-4.jpg"></div><div _ngcontent-sc3="" class="col-6 col-md-3"><img _ngcontent-sc3="" src="../../assets/gallery-5.jpg"></div><div _ngcontent-sc3="" class="col-6 col-md-3"><img _ngcontent-sc3="" src="../../assets/gallery-6.jpg"></div><div _ngcontent-sc3="" class="col-6 col-md-3"><img _ngcontent-sc3="" src="../../assets/gallery-7.jpg"></div><div _ngcontent-sc3="" class="col-6 col-md-3"><img _ngcontent-sc3="" src="../../assets/gallery-8.jpg"></div></div></div><div _ngcontent-sc3="" class="row" style="margin-bottom: 60px;"><div _ngcontent-sc3="" class="col-sm-12 testimonials"><h2 _ngcontent-sc3="">What <b _ngcontent-sc3="">our campers</b> are saying</h2><div _ngcontent-sc3="" class="carousel slide tCarousel" data-ride="carousel" id="testimonialCarousel"><div _ngcontent-sc3="" class="carousel-inner"><div _ngcontent-sc3="" class="item carousel-item active"><div _ngcontent-sc3="" class="row"><div _ngcontent-sc3="" class="col-sm-4"><div _ngcontent-sc3="" class="media row"><div _ngcontent-sc3="" class="col-12 col-lg-6"><img _ngcontent-sc3="" alt="" src="../../assets/kalea.jpg"></div><div _ngcontent-sc3="" class="col-12 col-lg-6 media-body"><div _ngcontent-sc3="" class="testimonial"><p _ngcontent-sc3="">"I like dressing up at camp."</p><p _ngcontent-sc3="" class="overview"><b _ngcontent-sc3="">Kalea</b>, Age 4</p></div></div></div></div><div _ngcontent-sc3="" class="col-sm-8"><div _ngcontent-sc3="" class="media row"><div _ngcontent-sc3="" class="col-12 col-lg-3"><img _ngcontent-sc3="" alt="" src="../../assets/andrea.png"></div><div _ngcontent-sc3="" class="col-12 col-lg-9 media-body"><div _ngcontent-sc3="" class="testimonial"><p _ngcontent-sc3="">"Camp It Up has been a welcoming community of support for me for most of my adult life. Of course it is fun to hang out in beautiful nature and enjoy group activities, but the foundation of camp is the safe space that it creates for LGBTQ youth and adults. As a former counselor and program director, I have a ton of beautiful memories of people coming to camp and discovering a whole new level of safety and ease."</p><p _ngcontent-sc3="" class="overview"><b _ngcontent-sc3=""> Andrea Prichett</b>, Former Staff</p></div></div></div></div></div></div><div _ngcontent-sc3="" class="item carousel-item"><div _ngcontent-sc3="" class="row"><div _ngcontent-sc3="" class="col-sm-4"><div _ngcontent-sc3="" class="media row"><div _ngcontent-sc3="" class="col-12 col-lg-6"><img _ngcontent-sc3="" alt="" src="../../assets/cabins.jpg"></div><div _ngcontent-sc3="" class="col-12 col-lg-6 media-body"><div _ngcontent-sc3="" class="testimonial"><p _ngcontent-sc3="">"I like to play in my tent."</p><p _ngcontent-sc3="" class="overview"><b _ngcontent-sc3="">Eddy</b>, Age 3</p></div></div></div></div><div _ngcontent-sc3="" class="col-sm-8"><div _ngcontent-sc3="" class="media row"><div _ngcontent-sc3="" class="col-12 col-lg-3"><img _ngcontent-sc3="" alt="" src="../../assets/lilah.png"></div><div _ngcontent-sc3="" class="col-12 col-lg-9 media-body"><div _ngcontent-sc3="" class="testimonial"><p _ngcontent-sc3="">"Camp is a magic place with spirit and heart; the best of what an intentional community can be. At Camp everyone is expected to be their highest selves—and it works!"</p><p _ngcontent-sc3="" class="overview"><b _ngcontent-sc3="">Kate Kaufman</b>, Camper Mom</p></div></div></div></div></div></div><div _ngcontent-sc3="" class="item carousel-item"><div _ngcontent-sc3="" class="row"><div _ngcontent-sc3="" class="col-sm-4"><div _ngcontent-sc3="" class="media row"><div _ngcontent-sc3="" class="col-12 col-lg-6"><img _ngcontent-sc3="" alt="" src="../../assets/aviva.jpg"></div><div _ngcontent-sc3="" class="col-12 col-lg-6 media-body"><div _ngcontent-sc3="" class="testimonial"><p _ngcontent-sc3="">"I like being with daddy and poppa at camp."</p><p _ngcontent-sc3="" class="overview"><b _ngcontent-sc3="">Aviva</b>, Age 3</p></div></div></div></div><div _ngcontent-sc3="" class="col-sm-8"><div _ngcontent-sc3="" class="media row"><div _ngcontent-sc3="" class="col-12 col-lg-3"><img _ngcontent-sc3="" alt="" src="../../assets/emma.png"></div><div _ngcontent-sc3="" class="col-12 col-lg-9 media-body"><div _ngcontent-sc3="" class="testimonial"><p _ngcontent-sc3="">"It is amazing to me how one week a year could have had such a significant impact on our family’s life. – and each member of it. Camp It Up is a week of fun, exploration, friends, wonder, music, outdoor activities, and creativity, in the context of LGBTQ positive community spirit. Our kids learned how to be leaders, and both wrote their college essays about Camp It Up!"</p><p _ngcontent-sc3="" class="overview"><b _ngcontent-sc3="">Judy Schwartz</b>, Camper Mom</p></div></div></div></div></div></div><div _ngcontent-sc3="" class="item carousel-item"><div _ngcontent-sc3="" class="row"><div _ngcontent-sc3="" class="col-sm-4"><div _ngcontent-sc3="" class="media row"><div _ngcontent-sc3="" class="col-12 col-lg-6"><img _ngcontent-sc3="" alt="" src="../../assets/games.jpg"></div><div _ngcontent-sc3="" class="col-12 col-lg-6 media-body"><div _ngcontent-sc3="" class="testimonial"><p _ngcontent-sc3="">"I like everything at Camp It Up!"</p><p _ngcontent-sc3="" class="overview"><b _ngcontent-sc3="">Axel</b>, Age 4</p></div></div></div></div><div _ngcontent-sc3="" class="col-sm-8"><div _ngcontent-sc3="" class="media row"><div _ngcontent-sc3="" class="col-12 col-lg-3"><img _ngcontent-sc3="" alt="" src="../../assets/kids.jpg"></div><div _ngcontent-sc3="" class="col-12 col-lg-9 media-body"><div _ngcontent-sc3="" class="testimonial"><p _ngcontent-sc3="">"Camp it Up! spells S-U-M-M-E-R for our family. Fun, playful, connective, and most important, community! Our three year-old daughter informed us at the end of last summer, “I want to be a counselor one day!” What more could we ask for?"</p><p _ngcontent-sc3="" class="overview"><b _ngcontent-sc3="">Daniel Barash</b>, Camper Dad</p></div></div></div></div></div></div><div _ngcontent-sc3="" class="item carousel-item"><div _ngcontent-sc3="" class="row"><div _ngcontent-sc3="" class="col-sm-4"><div _ngcontent-sc3="" class="media row"><div _ngcontent-sc3="" class="col-12 col-lg-6"><img _ngcontent-sc3="" alt="" src="../../assets/quidditch.jpg"></div><div _ngcontent-sc3="" class="col-12 col-lg-6 media-body"><div _ngcontent-sc3="" class="testimonial"><p _ngcontent-sc3="">"I like seeing all my friends playing Quidditch, Capture the flag and Kick Ball."</p><p _ngcontent-sc3="" class="overview"><b _ngcontent-sc3="">Josh</b>, Age 9</p></div></div></div></div><div _ngcontent-sc3="" class="col-sm-8"><div _ngcontent-sc3="" class="media row"><div _ngcontent-sc3="" class="col-12 col-lg-3"><img _ngcontent-sc3="" alt="" src="../../assets/shaynasophie.jpg"></div><div _ngcontent-sc3="" class="col-12 col-lg-9 media-body"><div _ngcontent-sc3="" class="testimonial"><p _ngcontent-sc3="">"I love camp because kids see families like theirs. They also see kids older than themselves, a version of their own future that their parents can’t show them."</p><p _ngcontent-sc3="" class="overview"><b _ngcontent-sc3="">Parent Camper</b></p></div></div></div></div></div></div></div></div></div></div><div _ngcontent-sc3="" aria-hidden="true" class="modal fade" id="myModal" role="dialog" tabindex="-1"><div _ngcontent-sc3="" class="modal-dialog" role="document"><div _ngcontent-sc3="" class="modal-content"><div _ngcontent-sc3="" class="modal-body"><button _ngcontent-sc3="" aria-label="Close" class="close" data-dismiss="modal" type="button"><span _ngcontent-sc3="" aria-hidden="true">×</span></button><div _ngcontent-sc3="" class="embed-responsive embed-responsive-16by9"><iframe _ngcontent-sc3="" allowscriptaccess="always" class="embed-responsive-item" id="video" src="">></iframe></div></div></div></div></div></app-dashboard></div><app-footer _ngcontent-sc0="" _nghost-sc2=""><footer _ngcontent-sc2="" class=""><div _ngcontent-sc2="" class="container-fluid"><div _ngcontent-sc2="" class="row"><div _ngcontent-sc2="" class="col-md-4 mx-auto"><h5 _ngcontent-sc2="" class="font-weight-bold text-uppercase mt-3 mb-4"> Discover Camp It Up! </h5><p _ngcontent-sc2=""> The family camp you've been looking for. For almost 30 years, we’ve been known as a one-of-a-kind LGBTQ+ family vacation spot. We respect and celebrate all unique families and we welcome you to find out more and join us this winter and summer. </p></div><hr _ngcontent-sc2="" class="clearfix w-100 d-md-none"><div _ngcontent-sc2="" class="col-md-2 mx-auto"><h5 _ngcontent-sc2="" class="font-weight-bold text-uppercase mt-3 mb-4"> Contact </h5><ul _ngcontent-sc2="" class="list-unstyled"><li _ngcontent-sc2=""> 510.871.3659 </li><li _ngcontent-sc2=""> (510.UR1.FMLY) </li><li _ngcontent-sc2=""> info@campitup.org </li><li _ngcontent-sc2=""> Tax ID number: 26-2733972 </li></ul></div><hr _ngcontent-sc2="" class="clearfix w-100 d-md-none"><div _ngcontent-sc2="" class="col-md-2 mx-auto"><h5 _ngcontent-sc2="" class="font-weight-bold text-uppercase mt-3 mb-4"> Address </h5><ul _ngcontent-sc2="" class="list-unstyled"><li _ngcontent-sc2=""> 3526 Redding Street </li><li _ngcontent-sc2=""> Oakland, CA </li><li _ngcontent-sc2=""> 94619 </li><li _ngcontent-sc2=""> USA </li></ul></div></div></div><hr _ngcontent-sc2=""><h5 _ngcontent-sc2="" class="font-weight-bold text-uppercase mt-3 mb-4" style="text-align: center"> TIME TILL SUMMER CAMP: </h5><div _ngcontent-sc2="" id="clockdiv"><div _ngcontent-sc2=""><span _ngcontent-sc2="" class="days"></span><div _ngcontent-sc2="" class="smalltext">Days</div></div><div _ngcontent-sc2=""><span _ngcontent-sc2="" class="hours"></span><div _ngcontent-sc2="" class="smalltext">Hours</div></div><div _ngcontent-sc2=""><span _ngcontent-sc2="" class="minutes"></span><div _ngcontent-sc2="" class="smalltext">Minutes</div></div><div _ngcontent-sc2=""><span _ngcontent-sc2="" class="seconds"></span><div _ngcontent-sc2="" class="smalltext">Seconds</div></div></div><div _ngcontent-sc2="" class="row footer-copyright"><div _ngcontent-sc2="" class="col" style="text-align: left"> © 2019 Copyright: Camp It Up! </div><div _ngcontent-sc2="" class="col"><ul _ngcontent-sc2="" class="list-unstyled list-inline text-center"><li _ngcontent-sc2="" class="list-inline-item"><a _ngcontent-sc2="" class="btn-floating btn-fb mx-1" href="https://www.facebook.com/campitup" target="_blank"><i _ngcontent-sc2="" class="fa fa-facebook"></i></a></li><li _ngcontent-sc2="" class="list-inline-item"><a _ngcontent-sc2="" class="btn-floating btn-fb mx-1" href="https://twitter.com/campitupinc" target="_blank"><i _ngcontent-sc2="" class="fa fa-twitter"></i></a></li><li _ngcontent-sc2="" class="list-inline-item"><a _ngcontent-sc2="" class="btn-floating btn-fb mx-1" href="https://www.instagram.com/campitup/" target="_blank"><i _ngcontent-sc2="" class="fa fa-instagram"></i></a></li><li _ngcontent-sc2="" class="list-inline-item"><a _ngcontent-sc2="" class="btn-floating btn-fb mx-1" href="https://www.linkedin.com/company/18426295/" target="_blank"><i _ngcontent-sc2="" class="fa fa-linkedin"></i></a></li><li _ngcontent-sc2="" class="list-inline-item"><a _ngcontent-sc2="" class="btn-floating btn-fb mx-1" href="https://www.youtube.com/channel/UCJ7H6oEwFnGgMupD8m4e3GQ?" target="_blank"><i _ngcontent-sc2="" class="fa fa-youtube"></i></a></li></ul></div><div _ngcontent-sc2="" class="col" style="text-align: right"><a _ngcontent-sc2="" routerlink="/conditions" style="color: black" ng-reflect-router-link="/conditions" href="#/conditions"> Conditions of Use </a></div></div></footer></app-footer></app-root></body></html>

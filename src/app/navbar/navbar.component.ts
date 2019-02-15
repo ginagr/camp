@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
-import * as $ from 'jquery';
+import { Component, OnInit, Inject } from '@angular/core';
 import { Router, NavigationExtras } from '@angular/router';
+import { PLATFORM_ID } from '@angular/core';
+import { isPlatformBrowser, isPlatformServer } from '@angular/common';
 
 @Component({
 	selector: 'navbar',
@@ -9,23 +10,29 @@ import { Router, NavigationExtras } from '@angular/router';
 })
 export class NavbarComponent implements OnInit {
 
-	actives = [ false, false, false, false, false, false, false ];
+	actives = [ false, false, false, false, false, false, false, false ];
 	old = 0;
 
-	constructor(private router: Router) { 
-	}
+	constructor(@Inject(PLATFORM_ID) private platformId: Object, private router: Router) { }
 
 	ngOnInit() {
 	}
 
 	changeActive(active) {
-		var url = this.router.url.split('/')[1];
-		this.actives[this.old] = false;
-		this.actives[active] = true;
-		this.old = active;
+		//		var url = this.router.url.split('/')[1];
+		if (active == -1) {
+			this.actives[this.old] = false;
+			this.old = 0;
+		} else {
+			this.actives[this.old] = false;
+			this.actives[active] = true;
+			this.old = active;
+		}
 	}
 
 	reloadWeather () {
-		setTimeout(function(){window.location.reload(); }, 100);
+		if (isPlatformBrowser(this.platformId)) {
+			setTimeout(function(){window.location.reload(); }, 100);
+		}
 	}
 }

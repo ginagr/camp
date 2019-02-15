@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
+import { PLATFORM_ID } from '@angular/core';
+import { isPlatformBrowser, isPlatformServer } from '@angular/common';
 
 @Component({
 	selector: 'app-weather',
@@ -7,8 +9,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class WeatherComponent implements OnInit {
 
-	constructor() { 
-		this.weather(document,'script','weatherwidget-io-js');
+	constructor(@Inject(PLATFORM_ID) private platformId: Object) { 
+		if (isPlatformBrowser(this.platformId)) {
+			this.weather(document,'script','weatherwidget-io-js');
+		}
 	}
 
 	ngOnInit() {

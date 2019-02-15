@@ -1,3 +1,13 @@
+.banner {
+	background: rgba(255, 255, 255, 0.75);
+	padding: 1em 2em;
+	z-index: 999;
+	font-size: .75em; 
+}
+.banner h2 {
+	border-bottom: none;
+	margin: 0;
+}
 .navbar {
 	padding: 0 1rem;
 }

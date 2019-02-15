@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
+import { PLATFORM_ID } from '@angular/core';
+import { isPlatformBrowser, isPlatformServer } from '@angular/common';
 import $ from 'jquery';
 
 @Component({
@@ -13,7 +15,6 @@ export class DashboardComponent implements OnInit {
 		"  is a LGBTIQA+ family vacation",
 		" is for families like yours",
 		" a place to be yourself",
-		//		" where fun and friendships last forever",
 		" Summer Dates: July 27 - August 4, 2019", 
 	];
 	index = 0;
@@ -36,29 +37,31 @@ export class DashboardComponent implements OnInit {
 		'../../assets/gallery-7.jpg',
 		'../../assets/gallery-8.jpg'
 	]
-	constructor() {   }
+	constructor(@Inject(PLATFORM_ID) private platformId: Object) {   }
 
 	ngOnInit() {
-		var $videoSrc;  
-		$('.video-btn').click(function() {
-			$videoSrc = $(this).data("src");
-			var url = $videoSrc + "?rel=0&amp;showinfo=0&amp;modestbranding=1&amp;autoplay=1";
-			$("#video").attr('src', url); 
-		});
-		$('.close').click(function () {
-			$("#video").attr('src', $videoSrc); 
-		});
-		$(".carousel.lazy").on("slide", function(ev) {
-			console.log('in');
-			var lazy = $(ev.relatedTarget).find("img[data-src]");
-			lazy.attr("src", lazy.data('src'));
-			lazy.removeAttr("data-src");
-		});
-		$('.carousel.lazy').on('slide.bs.carousel', function () {
-			console.log("Slide Event");
-			//console.log('slid event');
-		});
-		setTimeout(this.typeWriter.bind(this), 1000);
+		if (isPlatformBrowser(this.platformId)) {
+			var $videoSrc;  
+			$('.video-btn').click(function() {
+				$videoSrc = $(this).data("src");
+				var url = $videoSrc + "?rel=0&amp;showinfo=0&amp;modestbranding=1&amp;autoplay=1";
+				$("#video").attr('src', url); 
+			});
+			$('.close').click(function () {
+				$("#video").attr('src', $videoSrc); 
+			});
+			$(".carousel.lazy").on("slide", function(ev) {
+				console.log('in');
+				var lazy = $(ev.relatedTarget).find("img[data-src]");
+				lazy.attr("src", lazy.data('src'));
+				lazy.removeAttr("data-src");
+			});
+			$('.carousel.lazy').on('slide.bs.carousel', function () {
+				console.log("Slide Event");
+				//console.log('slid event');
+			});
+			setTimeout(this.typeWriter.bind(this), 1000);
+		}
 	}
 
 	ngOnDestroy() {

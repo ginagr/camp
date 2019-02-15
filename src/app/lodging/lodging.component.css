@@ -1,3 +1,19 @@
 img {
 	margin-right: 1%;
 }
+.btn {
+	color: black;
+	background: #27974E;
+	border: #27974E;
+	padding: 10px;
+	border-radius: 5px;
+	cursor: pointer;
+	width: 100%;
+}
+a {
+	color: black;
+}
+.btn:hover {
+	opacity: 0.8;
+	color: white !important;
+}

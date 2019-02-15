@@ -1,0 +1,29 @@
+label {
+	text-transform: uppercase;
+	font-weight: 500;
+	font-size: 18px;
+}
+.custom-control-label, 
+.col-form-label {
+	font-size: 16px;
+}
+.custom-control {
+	padding-left: 2em;
+	margin: .5em;
+}
+.error {
+	color: red;
+}
+span {
+	font-size: .75em;
+	color: red;
+	margin: 0 .1em 2em;
+	position: relative;
+	bottom: .3em;
+}
+.form-group, .form-row {
+	margin-bottom: .5rem;
+}
+h3 {
+	font-weight: bold;
+}

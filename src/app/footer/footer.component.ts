@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
+import { PLATFORM_ID } from '@angular/core';
+import { isPlatformBrowser, isPlatformServer } from '@angular/common';
 
 @Component({
 	selector: 'app-footer',
@@ -13,13 +15,15 @@ export class FooterComponent implements OnInit {
 	minutesSpan;
 	secondsSpan;
 
-	constructor() { 
+	constructor(@Inject(PLATFORM_ID) private platformId: Object) { 
 
 	}
 
 	ngOnInit() {
-		this.updateClock();
-		this.timeinterval = setInterval(this.updateClock, 1000);
+		if (isPlatformBrowser(this.platformId)) {
+			this.updateClock();
+			this.timeinterval = setInterval(this.updateClock, 1000);
+		}
 	}
 
 	updateClock() {

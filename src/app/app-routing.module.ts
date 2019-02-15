@@ -33,6 +33,8 @@ import { DirectorsReportSixteenComponent }   from './blog/directors-report-sixte
 import { DirectorsReportFifteenComponent }   from './blog/directors-report-fifteen/directors-report-fifteen.component';
 import { TalentShowFourteenComponent }   from './blog/talent-show-fourteen/talent-show-fourteen.component';
 import { SearchTermsComponent }   from './search-terms/search-terms.component';
+import { CareersComponent }   from './careers/careers.component';
+import { ApplicationsComponent }   from './applications/applications.component';
 
 const routes: Routes = [
 	{ path: 'summer-programs', component: SummerProgramsComponent },
@@ -66,6 +68,8 @@ const routes: Routes = [
 	{ path: 'blog/directors-report-fifteen', component: DirectorsReportFifteenComponent },
 	{ path: 'blog/talent-show-fourteen', component: TalentShowFourteenComponent },
 	{ path: 'search-terms', component: SearchTermsComponent },
+	{ path: 'careers', component: CareersComponent },
+	{ path: 'applications', component: ApplicationsComponent },
 	{ path: '', component: DashboardComponent },
 	{ path: '**', redirectTo: '/' }
 ];

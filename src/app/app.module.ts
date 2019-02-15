@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { ReactiveFormsModule } from '@angular/forms';
 import { environment } from './../environments/environment';
 import { FormsModule } from '@angular/forms';
 
@@ -7,7 +8,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import { AngularFireModule } from '@angular/fire';
-import { AngularFireDatabaseModule } from '@angular/fire/database';
+import { AngularFirestoreModule, FirestoreSettingsToken } from '@angular/fire/firestore';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 
 import { PdfViewerModule } from 'ng2-pdf-viewer';
@@ -46,6 +47,8 @@ import { DirectorsReportSixteenComponent } from './blog/directors-report-sixteen
 import { DirectorsReportFifteenComponent } from './blog/directors-report-fifteen/directors-report-fifteen.component';
 import { TalentShowFourteenComponent } from './blog/talent-show-fourteen/talent-show-fourteen.component';
 import { SearchTermsComponent } from './search-terms/search-terms.component';
+import { CareersComponent } from './careers/careers.component';
+import { ApplicationsComponent } from './applications/applications.component';
 
 @NgModule({
 	declarations: [
@@ -83,13 +86,16 @@ import { SearchTermsComponent } from './search-terms/search-terms.component';
 		DirectorsReportSixteenComponent,
 		DirectorsReportFifteenComponent,
 		TalentShowFourteenComponent,
-		SearchTermsComponent
+		SearchTermsComponent,
+		CareersComponent,
+		ApplicationsComponent
 	],
 	imports: [
-		BrowserModule,
+		BrowserModule.withServerTransition({ appId: 'serverApp' }),
+		ReactiveFormsModule,
 		AppRoutingModule,
-		AngularFireModule.initializeApp(environment.firebase),
-		AngularFireDatabaseModule,
+		AngularFireModule.initializeApp(environment.firebaseConfig),
+		AngularFirestoreModule,
 		AngularFireAuthModule,
 		PdfViewerModule,
 		FormsModule

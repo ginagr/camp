@@ -1,0 +1,442 @@
+<div class="container">
+	<h1>Employment Application</h1>
+	<p>All questions marked with a red asterisk (<span>*</span>) are required to submit the application.</p>
+	<p>Questions and concerns can be emailed directly to the Director at <a href="lisazeilermusic@gmail.com">lisazeilermusic@gmail.com</a>.</p>
+	<form [formGroup]="registerForm">
+		<h2>Basic Info</h2>
+		<div class="form-group">
+			<label>
+				Full Name<span>*</span>
+			</label>
+			<input type="text" formControlName="name" class="form-control" required>
+			<div *ngIf="registerForm.controls.name.touched && registerForm.controls.name.errors" class="error">
+				Full Name is required
+			</div>
+		</div>
+		<div class="form-group">
+			<label>
+				Address<span>*</span>
+			</label> 
+			<input type="text" formControlName="address" class="form-control" required>
+			<div *ngIf="registerForm.controls.address.touched && registerForm.controls.address.errors" class="error">
+				Address is required
+			</div>
+		</div>
+		<div class="form-row">
+			<div class="form-group col-md-6">
+				<label>
+					City<span>*</span>
+				</label> 
+				<input type="text" formControlName="city" class="form-control" required>
+				<div *ngIf="registerForm.controls.city.touched && registerForm.controls.city.errors" class="error">
+					City is required
+				</div>
+			</div>
+			<div class="form-group col-md-4">
+				<label>
+					State<span>*</span>
+				</label> 
+				<input type="text" formControlName="state" class="form-control" required>
+				<div *ngIf="registerForm.controls.state.touched && registerForm.controls.state.errors" class="error">
+					State is required
+				</div>
+			</div>
+			<div class="form-group col-md-2">
+				<label>
+					Zip<span>*</span>
+				</label> 
+				<input type="text" formControlName="zip" class="form-control" required>
+				<div *ngIf="registerForm.controls.zip.touched && registerForm.controls.zip.errors" class="error">
+					Zip is required
+				</div>
+			</div>
+		</div>
+		<div class="form-row">
+			<div class="form-group col-md-6">
+				<label>
+					Phone<span>*</span>
+				</label> 
+				<input type="text" formControlName="phone" class="form-control" required>
+				<div *ngIf="registerForm.controls.phone.touched && registerForm.controls.phone.errors" class="error">
+					Phone is required
+				</div>
+			</div>
+			<div class="form-group col-md-6">
+				<label>
+					Alt Phone
+				</label> 
+				<input type="text" formControlName="altPhone" class="form-control">
+			</div>
+		</div>
+		<div class="form-row">
+			<div class="form-group col-md-6">
+				<label>
+					Email<span>*</span>
+				</label>
+				<input type="email" formControlName="email" class="form-control" required>
+				<div *ngIf="registerForm.controls.email.touched && registerForm.controls.email.errors">
+					<div *ngIf="registerForm.controls.email.errors.required" class="error">Email is required</div>
+					<div *ngIf="registerForm.controls.email.errors.email" class="error">Not a valid email address</div>
+				</div>
+			</div>
+			<div class="form-group col-md-6">
+				<label>
+					Best Time to Contact<span>*</span>
+				</label>
+				<select class="form-control" formControlName="contactTime" required>
+					<option disabled selected value> Select... </option>
+					<option value="Morning">
+						Morning
+					</option>
+					<option value="Midday">
+						Midday
+					</option>
+					<option value="Afternoon">
+						Afternoon
+					</option>
+					<option value="Night">
+						Night
+					</option>
+				</select>
+				<div *ngIf="registerForm.controls.contactTime.touched && registerForm.controls.contactTime.errors" class="error">
+					Contact Time is required
+				</div>
+			</div>
+		</div>
+		<h2>Position Desired<span>*</span></h2>
+		<p>Please check all positions that you would like to be considered for.</p>
+		<div class="form-group form-inline">
+			<div class="custom-control custom-checkbox mr-sm-2 ml-sm-2">
+				<input type="checkbox" formControlName="staffDir" class="custom-control-input" id="staffDir">
+				<label class="custom-control-label" for="staffDir">Staff Director</label>
+			</div>
+			<div class="custom-control custom-checkbox mr-sm-2 ml-sm-2">
+				<input type="checkbox" formControlName="assDir" class="custom-control-input" id="assDir">
+				<label class="custom-control-label" for="assDir">Assistant Camp Director</label>
+			</div>
+			<div class="custom-control custom-checkbox mr-sm-2 ml-sm-2">
+				<input type="checkbox" formControlName="citDir" class="custom-control-input" id="citDir">
+				<label class="custom-control-label" for="citDir">CIT Director</label>
+			</div>
+			<div class="custom-control custom-checkbox mr-sm-2 ml-sm-2">
+				<input type="checkbox" formControlName="counselor" class="custom-control-input" id="counselor">
+				<label class="custom-control-label" for="counselor">Counselor</label>
+			</div>
+			<div class="custom-control custom-checkbox mr-sm-2 ml-sm-2">
+				<input type="checkbox" formControlName="jrcounselor" class="custom-control-input" id="jrcounselor">
+				<label class="custom-control-label" for="jrcounselor">Junior Counselor</label>
+			</div>
+			<div class="custom-control custom-checkbox mr-sm-2 ml-sm-2">
+				<input type="checkbox" formControlName="specialist" class="custom-control-input" id="specialist">
+				<label class="custom-control-label" for="specialist">Specialist</label>
+			</div>
+			<div class="custom-control custom-checkbox mr-sm-2 ml-sm-2">
+				<input type="checkbox" formControlName="cit" class="custom-control-input" id="cit">
+				<label class="custom-control-label" for="cit">Counselor in Training (CIT)</label>
+			</div>
+		</div>
+		<div class="form-group row">
+			<label for="other" class="col-2 col-md-1 col-form-label col-form-label-sm" style="text-align: right">Other:</label>
+			<div class="col-10 col-md-6">
+				<input type="text" class="form-control form-control-sm" id="other" formControlName="other">
+			</div>
+		</div>
+		<h2>Camping Experience</h2>
+		<p>Please check all that apply.</p>
+		<div class="form-group">
+			<label style="margin-right: 1em">Did you attend camp as a child?<span>*</span></label>
+			<div class="form-check form-check-inline">
+				<input class="form-check-input" type="radio" formControlName="childAttend" name="childAttend" id="childAttendYes" value="true">
+				<label class="form-check-label" for="childAttendYes">Yes</label>
+			</div>
+			<div class="form-check form-check-inline">
+				<input class="form-check-input" type="radio" formControlName="childAttend" name="childAttend" id="childAttendNo" value="false">
+				<label class="form-check-label" for="childAttendNo">No</label>
+			</div>
+		</div>
+		<div class="form-group form-inline">
+			<label style="margin-right: 1em">If so, what type of camp?</label>
+			<div class="custom-control custom-checkbox mr-sm-2 ml-sm-2">
+				<input type="checkbox" formControlName="campTypeOvernight" class="custom-control-input" id="campTypeOvernight">
+				<label class="custom-control-label" for="campTypeOvernight">Overnight</label>
+			</div>
+			<div class="custom-control custom-checkbox mr-sm-2 ml-sm-2">
+				<input type="checkbox" formControlName="campTypeFamily" class="custom-control-input" id="campTypeFamily">
+				<label class="custom-control-label" for="campTypeFamily">Family</label>
+			</div>
+			<div class="custom-control custom-checkbox mr-sm-2 ml-sm-2">
+				<input type="checkbox" formControlName="campTypeDayCamp" class="custom-control-input" id="campTypeDayCamp">
+				<label class="custom-control-label" for="campTypeDayCamp">Day Camp</label>
+			</div>
+		</div>
+		<div class="form-group row">
+			<label class="col" for="attendCampYears">
+				How many summers did you participate in camp as a child?<span>*</span>
+			</label>
+			<input type="number" formControlName="attendCampYears" class="form-control col" required [value]="0" id="attendCampYears">
+			<div *ngIf="registerForm.controls.attendCampYears.touched && registerForm.controls.attendCampYears.errors" class="error">
+				Years is required (input 0 if none)
+			</div>
+		</div>
+		<div class="form-group">
+			<label style="margin-right: 1em">Have you attended Camp It Up!?<span>*</span></label>
+			<div class="form-check form-check-inline">
+				<input class="form-check-input" type="radio" formControlName="attendCIU" name="attendCIU" id="attendCIUYes" value="true">
+				<label class="form-check-label" for="attendCIUYes">Yes</label>
+			</div>
+			<div class="form-check form-check-inline">
+				<input class="form-check-input" type="radio" formControlName="attendCIU" name="attendCIU" id="attendCIUNo" value="false">
+				<label class="form-check-label" for="attendCIUNo">No</label>
+			</div>
+		</div>
+		<div class="form-group">
+			<label style="margin-right: 1em">Have you worked on a camp staff?<span>*</span></label>
+			<div class="form-check form-check-inline">
+				<input class="form-check-input" type="radio" formControlName="campStaff" name="campStaff" id="campStaffYes" value="true">
+				<label class="form-check-label" for="campStaffYes">Yes</label>
+			</div>
+			<div class="form-check form-check-inline">
+				<input class="form-check-input" type="radio" formControlName="campStaff" name="campStaff" id="campStaffNo" value="false">
+				<label class="form-check-label" for="campStaffNo">No</label>
+			</div>
+		</div>
+		<h2>Skills and Certifications</h2>
+		<p>Please indicate any specific skills you have that may be useful while working at camp. List any training you have taken or certifications you have obtained in the space provided for each skill, as applicable.</p>
+		<h3>Arts and Crafts:</h3>
+		<div class="form-group form-inline">
+			<label for="arts col" style="margin-right: 1em">
+				Specific Skills
+			</label> 
+			<input type="text" id="arts" formControlName="arts" class="form-control col">
+		</div>
+		<div class="form-group form-inline">
+			<label for="artsCert col" style="margin-right: 1em">
+				Training/Certifications
+			</label> 
+			<input type="text" id="artsCert" formControlName="artsCert" class="form-control col">
+		</div>
+		<h3>Sports:</h3>
+		<div class="form-group form-inline">
+			<label for="sports col" style="margin-right: 1em">
+				Specific Skills
+			</label> 
+			<input type="text" id="sports" formControlName="sports" class="form-control col">
+		</div>
+		<div class="form-group form-inline ">
+			<label for="sportsCert col" style="margin-right: 1em">
+				Training/Certifications
+			</label> 
+			<input type="text" id="sportsCert" formControlName="sportsCert" class="form-control col">
+		</div>
+		<h3>Outdoor Living:</h3>
+		<div class="form-group form-inline">
+			<label for="outdoor col" style="margin-right: 1em">
+				Specific Skills
+			</label> 
+			<input type="text" id="outdoor" formControlName="outdoor" class="form-control col">
+		</div>
+		<div class="form-group form-inline ">
+			<label for="outdoorCert col" style="margin-right: 1em">
+				Training/Certifications
+			</label> 
+			<input type="text" id="outdoorCert" formControlName="outdoorCert" class="form-control col">
+		</div>
+		<h3>Performing Arts:</h3>
+		<div class="form-group form-inline">
+			<label for="performing col" style="margin-right: 1em">
+				Specific Skills
+			</label> 
+			<input type="text" id="performing" formControlName="performing" class="form-control col">
+		</div>
+		<div class="form-group form-inline ">
+			<label for="performingCert col" style="margin-right: 1em">
+				Training/Certifications
+			</label> 
+			<input type="text" id="performingCert" formControlName="performingCert" class="form-control col">
+		</div>
+		<h3>Nature:</h3>
+		<div class="form-group form-inline">
+			<label for="nature col" style="margin-right: 1em">
+				Specific Skills
+			</label> 
+			<input type="text" id="nature" formControlName="nature" class="form-control col">
+		</div>
+		<div class="form-group form-inline ">
+			<label for="natureCert col" style="margin-right: 1em">
+				Training/Certifications
+			</label> 
+			<input type="text" id="natureCert" formControlName="natureCert" class="form-control col">
+		</div>
+		<h3>Waterfront Activities/Lifeguarding:</h3>
+		<div class="form-group form-inline">
+			<label for="water col" style="margin-right: 1em">
+				Specific Skills
+			</label> 
+			<input type="text" id="water" formControlName="water" class="form-control col">
+		</div>
+		<div class="form-group form-inline ">
+			<label for="waterCert col" style="margin-right: 1em">
+				Training/Certifications
+			</label> 
+			<input type="text" id="waterCert" formControlName="waterCert" class="form-control col">
+		</div>
+		<h3>Other:</h3>
+		<div class="form-group form-inline">
+			<label for="otherSkills col" style="margin-right: 1em">
+				Specific Skills
+			</label> 
+			<input type="text" id="otherSkills" formControlName="otherSkills" class="form-control col">
+		</div>
+		<div class="form-group form-inline ">
+			<label for="otherSkillsCert col" style="margin-right: 1em">
+				Training/Certifications
+			</label> 
+			<input type="text" id="otherSkillsCert" formControlName="otherSkillsCert" class="form-control col">
+		</div>
+		<h2>Open Response Questions</h2>
+		<p>Answer all of the following questions to the best of your ability.</p>
+		<div class="form-group">
+			<label for="q1">1. Why do you want to work at camp this summer?<span>*</span></label>
+			<textarea class="form-control" formControlName="q1" id="q1" rows="3"></textarea>
+		</div>
+		<div class="form-group">
+			<label for="q2">2. What experience or background do you have working with diverse backgrounds, specifically the LGBTQ community. Be specific.<span>*</span></label>
+			<textarea class="form-control" formControlName="q2" id="q2" rows="3"></textarea>
+		</div>
+		<div class="form-group">
+			<label for="q3">3. Tell us about your experience working with youth and/or leading activities.<span>*</span></label>
+			<textarea class="form-control" formControlName="q3" id="q3" rows="3"></textarea>
+		</div>
+		<div class="form-group">
+			<label for="q4">4. What do you hope to gain by being a staff member at Camp It Up?<span>*</span></label>
+			<textarea class="form-control" formControlName="q4" id="q4" rows="3"></textarea>
+		</div>
+		<div class="form-group">
+			<label for="q5">5. Is there anything else you’d like to tell us?</label>
+			<textarea class="form-control" formControlName="q5" id="q5" rows="3"></textarea>
+		</div>
+		<h2>References</h2>
+		<p>Applicant must list three (3) persons, other than relatives, who know of your qualifications and/or background experience. <strong>We recommend former employers, teachers, religious leaders, school counselors, or other persons who can give an honest accounting of the type of individual you are.</strong> All information related to references must be current and accurate.</p>
+		<h3>Reference #1</h3>
+		<div class="form-row">
+			<div class="form-group col-md-3">
+				<label>
+					Name<span>*</span>
+				</label> 
+				<input type="text" formControlName="refName1" class="form-control" required>
+				<div *ngIf="registerForm.controls.refName1.touched && registerForm.controls.refName1.errors" class="error">
+					Name is required
+				</div>
+			</div>
+			<div class="form-group col-md-3">
+				<label>
+					Relationship<span>*</span>
+				</label> 
+				<input type="text" formControlName="refRelation1" class="form-control" required>
+				<div *ngIf="registerForm.controls.refRelation1.touched && registerForm.controls.refRelation1.errors" class="error">
+					Relationship is required
+				</div>
+			</div>
+			<div class="form-group col-md-3">
+				<label>
+					Phone<span>*</span>
+				</label> 
+				<input type="text" formControlName="refPhone1" class="form-control" required>
+				<div *ngIf="registerForm.controls.refPhone1.touched && registerForm.controls.refPhone1.errors" class="error">
+					Phone is required
+				</div>
+			</div>
+			<div class="form-group col-md-3">
+				<label>
+					Email<span>*</span>
+				</label> 
+				<input type="text" formControlName="refEmail1" class="form-control" required>
+				<div *ngIf="registerForm.controls.refEmail1.touched && registerForm.controls.refEmail1.errors" class="error">
+					Email is required
+				</div>
+			</div>
+		</div>
+		<h3>Reference #2</h3>
+		<div class="form-row">
+			<div class="form-group col-md-3">
+				<label>
+					Name<span>*</span>
+				</label> 
+				<input type="text" formControlName="refName2" class="form-control" required>
+				<div *ngIf="registerForm.controls.refName2.touched && registerForm.controls.refName2.errors" class="error">
+					Name is required
+				</div>
+			</div>
+			<div class="form-group col-md-3">
+				<label>
+					Relationship<span>*</span>
+				</label> 
+				<input type="text" formControlName="refRelation2" class="form-control" required>
+				<div *ngIf="registerForm.controls.refRelation2.touched && registerForm.controls.refRelation2.errors" class="error">
+					Relationship is required
+				</div>
+			</div>
+			<div class="form-group col-md-3">
+				<label>
+					Phone<span>*</span>
+				</label> 
+				<input type="text" formControlName="refPhone2" class="form-control" required>
+				<div *ngIf="registerForm.controls.refPhone2.touched && registerForm.controls.refPhone2.errors" class="error">
+					Phone is required
+				</div>
+			</div>
+			<div class="form-group col-md-3">
+				<label>
+					Email<span>*</span>
+				</label> 
+				<input type="text" formControlName="refEmail2" class="form-control" required>
+				<div *ngIf="registerForm.controls.refEmail2.touched && registerForm.controls.refEmail2.errors" class="error">
+					Email is required
+				</div>
+			</div>
+		</div>
+		<h3>Reference #3</h3>
+		<div class="form-row">
+			<div class="form-group col-md-3">
+				<label>
+					Name<span>*</span>
+				</label> 
+				<input type="text" formControlName="refName3" class="form-control" required>
+				<div *ngIf="registerForm.controls.refName3.touched && registerForm.controls.refName3.errors" class="error">
+					Name is required
+				</div>
+			</div>
+			<div class="form-group col-md-3">
+				<label>
+					Relationship<span>*</span>
+				</label> 
+				<input type="text" formControlName="refRelation3" class="form-control" required>
+				<div *ngIf="registerForm.controls.refRelation3.touched && registerForm.controls.refRelation3.errors" class="error">
+					Relationship is required
+				</div>
+			</div>
+			<div class="form-group col-md-3">
+				<label>
+					Phone<span>*</span>
+				</label> 
+				<input type="text" formControlName="refPhone3" class="form-control" required>
+				<div *ngIf="registerForm.controls.refPhone3.touched && registerForm.controls.refPhone3.errors" class="error">
+					Phone is required
+				</div>
+			</div>
+			<div class="form-group col-md-3">
+				<label>
+					Email<span>*</span>
+				</label> 
+				<input type="text" formControlName="refEmail3" class="form-control" required>
+				<div *ngIf="registerForm.controls.refEmail3.touched && registerForm.controls.refEmail3.errors" class="error">
+					Email is required
+				</div>
+			</div>
+		</div>
+	</form>
+	<button type="submit" (click)="tryRegister()" class="btn btn-default" [disabled]="registerForm.invalid">
+		{{ applyMsg }}
+	</button>
+	<br><br>
+</div>
