@@ -14,6 +14,8 @@ export class ApplicationsComponent implements OnInit {
 
 	registerForm: FormGroup;
 	applyMsg = 'Apply!';
+	education = [{ name: '', field: '', degree: '' }];
+	employment = [{ employer: '', address: '', city: '', state: '', zip: '', duties: '', leaving: '', supervisor: '', contact: '', duration: '' }]; 
 
 	constructor(private router: Router, private fb: FormBuilder, private db: AngularFirestore, private afAuth: AngularFireAuth) {
 		this.createForm();
@@ -81,11 +83,46 @@ export class ApplicationsComponent implements OnInit {
 		});
 	}
 
+	addEducation() {
+		let json = {
+			name: '',
+			field: '',
+			degree: ''
+		};
+		this.education.push(json);
+	}
+
+	deleteEducation(index) {
+		this.education.splice(index, 1);
+	}
+
+	addEmployment() {
+		let json = {
+			employer: '',
+			address: '',
+			city: '',
+			state: '',
+			zip: '',
+			duties: '',
+			leaving: '',
+			supervisor: '',
+			contact: '',
+			duration: ''
+		};
+		this.employment.push(json);
+	}
+
+	deleteEmployment(index) {
+		this.employment.splice(index, 1);
+	}
+
 	tryRegister() {
 		this.applyMsg = 'Saving...';
 		if (!this.registerForm.invalid) {
 			var application = this.registerForm.value;
 			application['timestamp'] = new Date();
+			application['employment'] = this.employment;
+			application['education'] = this.education;
 			this.db.collection('applications').add({ ... application })
 				.then(() => { 
 				alert('Thank you for applying, we have successfully saved your application and will get back to you soon!');
