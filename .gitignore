@@ -2,11 +2,13 @@
 
 # compiled output
 /dist
+/dist.nosync
 /tmp
 /out-tsc
 
 # dependencies
 /node_modules
+/node_modules.nosync
 
 # IDEs and editors
 /.idea
@@ -41,3 +43,6 @@ src/environments/environment.prod.ts
 src/environments/environment.ts
 src/environments/environment.ts
 src/environments/environment.prod.ts
+# ignore node_modules symlink
+node_modules
+node_modules.nosync

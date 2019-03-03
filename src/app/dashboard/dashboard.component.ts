@@ -22,20 +22,21 @@ export class DashboardComponent implements OnInit {
 	timeouts = [];
 
 	slides = [
-		'./../assets/front-image-2.jpg',
-		'./../assets/front-image-1.jpg',
-		'./../assets/front-image-3.jpg',
-		'./../assets/front-image-4.jpg'
+		'./assets/front-image-2.jpg',
+		'./assets/front-image-3.jpg',
+		'./assets/front-image-4.jpg',
+		'./assets/centralcamp.jpg',
+		'./assets/emptytent.jpg'
 	];
 	gallery = [
-		'../../assets/gallery-1.jpg',
-		'../../assets/gallery-2.jpg',
-		'../../assets/gallery-3.jpg',
-		'../../assets/gallery-4.jpg',
-		'../../assets/gallery-5.jpg',
-		'../../assets/gallery-6.jpg',
-		'../../assets/gallery-7.jpg',
-		'../../assets/gallery-8.jpg'
+		'./assets/gallery-1.jpg',
+		'./assets/gallery-2.jpg',
+		'./assets/gallery-3.jpg',
+		'./assets/gallery-4.jpg',
+		'./assets/gallery-5.jpg',
+		'./assets/gallery-6.jpg',
+		'./assets/gallery-7.jpg',
+		'./assets/gallery-8.jpg'
 	]
 	constructor(@Inject(PLATFORM_ID) private platformId: Object) {   }
 

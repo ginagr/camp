@@ -37,3 +37,6 @@
 .deadline {
 	word-wrap: break-word;
 }
+.top-space {
+	margin-top: 15px;
+}

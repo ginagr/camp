@@ -4,3 +4,54 @@ img {
 	width: 100%;
 	margin-bottom: 10%;
 }
+.circle-img {
+	display: block;
+	width: 15vw;
+	height: 15vw;
+	background: #E6E7ED;
+	-moz-border-radius: 50%;
+	-webkit-border-radius: 50%;
+	background-position: 50% 50%;
+	background-repeat: no-repeat;   
+	margin: 0 auto;
+}
+.thumbnail {
+	position: relative;
+	cursor: pointer;
+	-webkit-transition: height .2s;
+	-moz-transition: height .2s;
+	-ms-transition: height .2s;
+	-o-transition: height .2s;
+	transition: height .2s;
+}
+.thumbnail:hover {
+	top: -1em;
+}
+.caption {
+	position: absolute;
+	margin: 0;
+	top: 50%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);
+	color: #fff;
+	font-weight: bolder;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	font-size: 2vw;
+	text-shadow: black 0.1em 0.1em 0.2em;
+}
+.row {
+	margin: 4vh -15px;
+}
+/* Extra small devices (portrait phones, less than 567px)*/
+@media (max-width: 567px) {
+	.circle-img {
+		width: 65vw;
+		height: 65vw;
+	}
+	.caption {
+		font-size: 8vw
+	}
+}
+
