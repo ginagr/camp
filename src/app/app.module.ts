@@ -49,6 +49,7 @@ import { TalentShowFourteenComponent } from './blog/talent-show-fourteen/talent-
 import { SearchTermsComponent } from './search-terms/search-terms.component';
 import { CareersComponent } from './careers/careers.component';
 import { ApplicationsComponent } from './applications/applications.component';
+import { CompleteApplicationsComponent } from './complete-applications/complete-applications.component';
 
 @NgModule({
 	declarations: [
@@ -88,7 +89,8 @@ import { ApplicationsComponent } from './applications/applications.component';
 		TalentShowFourteenComponent,
 		SearchTermsComponent,
 		CareersComponent,
-		ApplicationsComponent
+		ApplicationsComponent,
+		CompleteApplicationsComponent
 	],
 	imports: [
 		BrowserModule.withServerTransition({ appId: 'serverApp' }),

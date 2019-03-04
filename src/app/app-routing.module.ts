@@ -35,6 +35,7 @@ import { TalentShowFourteenComponent }   from './blog/talent-show-fourteen/talen
 import { SearchTermsComponent }   from './search-terms/search-terms.component';
 import { CareersComponent }   from './careers/careers.component';
 import { ApplicationsComponent }   from './applications/applications.component';
+import { CompleteApplicationsComponent }   from './complete-applications/complete-applications.component';
 
 const routes: Routes = [
 	{ path: 'summer-programs', component: SummerProgramsComponent },
@@ -70,6 +71,7 @@ const routes: Routes = [
 	{ path: 'search-terms', component: SearchTermsComponent },
 	{ path: 'careers', component: CareersComponent },
 	{ path: 'applications', component: ApplicationsComponent },
+	{ path: 'complete-applications', component: CompleteApplicationsComponent },
 	{ path: '', component: DashboardComponent },
 	{ path: '**', redirectTo: '/' }
 ];
