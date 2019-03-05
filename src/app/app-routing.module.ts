@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
+import { AuthGuard } from './auth.guard';
+
 import { SummerProgramsComponent } from './summer-programs/summer-programs.component';
 import { WinterProgramsComponent } from './winter-programs/winter-programs.component';
 import { DashboardComponent }   from './dashboard/dashboard.component';
@@ -36,6 +38,8 @@ import { SearchTermsComponent }   from './search-terms/search-terms.component';
 import { CareersComponent }   from './careers/careers.component';
 import { ApplicationsComponent }   from './applications/applications.component';
 import { CompleteApplicationsComponent }   from './complete-applications/complete-applications.component';
+import { LoginComponent }   from './login/login.component';
+import { ChangePasswordComponent }   from './change-password/change-password.component';
 
 const routes: Routes = [
 	{ path: 'summer-programs', component: SummerProgramsComponent },
@@ -71,7 +75,9 @@ const routes: Routes = [
 	{ path: 'search-terms', component: SearchTermsComponent },
 	{ path: 'careers', component: CareersComponent },
 	{ path: 'applications', component: ApplicationsComponent },
-	{ path: 'complete-applications', component: CompleteApplicationsComponent },
+	{ path: 'complete-applications', component: CompleteApplicationsComponent, canActivate: [AuthGuard] },
+	{ path: 'login', component: LoginComponent },
+	{ path: 'change-password', component: ChangePasswordComponent },
 	{ path: '', component: DashboardComponent },
 	{ path: '**', redirectTo: '/' }
 ];

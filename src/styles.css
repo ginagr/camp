@@ -49,7 +49,7 @@ a:hover {
 	color: #27974E;
 	text-decoration: none;
 }
-button {
+button, .btn {
 	background: #27974E;
 	border: #27974E;
 	padding: 10px;

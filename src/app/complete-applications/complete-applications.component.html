@@ -1,5 +1,7 @@
 <div class="container-fluid">
-	<h1>Complete Applications</h1>
+	<h1>
+		Complete Applications
+	</h1>
 	<div class="app" *ngFor="let app of applications">
 		<h2>Basic Info
 			<span style="float:right">Submitted at {{ app?.timestamp.toMillis() | date:'yyyy/MM/dd h:mm:ss a'}}</span>
@@ -363,6 +365,5 @@
 				</label> 
 			</div>
 		</div>
-		<!--		{{ app | json}}-->
 	</div>
 </div>

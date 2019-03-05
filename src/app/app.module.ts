@@ -7,6 +7,9 @@ import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
+import { AuthGuard } from './auth.guard';
+import { AuthService } from './auth.service';
+
 import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule, FirestoreSettingsToken } from '@angular/fire/firestore';
 import { AngularFireAuthModule } from '@angular/fire/auth';
@@ -50,6 +53,8 @@ import { SearchTermsComponent } from './search-terms/search-terms.component';
 import { CareersComponent } from './careers/careers.component';
 import { ApplicationsComponent } from './applications/applications.component';
 import { CompleteApplicationsComponent } from './complete-applications/complete-applications.component';
+import { LoginComponent } from './login/login.component';
+import { ChangePasswordComponent } from './change-password/change-password.component';
 
 @NgModule({
 	declarations: [
@@ -90,7 +95,9 @@ import { CompleteApplicationsComponent } from './complete-applications/complete-
 		SearchTermsComponent,
 		CareersComponent,
 		ApplicationsComponent,
-		CompleteApplicationsComponent
+		CompleteApplicationsComponent,
+		LoginComponent,
+		ChangePasswordComponent
 	],
 	imports: [
 		BrowserModule.withServerTransition({ appId: 'serverApp' }),
@@ -102,7 +109,11 @@ import { CompleteApplicationsComponent } from './complete-applications/complete-
 		PdfViewerModule,
 		FormsModule
 	],
-	providers: [],
+	providers: [
+		AuthService,
+		AuthGuard,
+		{ provide: FirestoreSettingsToken, useValue: {} }
+	],
 	bootstrap: [AppComponent]
 })
 export class AppModule { }
