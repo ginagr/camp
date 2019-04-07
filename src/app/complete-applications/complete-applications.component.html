@@ -2,367 +2,378 @@
 	<h1>
 		Complete Applications
 	</h1>
-	<div class="app" *ngFor="let app of applications">
-		<h2>Basic Info
-			<span style="float:right">Submitted at {{ app?.timestamp.toMillis() | date:'yyyy/MM/dd h:mm:ss a'}}</span>
-		</h2>
-		<div class="form-group">
-			<label>
-				<strong>Full Name: </strong> {{ app?.name }}
-			</label>
+	<div class="app" *ngFor="let app of applications; let i = index">
+		<div class="collapse-btn" data-toggle="collapse" [attr.data-target]="'#collapse-' + i" aria-expanded="false"
+			aria-controls="collapse">
+			#{{ i+1 }}: <span style="font-weight: bolder">{{ app?.name }}</span>
+			<span style="float:right">Submitted at
+				{{ app?.timestamp.toMillis() | date:'MM/dd/yyyy h:mm:ss a'}}</span>
 		</div>
-		<div class="form-group">
-			<label>
-				<strong>Address: </strong> {{ app?.address }}
-			</label> 
-		</div>
-		<div class="form-row">
-			<div class="form-group col-md-6">
-				<label>
-					<strong>City: </strong> {{ app?.city }}
-				</label> 
-			</div>
-			<div class="form-group col-md-4">
-				<label>
-					<strong>State: </strong> {{ app?.state }}
-				</label> 
-			</div>
-			<div class="form-group col-md-2">
-				<label>
-					<strong>Zip: </strong> {{ app?.zip }}
-				</label> 
-			</div>
-		</div>
-		<div class="form-row">
-			<div class="form-group col-md-6">
-				<label>
-					<strong>Phone: </strong> {{ app?.phone }}
-				</label> 
-			</div>
-			<div class="form-group col-md-6" *ngIf="app?.altPhone">
-				<label>
-					<strong>Alt Phone: </strong> {{ app?.altPhone }}
-				</label> 
-			</div>
-		</div>
-		<div class="form-row">
-			<div class="form-group col-md-6">
-				<label>
-					<strong>Email: </strong> {{ app?.email }}
-				</label>
-			</div>
-			<div class="form-group col-md-6">
-				<label>
-					<strong>Best Time to Contact: </strong> {{ app?.contactTime }}
-				</label>
-			</div>
-		</div>
-		<h2>Education Background</h2>
-		<div class="form-row">
-			<div class="form-group col-4">
-				<strong>Name of School (High School, College, Graduate School)</strong>
-			</div>
-			<div class="form-group col-4">
-				<strong>Field of Study</strong>
-			</div>
-			<div class="form-group col-4">
-				<strong>Degree/GPA</strong>
-			</div>
-		</div>
-		<div *ngFor="let e of app?.education; let i = index" class="app">
-			<div class="form-row">
-				<div class="form-group col-4">
-					{{ e?.name }}
-				</div>
-				<div class="form-group col-4">
-					{{ e?.field }}
-				</div>
-				<div class="form-group col-4">
-					{{ e?.degree }}
-				</div>
-			</div>
-		</div>
-		<h2>Employment Background</h2>
-		<div class="app" *ngFor="let e of app?.employment; let i = index" style="padding-top: 1em;">
+		<div class="collapse" [id]="'collapse-' + i">
+			<h2>Basic Info
+				<span style="float:right">Submitted at
+					{{ app?.timestamp.toMillis() | date:'yyyy/MM/dd h:mm:ss a'}}</span>
+			</h2>
 			<div class="form-group">
 				<label>
-					<strong>Employer/Company: </strong> {{ e?.employer }}
+					<strong>Full Name: </strong> {{ app?.name }}
 				</label>
 			</div>
 			<div class="form-group">
 				<label>
-					<strong>Address: </strong> {{ e?.address }}
-				</label> 
+					<strong>Address: </strong> {{ app?.address }}
+				</label>
 			</div>
 			<div class="form-row">
 				<div class="form-group col-md-6">
 					<label>
-						<strong>City: </strong> {{ e?.city }}
-					</label> 
+						<strong>City: </strong> {{ app?.city }}
+					</label>
 				</div>
 				<div class="form-group col-md-4">
 					<label>
-						<strong>State: </strong> {{ e?.state }}
-					</label> 
+						<strong>State: </strong> {{ app?.state }}
+					</label>
 				</div>
 				<div class="form-group col-md-2">
 					<label>
-						<strong>Zip: </strong> {{ e?.zip }}
-					</label> 
+						<strong>Zip: </strong> {{ app?.zip }}
+					</label>
 				</div>
 			</div>
 			<div class="form-row">
 				<div class="form-group col-md-6">
 					<label>
-						<strong>Supervisor Name: </strong> {{ e?.supervisor }}
-					</label> 
+						<strong>Phone: </strong> {{ app?.phone }}
+					</label>
 				</div>
-				<div class="form-group col-md-6">
+				<div class="form-group col-md-6" *ngIf="app?.altPhone">
 					<label>
-						<strong>Supervisor Phone/Email: </strong> {{ e?.contact }}
-					</label> 
+						<strong>Alt Phone: </strong> {{ app?.altPhone }}
+					</label>
 				</div>
-			</div>
-			<div class="form-group">
-				<label>
-					<strong>Job Title/Duties: </strong> {{ e?.duties }}
-				</label> 
 			</div>
 			<div class="form-row">
 				<div class="form-group col-md-6">
 					<label>
-						<strong>Duration of Employment: </strong> {{ e?.duration }}
-					</label> 
+						<strong>Email: </strong> {{ app?.email }}
+					</label>
 				</div>
-				<div class="form-group col-md-5" *ngIf="e?.leaving">
+				<div class="form-group col-md-6">
 					<label>
-						<strong>Reason For Leaving (If not current): </strong> {{ e?.leaving }}
-					</label> 
+						<strong>Best Time to Contact: </strong> {{ app?.contactTime }}
+					</label>
 				</div>
 			</div>
-		</div>
-		<h2>Position(s) Desired</h2>
-		<div class="form-group">
-			<label style="white-space: pre-line;">
-				{{ app?.staffDir ? 'Staff Director \n' : '' }}
-				{{ app?.assDir ? 'Assistant Camp Director \n' : '' }}
-				{{ app?.citDir ? 'CIT Director \n' : '' }}
-				{{ app?.counselor ? 'Counselor \n' : '' }}
-				{{ app?.jrcounselor ? 'Junior Counselor \n' : '' }}
-				{{ app?.specialist ? 'Specialist \n' : '' }}
-				{{ app?.cit ? 'Counselor in Training (CIT) \n' : '' }}
-				{{ app?.other ? app?.other : '' }}
-			</label>
-		</div>
-		<h2>Camping Experience</h2>
-		<div class="form-row">
-			<div class="form-group col-6">
-				<label>
-					<strong>Attend Camp as Child: </strong> {{ app?.childAttend ? 'Yes' : 'No' }}
+			<h2>Education Background</h2>
+			<div class="form-row">
+				<div class="form-group col-4">
+					<strong>Name of School (High School, College, Graduate School)</strong>
+				</div>
+				<div class="form-group col-4">
+					<strong>Field of Study</strong>
+				</div>
+				<div class="form-group col-4">
+					<strong>Degree/GPA</strong>
+				</div>
+			</div>
+			<div *ngFor="let e of app?.education; let i = index" class="app">
+				<div class="form-row">
+					<div class="form-group col-4">
+						{{ e?.name }}
+					</div>
+					<div class="form-group col-4">
+						{{ e?.field }}
+					</div>
+					<div class="form-group col-4">
+						{{ e?.degree }}
+					</div>
+				</div>
+			</div>
+			<h2>Employment Background</h2>
+			<div class="app" *ngFor="let e of app?.employment; let i = index" style="padding-top: 1em;">
+				<div class="form-group">
+					<label>
+						<strong>Employer/Company: </strong> {{ e?.employer }}
+					</label>
+				</div>
+				<div class="form-group">
+					<label>
+						<strong>Address: </strong> {{ e?.address }}
+					</label>
+				</div>
+				<div class="form-row">
+					<div class="form-group col-md-6">
+						<label>
+							<strong>City: </strong> {{ e?.city }}
+						</label>
+					</div>
+					<div class="form-group col-md-4">
+						<label>
+							<strong>State: </strong> {{ e?.state }}
+						</label>
+					</div>
+					<div class="form-group col-md-2">
+						<label>
+							<strong>Zip: </strong> {{ e?.zip }}
+						</label>
+					</div>
+				</div>
+				<div class="form-row">
+					<div class="form-group col-md-6">
+						<label>
+							<strong>Supervisor Name: </strong> {{ e?.supervisor }}
+						</label>
+					</div>
+					<div class="form-group col-md-6">
+						<label>
+							<strong>Supervisor Phone/Email: </strong> {{ e?.contact }}
+						</label>
+					</div>
+				</div>
+				<div class="form-group">
+					<label>
+						<strong>Job Title/Duties: </strong> {{ e?.duties }}
+					</label>
+				</div>
+				<div class="form-row">
+					<div class="form-group col-md-6">
+						<label>
+							<strong>Duration of Employment: </strong> {{ e?.duration }}
+						</label>
+					</div>
+					<div class="form-group col-md-5" *ngIf="e?.leaving">
+						<label>
+							<strong>Reason For Leaving (If not current): </strong> {{ e?.leaving }}
+						</label>
+					</div>
+				</div>
+			</div>
+			<h2>Position(s) Desired</h2>
+			<div class="form-group">
+				<label style="white-space: pre-line;">
+					{{ app?.staffDir ? 'Staff Director \n' : '' }}
+					{{ app?.assDir ? 'Assistant Camp Director \n' : '' }}
+					{{ app?.citDir ? 'CIT Director \n' : '' }}
+					{{ app?.counselor ? 'Counselor \n' : '' }}
+					{{ app?.jrcounselor ? 'Junior Counselor \n' : '' }}
+					{{ app?.specialist ? 'Specialist \n' : '' }}
+					{{ app?.cit ? 'Counselor in Training (CIT) \n' : '' }}
+					{{ app?.other ? app?.other : '' }}
 				</label>
 			</div>
-			<div class="form-group col-6">
-				<label class="col" for="attendCampYears">
-					<strong>Years Attended Camp: </strong> {{ app?.attendCampYears }} Years
+			<h2>Camping Experience</h2>
+			<div class="form-row">
+				<div class="form-group col-6">
+					<label>
+						<strong>Attend Camp as Child: </strong> {{ app?.childAttend ? 'Yes' : 'No' }}
+					</label>
+				</div>
+				<div class="form-group col-6">
+					<label class="col" for="attendCampYears">
+						<strong>Years Attended Camp: </strong> {{ app?.attendCampYears }} Years
+					</label>
+				</div>
+			</div>
+			<div class="form-group">
+				<label style="white-space: pre-line;">
+					<strong>Type of Camp: </strong>
+					{{ app?.campTypeOvernight ? '\n Overnight \n' : '' }}
+					{{ app?.campTypeFamily ? 'Family \n' : '' }}
+					{{ app?.campTypeDayCamp ? 'Day Camp' : '' }}
 				</label>
 			</div>
-		</div>
-		<div class="form-group">
-			<label style="white-space: pre-line;">
-				<strong>Type of Camp: </strong> 
-				{{ app?.campTypeOvernight ? '\n Overnight \n' : '' }}
-				{{ app?.campTypeFamily ? 'Family \n' : '' }}
-				{{ app?.campTypeDayCamp ? 'Day Camp' : '' }}
-			</label>
-		</div>
-		<div class="form-row">
-			<div class="form-group col-6">
-				<label>
-					<strong>Attended Camp It Up!: </strong> {{ app?.attendCIU ? 'Yes' : 'No' }}
-				</label>
+			<div class="form-row">
+				<div class="form-group col-6">
+					<label>
+						<strong>Attended Camp It Up!: </strong> {{ app?.attendCIU ? 'Yes' : 'No' }}
+					</label>
+				</div>
+				<div class="form-group col-6">
+					<label>
+						<strong>Worked on Camp Staff: </strong> {{ app?.campStaff  ? 'Yes' : 'No' }}
+					</label>
+				</div>
 			</div>
-			<div class="form-group col-6">
-				<label>
-					<strong>Worked on Camp Staff: </strong> {{ app?.campStaff  ? 'Yes' : 'No' }}
-				</label>
+			<h2>Skills and Certifications</h2>
+			<div *ngIf="app?.arts || app?.artsCert" class="app">
+				<h3>Arts and Crafts:</h3>
+				<div class="form-group">
+					<label>
+						<strong>Specific Skills: </strong> {{ app?.arts }}
+					</label>
+				</div>
+				<div class="form-group">
+					<label>
+						<strong>Training/Certifications: </strong> {{ app?.artsCert }}
+					</label>
+				</div>
 			</div>
-		</div>
-		<h2>Skills and Certifications</h2>
-		<div *ngIf="app?.arts || app?.artsCert" class="app">
-			<h3>Arts and Crafts:</h3>
+			<div *ngIf="app?.sports || app?.sportsCert" class="app">
+				<h3>Sports:</h3>
+				<div class="form-group">
+					<label>
+						<strong>Specific Skills: </strong> {{ app?.sports }}
+					</label>
+				</div>
+				<div class="form-group">
+					<label>
+						<strong>Training/Certifications: </strong> {{ app?.sportsCert }}
+					</label>
+				</div>
+			</div>
+			<div *ngIf="app?.outdoor || app?.outdoorCert" class="app">
+				<h3>Outdoor Living:</h3>
+				<div class="form-group">
+					<label>
+						<strong>Specific Skills: </strong> {{ app?.outdoor }}
+					</label>
+				</div>
+				<div class="form-group">
+					<label>
+						<strong>Training/Certifications: </strong> {{ app?.outdoorCert }}
+					</label>
+				</div>
+			</div>
+			<div *ngIf="app?.performing || app?.performingCert" class="app">
+				<h3>Performing Arts:</h3>
+				<div class="form-group">
+					<label>
+						<strong>Specific Skills: </strong> {{ app?.performing }}
+					</label>
+				</div>
+				<div class="form-group">
+					<label>
+						<strong>Training/Certifications: </strong> {{ app?.performingCert }}
+					</label>
+				</div>
+			</div>
+			<div *ngIf="app?.nature || app?.natureCert" class="app">
+				<h3>Nature:</h3>
+				<div class="form-group">
+					<label>
+						<strong>Specific Skills: </strong> {{ app?.nature }}
+					</label>
+				</div>
+				<div class="form-group">
+					<label>
+						<strong>Training/Certifications: </strong> {{ app?.natureCert }}
+					</label>
+				</div>
+			</div>
+			<div *ngIf="app?.water || app?.waterCert" class="app">
+				<h3>Waterfront Activities/Lifeguarding:</h3>
+				<div class="form-group">
+					<label>
+						<strong>Specific Skills: </strong> {{ app?.water }}
+					</label>
+				</div>
+				<div class="form-group">
+					<label>
+						<strong>Training/Certifications: </strong> {{ app?.waterCert }}
+					</label>
+				</div>
+			</div>
+			<div *ngIf="app?.otherSkills || app?.otherSkillsCert" class="app">
+				<h3>Other:</h3>
+				<div class="form-group">
+					<label>
+						<strong>Specific Skills: </strong> {{ app?.otherSkills }}
+					</label>
+				</div>
+				<div class="form-group">
+					<label>
+						<strong>Training/Certifications: </strong> {{ app?.otherSkillsCert }}
+					</label>
+				</div>
+			</div>
+			<h2>Open Response Questions</h2>
 			<div class="form-group">
-				<label>
-					<strong>Specific Skills: </strong> {{ app?.arts }}
-				</label> 
+				<strong>1. Why do you want to work at camp this summer?: </strong> {{ app?.q1 }}
 			</div>
 			<div class="form-group">
-				<label>
-					<strong>Training/Certifications: </strong> {{ app?.artsCert }}
-				</label> 
-			</div>
-		</div>
-		<div *ngIf="app?.sports || app?.sportsCert" class="app">
-			<h3>Sports:</h3>
-			<div class="form-group">
-				<label>
-					<strong>Specific Skills: </strong> {{ app?.sports }}
-				</label> 
+				<strong>2. What experience or background do you have working with diverse backgrounds, specifically the
+					LGBTQ+ community?: </strong> {{ app?.q2 }}
 			</div>
 			<div class="form-group">
-				<label>
-					<strong>Training/Certifications: </strong> {{ app?.sportsCert }}
-				</label> 
-			</div>
-		</div>
-		<div *ngIf="app?.outdoor || app?.outdoorCert" class="app">
-			<h3>Outdoor Living:</h3>
-			<div class="form-group">
-				<label>
-					<strong>Specific Skills: </strong> {{ app?.outdoor }}
-				</label> 
+				<strong>3. Tell us about your experience working with youth and/or leading activities: </strong>
+				{{ app?.q3 }}
 			</div>
 			<div class="form-group">
-				<label>
-					<strong>Training/Certifications: </strong> {{ app?.outdoorCert }}
-				</label> 
-			</div>
-		</div>
-		<div *ngIf="app?.performing || app?.performingCert" class="app">
-			<h3>Performing Arts:</h3>
-			<div class="form-group">
-				<label>
-					<strong>Specific Skills: </strong> {{ app?.performing }}
-				</label> 
+				<strong>4. What do you hope to gain by being a staff member at Camp It Up?: </strong> {{ app?.q4 }}
 			</div>
 			<div class="form-group">
-				<label>
-					<strong>Training/Certifications: </strong> {{ app?.performingCert }}
-				</label> 
+				<strong>5. Is there anything else you’d like to tell us?: </strong> {{ app?.q5 }}
 			</div>
-		</div>
-		<div *ngIf="app?.nature || app?.natureCert" class="app">
-			<h3>Nature:</h3>
-			<div class="form-group">
-				<label>
-					<strong>Specific Skills: </strong> {{ app?.nature }}
-				</label> 
+			<h2>References</h2>
+			<h3>Reference #1</h3>
+			<div class="form-row">
+				<div class="form-group col-md-3">
+					<label>
+						<strong>Name: </strong> {{ app?.refName1 }}
+					</label>
+				</div>
+				<div class="form-group col-md-3">
+					<label>
+						<strong>Relationship: </strong> {{ app?.refRelation1 }}
+					</label>
+				</div>
+				<div class="form-group col-md-3">
+					<label>
+						<strong>Phone: </strong> {{ app?.refPhone1 }}
+					</label>
+				</div>
+				<div class="form-group col-md-3">
+					<label>
+						<strong>Email: </strong> {{ app?.refEmail1 }}
+					</label>
+				</div>
 			</div>
-			<div class="form-group">
-				<label>
-					<strong>Training/Certifications: </strong> {{ app?.natureCert }}
-				</label> 
+			<h3>Reference #2</h3>
+			<div class="form-row">
+				<div class="form-group col-md-3">
+					<label>
+						<strong>Name: </strong> {{ app?.refName2 }}
+					</label>
+				</div>
+				<div class="form-group col-md-3">
+					<label>
+						<strong>Relationship: </strong> {{ app?.refRelation2 }}
+					</label>
+				</div>
+				<div class="form-group col-md-3">
+					<label>
+						<strong>Phone: </strong> {{ app?.refPhone2 }}
+					</label>
+				</div>
+				<div class="form-group col-md-3">
+					<label>
+						<strong>Email: </strong> {{ app?.refEmail2 }}
+					</label>
+				</div>
 			</div>
-		</div>
-		<div *ngIf="app?.water || app?.waterCert" class="app">
-			<h3>Waterfront Activities/Lifeguarding:</h3>
-			<div class="form-group">
-				<label>
-					<strong>Specific Skills: </strong> {{ app?.water }}
-				</label> 
-			</div>
-			<div class="form-group">
-				<label>
-					<strong>Training/Certifications: </strong> {{ app?.waterCert }}
-				</label> 
-			</div>
-		</div>
-		<div *ngIf="app?.otherSkills || app?.otherSkillsCert" class="app">
-			<h3>Other:</h3>
-			<div class="form-group">
-				<label>
-					<strong>Specific Skills: </strong> {{ app?.otherSkills }}
-				</label> 
-			</div>
-			<div class="form-group">
-				<label>
-					<strong>Training/Certifications: </strong> {{ app?.otherSkillsCert }}
-				</label> 
-			</div>
-		</div>
-		<h2>Open Response Questions</h2>
-		<div class="form-group">
-			<strong>1. Why do you want to work at camp this summer?: </strong> {{ app?.q1 }}
-		</div>
-		<div class="form-group">
-			<strong>2. What experience or background do you have working with diverse backgrounds, specifically the LGBTQ community?: </strong> {{ app?.q2 }}
-		</div>
-		<div class="form-group">
-			<strong>3. Tell us about your experience working with youth and/or leading activities: </strong> {{ app?.q3 }}
-		</div>
-		<div class="form-group">
-			<strong>4. What do you hope to gain by being a staff member at Camp It Up?: </strong> {{ app?.q4 }}
-		</div>
-		<div class="form-group">
-			<strong>5. Is there anything else you’d like to tell us?: </strong> {{ app?.q5 }}
-		</div>
-		<h2>References</h2>
-		<h3>Reference #1</h3>
-		<div class="form-row">
-			<div class="form-group col-md-3">
-				<label>
-					<strong>Name: </strong> {{ app?.refName1 }}
-				</label> 
-			</div>
-			<div class="form-group col-md-3">
-				<label>
-					<strong>Relationship: </strong> {{ app?.refRelation1 }}
-				</label> 
-			</div>
-			<div class="form-group col-md-3">
-				<label>
-					<strong>Phone: </strong> {{ app?.refPhone1 }}
-				</label> 
-			</div>
-			<div class="form-group col-md-3">
-				<label>
-					<strong>Email: </strong> {{ app?.refEmail1 }}
-				</label> 
-			</div>
-		</div>
-		<h3>Reference #2</h3>
-		<div class="form-row">
-			<div class="form-group col-md-3">
-				<label>
-					<strong>Name: </strong> {{ app?.refName2 }}
-				</label> 
-			</div>
-			<div class="form-group col-md-3">
-				<label>
-					<strong>Relationship: </strong> {{ app?.refRelation2 }}
-				</label> 
-			</div>
-			<div class="form-group col-md-3">
-				<label>
-					<strong>Phone: </strong> {{ app?.refPhone2 }}
-				</label> 
-			</div>
-			<div class="form-group col-md-3">
-				<label>
-					<strong>Email: </strong> {{ app?.refEmail2 }}
-				</label> 
-			</div>
-		</div>
-		<h3>Reference #3</h3>
-		<div class="form-row">
-			<div class="form-group col-md-3">
-				<label>
-					<strong>Name: </strong> {{ app?.refName3 }}
-				</label> 
-			</div>
-			<div class="form-group col-md-3">
-				<label>
-					<strong>Relationship: </strong> {{ app?.refRelation3 }}
-				</label> 
-			</div>
-			<div class="form-group col-md-3">
-				<label>
-					<strong>Phone: </strong> {{ app?.refPhone3 }}
-				</label> 
-			</div>
-			<div class="form-group col-md-3">
-				<label>
-					<strong>Email: </strong> {{ app?.refEmail3 }}
-				</label> 
+			<h3>Reference #3</h3>
+			<div class="form-row">
+				<div class="form-group col-md-3">
+					<label>
+						<strong>Name: </strong> {{ app?.refName3 }}
+					</label>
+				</div>
+				<div class="form-group col-md-3">
+					<label>
+						<strong>Relationship: </strong> {{ app?.refRelation3 }}
+					</label>
+				</div>
+				<div class="form-group col-md-3">
+					<label>
+						<strong>Phone: </strong> {{ app?.refPhone3 }}
+					</label>
+				</div>
+				<div class="form-group col-md-3">
+					<label>
+						<strong>Email: </strong> {{ app?.refEmail3 }}
+					</label>
+				</div>
 			</div>
 		</div>
 	</div>

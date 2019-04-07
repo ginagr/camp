@@ -5,7 +5,7 @@ import { AuthGuard } from './auth.guard';
 
 import { SummerProgramsComponent } from './summer-programs/summer-programs.component';
 import { WinterProgramsComponent } from './winter-programs/winter-programs.component';
-import { DashboardComponent }   from './dashboard/dashboard.component';
+import { HomeComponent }   from './home/home.component';
 import { OverviewComponent }   from './overview/overview.component';
 import { MissionComponent }   from './mission/mission.component';
 import { BoardComponent }   from './board/board.component';
@@ -78,8 +78,8 @@ const routes: Routes = [
 	{ path: 'complete-applications', component: CompleteApplicationsComponent, canActivate: [AuthGuard] },
 	{ path: 'login', component: LoginComponent },
 	{ path: 'change-password', component: ChangePasswordComponent },
-	{ path: '', component: DashboardComponent },
-	{ path: '**', redirectTo: '/' }
+	{ path: '', component: HomeComponent },
+	{ path: '**', component: HomeComponent }
 ];
 
 @NgModule({

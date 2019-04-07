@@ -1,6 +1,9 @@
 <div class="container">
 	<h1>
 		Summer Camp
+		<button class="btn video-btn" data-toggle="modal" data-src="https://www.youtube.com/embed/-j9aAV16cFU" data-target="#videoModal">
+			Watch Video
+		</button>
 	</h1>
 	<h2>
 		Location
@@ -149,4 +152,19 @@
 		</div>
 	</div>
 	<!--	//TODO: add images to background-->
+	<hr>
 </div>
+<div class="modal fade" id="videoModal" tabindex="-1" role="dialog" aria-hidden="true">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-body">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>        
+				<div class="embed-responsive embed-responsive-16by9">
+					<iframe class="embed-responsive-item" src='' id="video" allowscriptaccess="always"></iframe>
+				</div>
+			</div>
+		</div>
+	</div>
+</div> 

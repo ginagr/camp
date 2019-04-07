@@ -3,7 +3,7 @@ import { PLATFORM_ID } from '@angular/core';
 import { isPlatformBrowser, isPlatformServer } from '@angular/common';
 
 @Component({
-	selector: 'winter-programs',
+	selector: 'app-winter-programs',
 	templateUrl: './winter-programs.component.html',
 	styleUrls: ['./winter-programs.component.css'],
 })
@@ -13,20 +13,13 @@ export class WinterProgramsComponent {
 
 	constructor(@Inject(PLATFORM_ID) private platformId: Object) { }
 
-	ngOnInit() {
-		if (isPlatformBrowser(this.platformId)) {
-			// Client only code.
-		}
-		if (isPlatformServer(this.platformId)) {
-			// Server only code.
-		}
-	}
+	OnInit() { }
 
 	changeTab(id, label) {
-		//		$('#' + this.lastShowId).css('display', 'none');
-		//		$('#' + this.lastShowLabel).removeClass('selected');
-		//		$('#' + id).css('display', 'block');
-		//		$('#' + label).addClass('selected');
+		// 		$('#' + this.lastShowId).css('display', 'none');
+		// 		$('#' + this.lastShowLabel).removeClass('selected');
+		// 		$('#' + id).css('display', 'block');
+		// 		$('#' + label).addClass('selected');
 
 		document.getElementById(this.lastShowId).style.display = 'none';
 		document.getElementById(this.lastShowLabel).classList.remove('selected');

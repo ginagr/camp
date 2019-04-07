@@ -1,6 +1,7 @@
 img {
 	margin-right: 1%;
 }
+
 .btn {
 	color: black;
 	background: #27974E;
@@ -10,9 +11,11 @@ img {
 	cursor: pointer;
 	width: 100%;
 }
+
 a {
 	color: black;
 }
+
 .btn:hover {
 	opacity: 0.8;
 	color: white !important;

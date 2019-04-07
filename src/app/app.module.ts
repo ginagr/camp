@@ -1,4 +1,4 @@
-import { BrowserModule } from '@angular/platform-browser';
+import { BrowserModule, Title }  from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
 import { environment } from './../environments/environment';
@@ -19,7 +19,7 @@ import { PdfViewerModule } from 'ng2-pdf-viewer';
 import { NavbarComponent } from './navbar/navbar.component';
 import { SummerProgramsComponent } from './summer-programs/summer-programs.component';
 import { WinterProgramsComponent } from './winter-programs/winter-programs.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
+import { HomeComponent } from './home/home.component';
 import { OverviewComponent } from './overview/overview.component';
 import { MissionComponent } from './mission/mission.component';
 import { BoardComponent } from './board/board.component';
@@ -61,7 +61,7 @@ import { ChangePasswordComponent } from './change-password/change-password.compo
 		AppComponent,
 		NavbarComponent,
 		SummerProgramsComponent,
-		DashboardComponent,
+		HomeComponent,
 		WinterProgramsComponent,
 		OverviewComponent,
 		MissionComponent,
@@ -112,6 +112,7 @@ import { ChangePasswordComponent } from './change-password/change-password.compo
 	providers: [
 		AuthService,
 		AuthGuard,
+		Title,
 		{ provide: FirestoreSettingsToken, useValue: {} }
 	],
 	bootstrap: [AppComponent]

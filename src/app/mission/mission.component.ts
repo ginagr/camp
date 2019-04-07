@@ -10,6 +10,7 @@ export class MissionComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+	  //TODO: add title
   }
 
 }

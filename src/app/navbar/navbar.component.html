@@ -1,14 +1,16 @@
 <nav class="navbar navbar-expand-xl navbar-light bg-light">
 	<a class="navbar-brand" routerLink="/" (click)="changeActive(-1)">
-		<img src="../../assets/camp_logo.png" height="30" alt="">
+		<img src="./assets/camp_logo.png" height="30" alt="">
 	</a>
-	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+		aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
 		<span class="navbar-toggler-icon"></span>
 	</button>
 	<div class="collapse navbar-collapse" id="navbarNavDropdown">
 		<ul class="navbar-nav ml-auto">
 			<li class="nav-item dropdown {{ actives[0] ? 'active' : '' }}">
-				<a class="nav-link dropdown-toggle" id="aboutDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				<a class="nav-link dropdown-toggle" id="aboutDropdownMenuLink" data-toggle="dropdown"
+					aria-haspopup="true" aria-expanded="false">
 					About
 				</a>
 				<ul class="dropdown-menu dropdown-menu-right" aria-labelledby="aboutDropdownMenuLink">
@@ -35,29 +37,33 @@
 				</ul>
 			</li>
 			<li class="nav-item dropdown {{ actives[1] ? 'active' : '' }}">
-				<a class="nav-link dropdown-toggle" id="programsDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				<a class="nav-link dropdown-toggle" id="programsDropdownMenuLink" data-toggle="dropdown"
+					aria-haspopup="true" aria-expanded="false">
 					Programs
 				</a>
 				<ul class="dropdown-menu dropdown-menu-right" aria-labelledby="programsDropdownMenuLink">
 					<li>
-						<a class="dropdown-item" routerLink="/summer-programs" (click)="changeActive(1)">					
+						<a class="dropdown-item" routerLink="/summer-programs" (click)="changeActive(1)">
 							Summer Camp
 						</a>
 					</li>
 					<li>
-						<a class="dropdown-item" routerLink="/winter-programs" (click)="changeActive(1)">			
+						<a class="dropdown-item" routerLink="/winter-programs" (click)="changeActive(1)">
 							Winter Camp
 						</a>
 					</li>
 				</ul>
 			</li>
 			<li class="nav-item dropdown {{ actives[2] ? 'active' : '' }}">
-				<a class="nav-link dropdown-toggle" id="registrationDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				<a class="nav-link dropdown-toggle" id="registrationDropdownMenuLink" data-toggle="dropdown"
+					aria-haspopup="true" aria-expanded="false">
 					Registration
 				</a>
 				<ul class="dropdown-menu dropdown-menu-right" aria-labelledby="registrationDropdownMenuLink">
 					<li>
-						<a class="dropdown-item" href="https://www.ultracamp.com/info/upcomingsessions.aspx?idCamp=786&campCode=mwf" target="_blank">
+						<a class="dropdown-item"
+							href="https://www.ultracamp.com/info/upcomingsessions.aspx?idCamp=786&campCode=mwf"
+							target="_blank">
 							Summer Camp 2019 Registration Coming Soon!
 						</a>
 					</li>
@@ -67,7 +73,7 @@
 						</a>
 						<ul>
 							<li>
-								<a routerLink="/summer-fees" (click)="changeActive(2)">	
+								<a routerLink="/summer-fees" (click)="changeActive(2)">
 									Summer Camp
 								</a>
 							</li>
@@ -79,56 +85,60 @@
 						</ul>
 					</li>
 					<li class="dropdown-item">
-						<a routerLink="/forms" (click)="changeActive(2)">			
+						<a routerLink="/forms" (click)="changeActive(2)">
 							Forms
 						</a>
 					</li>
 				</ul>
 			</li>
 			<li class="nav-item dropdown {{ actives[3] ? 'active' : '' }}">
-				<a class="nav-link dropdown-toggle" id="donateDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				<a class="nav-link dropdown-toggle" id="donateDropdownMenuLink" data-toggle="dropdown"
+					aria-haspopup="true" aria-expanded="false">
 					Donate
 				</a>
 				<ul class="dropdown-menu dropdown-menu-right" aria-labelledby="donateDropdownMenuLink">
 					<li>
-						<a class="dropdown-item" href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=WUCZ7ZZ5SE27N" target="_blank">
+						<a class="dropdown-item"
+							href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=WUCZ7ZZ5SE27N"
+							target="_blank">
 							Donate Online Now
 						</a>
 					</li>
 					<li>
-						<a class="dropdown-item" routerLink="/pledge-form" (click)="changeActive(3)" target="_blank">	
+						<a class="dropdown-item" routerLink="/pledge-form" (click)="changeActive(3)" target="_blank">
 							Download and Print Mail-In Donation
 						</a>
 					</li>
 					<li>
-						<a class="dropdown-item" routerLink="/campaign" (click)="changeActive(3)">		
+						<a class="dropdown-item" routerLink="/campaign" (click)="changeActive(3)">
 							Join the CAMPaign
 						</a>
 					</li>
 					<li>
-						<a class="dropdown-item" routerLink="/non-profit" (click)="changeActive(3)">		
+						<a class="dropdown-item" routerLink="/non-profit" (click)="changeActive(3)">
 							Non-Profit Status
 						</a>
 					</li>
 				</ul>
 			</li>
 			<li class="nav-item dropdown {{ actives[4] ? 'active' : '' }}">
-				<a class="nav-link dropdown-toggle" id="readyDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				<a class="nav-link dropdown-toggle" id="readyDropdownMenuLink" data-toggle="dropdown"
+					aria-haspopup="true" aria-expanded="false">
 					Getting Ready
 				</a>
 				<ul class="dropdown-menu dropdown-menu-right" aria-labelledby="readyDropdownMenuLink">
 					<li>
-						<a class="dropdown-item" routerLink="/directions" (click)="changeActive(4)">		
+						<a class="dropdown-item" routerLink="/directions" (click)="changeActive(4)">
 							Directions
 						</a>
 					</li>
 					<li>
-						<a class="dropdown-item" routerLink="/weather" (click)="changeActive(4);reloadWeather()">		
+						<a class="dropdown-item" routerLink="/weather" (click)="changeActive(4);reloadWeather()">
 							Weather
 						</a>
 					</li>
 					<li>
-						<a class="dropdown-item" routerLink="/what-to-bring" (click)="changeActive(4)">		
+						<a class="dropdown-item" routerLink="/what-to-bring" (click)="changeActive(4)">
 							What To Bring
 						</a>
 					</li>
@@ -143,21 +153,21 @@ Camp Songs
 				</ul>
 			</li>
 			<li class="nav-item {{ actives[5] ? 'active' : '' }}">
-				<a class="nav-link" routerLink="/news" (click)="changeActive(5)">		
+				<a class="nav-link" routerLink="/news" (click)="changeActive(5)">
 					<span>
 						Camp News
 					</span>
 				</a>
 			</li>
 			<li class="nav-item {{ actives[6] ? 'active' : '' }}">
-				<a class="nav-link" routerLink="/careers" (click)="changeActive(6)">		
+				<a class="nav-link" routerLink="/careers" (click)="changeActive(6)">
 					<span>
 						We're Hiring!
 					</span>
 				</a>
 			</li>
 			<li class="nav-item {{ actives[7] ? 'active' : '' }}">
-				<a class="nav-link" routerLink="/contact" (click)="changeActive(7)">		
+				<a class="nav-link" routerLink="/contact" (click)="changeActive(7)">
 					<span>
 						Contact Us
 					</span>

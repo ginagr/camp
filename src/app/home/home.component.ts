@@ -2,20 +2,21 @@ import { Component, OnInit, Inject } from '@angular/core';
 import { PLATFORM_ID } from '@angular/core';
 import { isPlatformBrowser, isPlatformServer } from '@angular/common';
 import $ from 'jquery';
+import { Title } from '@angular/platform-browser';
 
 @Component({
-	selector: 'app-dashboard',
-	templateUrl: './dashboard.component.html',
-	styleUrls: ['./dashboard.component.css']
+	selector: 'app-home',
+	templateUrl: './home.component.html',
+	styleUrls: ['./home.component.css']
 })
-export class DashboardComponent implements OnInit {
+export class HomeComponent implements OnInit {
 
 	i = 0;
 	txt = [
-		"  is a LGBTIQA+ family vacation",
-		" is for families like yours",
-		" a place to be yourself",
-		" Summer Dates: July 27 - August 4, 2019", 
+		' is an LGBTQ+ camp for families and friends',
+		' is for families like yours',
+		' is a place to be yourself',
+		' Summer Dates: July 27 - August 4, 2019'
 	];
 	index = 0;
 	speed = 50;
@@ -37,38 +38,40 @@ export class DashboardComponent implements OnInit {
 		'./assets/gallery-6.jpg',
 		'./assets/gallery-7.jpg',
 		'./assets/gallery-8.jpg'
-	]
-	constructor(@Inject(PLATFORM_ID) private platformId: Object) {   }
+	];
+	constructor(@Inject(PLATFORM_ID) private platformId: Object, private titleService: Title ) {
+		this.titleService.setTitle('Camp It Up!: A Summer Camp for LGBTQ+ Families');
+	}
 
 	ngOnInit() {
 		if (isPlatformBrowser(this.platformId)) {
-			var $videoSrc;  
+			let $videoSrc;
 			$('.video-btn').click(function() {
-				$videoSrc = $(this).data("src");
-				var url = $videoSrc + "?rel=0&amp;showinfo=0&amp;modestbranding=1&amp;autoplay=1";
-				$("#video").attr('src', url); 
+				$videoSrc = $(this).data('src');
+				const url = $videoSrc + '?rel=0&amp;showinfo=0&amp;modestbranding=1&amp;autoplay=1';
+				$('#video').attr('src', url);
 			});
 			$('.close').click(function () {
-				$("#video").attr('src', $videoSrc); 
+				$('#video').attr('src', $videoSrc);
 			});
-			$(".carousel.lazy").on("slide", function(ev) {
+			$('.carousel.lazy').on('slide', function(ev) {
 				console.log('in');
-				var lazy = $(ev.relatedTarget).find("img[data-src]");
-				lazy.attr("src", lazy.data('src'));
-				lazy.removeAttr("data-src");
+				const lazy = $(ev.relatedTarget).find('img[data-src]');
+				lazy.attr('src', lazy.data('src'));
+				lazy.removeAttr('data-src');
 			});
 			$('.carousel.lazy').on('slide.bs.carousel', function () {
-				console.log("Slide Event");
-				//console.log('slid event');
+				console.log('Slide Event');
+				// console.log('slid event');
 			});
 			setTimeout(this.typeWriter.bind(this), 1000);
 		}
 	}
 
-	ngOnDestroy() {
+	OnDestroy() {
 		if (this.timeouts.length > 0) {
 			console.log('clearing timeouts');
-			for (var t of this.timeouts) {
+			for (const t of this.timeouts) {
 				clearTimeout(t);
 			}
 		}
@@ -76,7 +79,7 @@ export class DashboardComponent implements OnInit {
 
 	typeWriter() {
 		if (this.i < this.txt[this.index].length) {
-			var t = this;
+			const t = this;
 			$('.type').each(function() {
 				$(this).append(t.txt[t.index].charAt(t.i));
 			});
@@ -95,7 +98,7 @@ export class DashboardComponent implements OnInit {
 			});
 			this.i++;
 			this.timeouts[2] = setTimeout(this.deleteWriter.bind(this), this.speed);
-		} else if (this.index == this.txt.length-1) {
+		} else if (this.index === this.txt.length - 1) {
 			this.index = 0;
 			this.i = 0;
 			this.timeouts[3] = setTimeout(this.typeWriter.bind(this), 1500);

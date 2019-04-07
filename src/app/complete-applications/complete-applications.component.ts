@@ -17,38 +17,32 @@ export class CompleteApplicationsComponent implements OnInit {
 
 	constructor(private router: Router, private db: AngularFirestore, private afAuth: AngularFireAuth, private fb: FormBuilder) {
 		this.registerForm = this.fb.group({
-			email: ['', [Validators.required, Validators.email] ],
+			email: ['', [Validators.required, Validators.email]],
 			password: ['', Validators.required],
-			confirmPassword: ['', Validators.required ]
+			confirmPassword: ['', Validators.required]
 		}, {
-			validator: [this.mustMatch('password', 'confirmPassword')]
-		});
+				validator: [this.mustMatch('password', 'confirmPassword')]
+			});
 
-		this.db.collection('applications', ref=> ref.orderBy('timestamp', 'desc')).valueChanges()
-			.subscribe(doc => { this.applications = doc; });
+		this.db.collection('applications', ref => ref.orderBy('timestamp', 'desc')).valueChanges()
+			.subscribe(doc => { this.applications = doc.slice().reverse(); });
 	}
 
 	ngOnInit() { }
 
 	tryRegister(value) {
 		firebase.auth().createUserWithEmailAndPassword(value.email, value.password)
-			.then(user => {
-			alert('added new profile');
-		}, err => console.error('error', err));
+			.then(_ => alert('added new profile'), err => console.error('error', err));
 	}
 
 	mustMatch(controlName: string, matchingControlName: string) {
 		return (formGroup: FormGroup) => {
 			const control = formGroup.controls[controlName];
 			const matchingControl = formGroup.controls[matchingControlName];
-			if (matchingControl.errors && !matchingControl.errors.mustMatch) {
-				return;
-			}
+			if (matchingControl.errors && !matchingControl.errors.mustMatch) { return; }
 			if (control.value !== matchingControl.value) {
 				matchingControl.setErrors({ mustMatch: true });
-			} else {
-				matchingControl.setErrors(null);
-			}
-		}
+			} else { matchingControl.setErrors(null); }
+		};
 	}
 }

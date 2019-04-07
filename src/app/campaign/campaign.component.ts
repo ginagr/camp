@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Title }     from '@angular/platform-browser';
 
 @Component({
 	selector: 'app-campaign',
@@ -7,7 +8,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CampaignComponent implements OnInit {
 
-	constructor() {
+	constructor(private titleService: Title) {
+		this.titleService.setTitle('Join the CAMPaign!');
 	}
 
 	ngOnInit() {

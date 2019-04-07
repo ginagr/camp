@@ -6,3 +6,8 @@
 	height: 35vh;
 	object-fit: cover;
 }
+thead tr th {
+	border-top: 0;
+	font-weight: bolder;
+	font-size: 110%;
+}

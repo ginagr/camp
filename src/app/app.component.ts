@@ -1,6 +1,7 @@
 import { Component, Inject } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Router, ActivationEnd } from '@angular/router';
+import { Title }     from '@angular/platform-browser';
 
 import { PLATFORM_ID } from '@angular/core';
 import { isPlatformBrowser, isPlatformServer } from '@angular/common';
@@ -11,9 +12,8 @@ import { isPlatformBrowser, isPlatformServer } from '@angular/common';
 	styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-	title = 'Camp It Up!';
-
-	constructor(@Inject(PLATFORM_ID) private platformId: Object, private activatedRoute : ActivatedRoute, private router: Router) {
+	constructor(@Inject(PLATFORM_ID) private platformId: Object, private activatedRoute : ActivatedRoute, private router: Router, private titleService: Title ) {
+		this.titleService.setTitle('Camp It Up!: A Summer Camp for Queer Families');
 		if (isPlatformBrowser(this.platformId)) {
 			router.events.forEach((event) => {
 				if (event instanceof ActivationEnd) {
@@ -38,5 +38,4 @@ export class AppComponent {
 			}
 		}, 16);
 	}
-
 }

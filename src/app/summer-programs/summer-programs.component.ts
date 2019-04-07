@@ -1,6 +1,7 @@
 import { Component, OnInit, Inject } from '@angular/core';
 import { PLATFORM_ID } from '@angular/core';
 import { isPlatformBrowser, isPlatformServer } from '@angular/common';
+declare var $;
 
 @Component({
 	selector: 'summer-programs',
@@ -14,6 +15,11 @@ export class SummerProgramsComponent implements OnInit {
 	constructor(@Inject(PLATFORM_ID) private platformId: Object) { }
 
 	ngOnInit() {
+		if (isPlatformBrowser(this.platformId)) {
+			var $videoSrc = 'https://www.youtube.com/embed/-j9aAV16cFU';  
+			$('#videoModal').on('shown.bs.modal', _ => { $("#video").attr('src', `${$videoSrc}?autoplay=1&amp;modestbranding=1&amp;showinfo=0`) });
+			$('#videoModal').on('hide.bs.modal', _ => { $("#video").attr('src', $videoSrc) });
+		}
 	}
 
 	changeTab(id, label) {
@@ -26,5 +32,4 @@ export class SummerProgramsComponent implements OnInit {
 			this.lastShowLabel = label;
 		}
 	}
-
 }
