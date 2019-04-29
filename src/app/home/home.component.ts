@@ -68,7 +68,7 @@ export class HomeComponent implements OnInit {
 		}
 	}
 
-	OnDestroy() {
+	ngOnDestroy() {
 		if (this.timeouts.length > 0) {
 			console.log('clearing timeouts');
 			for (const t of this.timeouts) {
