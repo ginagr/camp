@@ -2,41 +2,55 @@
 	background: rgba(72, 179, 86, 0.37);
 	padding: 8px;
 }
+
 .row {
 	margin-bottom: 10px;
 	margin-left: 0;
 	margin-right: 0;
 }
+
 .email {
-	color:#27974E;
+	color: #27974E;
 }
+
 .calendar .col {
 	border: 1px solid white;
 	padding-bottom: 10px;
 	padding: 10px 0;
 }
+
 .grey {
 	color: darkgrey;
 	background: rgba(211, 211, 211, 0.45);
 }
+
 .opt-1 {
 	border-bottom: 5px solid #27974E;
 	margin-bottom: 5px;
 }
+
 .opt-2 {
 	border-bottom: 5px solid #3333ff;
 	margin-bottom: 5px;
 }
+
 .opt-3 {
 	border-bottom: 5px solid #660066;
 	margin-bottom: 5px;
 }
+
 .num {
 	padding: 5px 10px;
 }
+
 .deadline {
 	word-wrap: break-word;
 }
+
 .top-space {
 	margin-top: 15px;
+}
+
+.past-date {
+	text-decoration: line-through;
 }

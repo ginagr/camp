@@ -1,11 +1,19 @@
 .card-text {
 	text-align: center;
+	position: absolute;
+	bottom: 0%;
+	left: 0;
+	right: 0;
+	background: #00000078;
+	color: white;
+	padding: 2.5%;
 }
 
-.card-img-top {
+.card-img {
 	width: 100%;
-	height: 35vh;
+	height: 50vh;
 	object-fit: cover;
+	border-radius: none;
 }
 
 thead tr th {
@@ -19,8 +27,11 @@ thead tr th {
 }
 
 .card {
-	margin: .5em .35em;
+	margin: .5em;
+	border: none;
 }
+
+
 
 @media (max-width: 576px) {
 	.two {

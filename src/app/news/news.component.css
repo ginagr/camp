@@ -7,16 +7,25 @@
 	cursor: pointer;
 	width: 100%;
 }
+
 a {
 	color: black;
 }
+
 .btn:hover {
 	opacity: 0.8;
 	color: white !important;
 }
+
 .col-6 {
 	text-align: center;
 }
+
 .cont {
 	margin: 1em 25vw 0;
+}
+
+img {
+	width: 100%;
+	margin: 1em auto;
 }
