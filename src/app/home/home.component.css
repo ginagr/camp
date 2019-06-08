@@ -136,6 +136,7 @@ img {
 	width: 150px;
 	height: 150px;
 	background: #E6E7ED;
+	border-radius: 50%;
 	-moz-border-radius: 50%;
 	-webkit-border-radius: 50%;
 	background-position: 50% 50%;
