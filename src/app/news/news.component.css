@@ -29,3 +29,8 @@ img {
 	width: 100%;
 	margin: 1em auto;
 }
+
+.bold {
+	font-weight: bold;
+	color: #005600;
+}
