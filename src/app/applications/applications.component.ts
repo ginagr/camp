@@ -1,9 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Router, Params } from '@angular/router';
-import { AbstractControl, FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { AngularFireAuth } from '@angular/fire/auth';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AngularFirestore } from '@angular/fire/firestore';
-import * as firebase from 'firebase/app';
 import { Title } from '@angular/platform-browser';
 
 @Component({
@@ -21,8 +18,7 @@ export class ApplicationsComponent implements OnInit {
 		zip: '', duties: '', leaving: '', supervisor: '', contact: '', duration: ''
 	}];
 
-	constructor(private router: Router, private fb: FormBuilder, private db: AngularFirestore,
-		private afAuth: AngularFireAuth, private titleService: Title) {
+	constructor(private fb: FormBuilder, private db: AngularFirestore, private titleService: Title) {
 		this.titleService.setTitle('Join the Camp It Up! Team');
 		this.createForm();
 	}
@@ -85,7 +81,9 @@ export class ApplicationsComponent implements OnInit {
 			refName3: ['', Validators.required],
 			refRelation3: ['', Validators.required],
 			refPhone3: ['', Validators.required],
-			refEmail3: ['', [Validators.required, Validators.email]]
+			refEmail3: ['', [Validators.required, Validators.email]],
+			pronouns: [''],
+			prefname: ['']
 		});
 	}
 
@@ -93,7 +91,7 @@ export class ApplicationsComponent implements OnInit {
 		this.education.push({ name: '', field: '', degree: '' });
 	}
 
-	deleteEducation(index) {
+	deleteEducation(index: number) {
 		this.education.splice(index, 1);
 	}
 
@@ -104,7 +102,7 @@ export class ApplicationsComponent implements OnInit {
 		});
 	}
 
-	deleteEmployment(index) {
+	deleteEmployment(index: number) {
 		this.employment.splice(index, 1);
 	}
 

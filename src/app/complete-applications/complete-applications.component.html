@@ -14,10 +14,22 @@
 				<span style="float:right">Submitted at
 					{{ app?.timestamp.toMillis() | date:'yyyy/MM/dd h:mm:ss a'}}</span>
 			</h2>
-			<div class="form-group">
-				<label>
-					<strong>Full Name: </strong> {{ app?.name }}
-				</label>
+			<div class="form-row">
+				<div class="form-group col-md-4">
+					<label>
+						<strong>Full Name: </strong> {{ app?.name }}
+					</label>
+				</div>
+				<div class="form-group col-md-4">
+					<label>
+						<strong>Preferred Name: </strong> {{ app?.prefname }}
+					</label>
+				</div>
+				<div class="form-group col-md-4">
+					<label>
+						<strong>Pronouns: </strong> {{ app?.pronouns }}
+					</label>
+				</div>
 			</div>
 			<div class="form-group">
 				<label>
