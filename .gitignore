@@ -45,3 +45,5 @@ src/environments/environment.prod.ts
 *.cache
 
 .vscode
+src/environments/environment.prod.ts
+src/environments/environment.ts
