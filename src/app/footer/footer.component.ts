@@ -9,37 +9,37 @@ import { isPlatformBrowser, isPlatformServer } from '@angular/common';
 })
 export class FooterComponent implements OnInit {
 
-	timeinterval;
-	daysSpan;
-	hoursSpan;
-	minutesSpan;
-	secondsSpan;
+	timeinterval: any;
+	daysSpan: { innerHTML: any; };
+	hoursSpan: { innerHTML: string; };
+	minutesSpan: { innerHTML: string; };
+	secondsSpan: { innerHTML: string; };
 
-	constructor(@Inject(PLATFORM_ID) private platformId: Object) { 
+	constructor(@Inject(PLATFORM_ID) private platformId: Object) {
 
 	}
 
 	ngOnInit() {
 		if (isPlatformBrowser(this.platformId)) {
-			this.updateClock();
-			this.timeinterval = setInterval(this.updateClock, 1000);
+			// this.updateClock();
+			// this.timeinterval = setInterval(this.updateClock, 1000);
 		}
 	}
 
 	updateClock() {
-		var clock = document.getElementById('clockdiv');
+		const clock = document.getElementById('clockdiv');
 		this.daysSpan = clock.querySelector('.days');
 		this.hoursSpan = clock.querySelector('.hours');
 		this.minutesSpan = clock.querySelector('.minutes');
 		this.secondsSpan = clock.querySelector('.seconds');
 
-		var diff = new Date(2019, 6, 27, 0, 0, 0, 0).getTime() - new Date().getTime();
-		var seconds = Math.floor((diff / 1000) % 60);
-		var minutes = Math.floor((diff / 1000 / 60) % 60);
-		var hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
-		var days = Math.floor(diff / (1000 * 60 * 60 * 24));
-		var t = {
-			'total': t,
+		const diff = new Date(2019, 6, 27, 0, 0, 0, 0).getTime() - new Date().getTime();
+		const seconds = Math.floor((diff / 1000) % 60);
+		const minutes = Math.floor((diff / 1000 / 60) % 60);
+		const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+		const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+		const t = {
+			// 'total': t,
 			'days': days,
 			'hours': hours,
 			'minutes': minutes,
@@ -50,8 +50,8 @@ export class FooterComponent implements OnInit {
 		this.hoursSpan.innerHTML = ('0' + t.hours).slice(-2);
 		this.minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
 		this.secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
-		if (t.total <= 0) {
-			clearInterval(this.timeinterval);
-		}
+		// if (t.total <= 0) {
+		// 	clearInterval(this.timeinterval);
+		// }
 	}
 }

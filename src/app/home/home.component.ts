@@ -16,7 +16,7 @@ export class HomeComponent implements OnInit {
 		' is an LGBTQ+ camp for families and friends',
 		' is for families like yours',
 		' is a place to be yourself',
-		' Summer Dates: July 27 - August 4, 2019'
+		// ' Summer Dates: July 27 - August 4, 2019'
 	];
 	index = 0;
 	speed = 50;
@@ -45,7 +45,7 @@ export class HomeComponent implements OnInit {
 
 	ngOnInit() {
 		if (isPlatformBrowser(this.platformId)) {
-			let $videoSrc;
+			let $videoSrc: string;
 			$('.video-btn').click(function() {
 				$videoSrc = $(this).data('src');
 				const url = $videoSrc + '?rel=0&amp;showinfo=0&amp;modestbranding=1&amp;autoplay=1';

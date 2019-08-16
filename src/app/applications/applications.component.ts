@@ -119,11 +119,11 @@ export class ApplicationsComponent implements OnInit {
 					this.createForm();
 				}).catch(err => {
 					console.error('Error saving application: ', err);
-					alert('Something went wrong saving your application, please try again or email lisazeilermusic@gmail.com.');
+					alert('Something went wrong saving your application, please try again or email info@campitup.org.');
 				});
 		} else {
 			alert('Looks like you didn\'t fill in all of the sections, please finish then try again.' +
-				'If you think this is a mistake, please email the Director at lisazeilermusic@gmail.com');
+				'If you think this is a mistake, please email the Director at info@campitup.org');
 		}
 	}
 }

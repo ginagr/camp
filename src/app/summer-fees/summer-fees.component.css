@@ -54,3 +54,7 @@
 .past-date {
 	text-decoration: line-through;
 }
+
+#dates, #deadlines {
+	display: none;
+}
