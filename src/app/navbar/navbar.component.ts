@@ -10,13 +10,12 @@ import { isPlatformBrowser, isPlatformServer } from '@angular/common';
 })
 export class NavbarComponent implements OnInit {
 
-	actives = [ false, false, false, false, false, false, false, false ];
+	actives = [false, false, false, false, false, false, false, false];
 	old = 0;
 
 	constructor(@Inject(PLATFORM_ID) private platformId: Object, private router: Router) { }
 
-	ngOnInit() {
-	}
+	ngOnInit() { }
 
 	changeActive(active) {
 		//		var url = this.router.url.split('/')[1];
@@ -30,9 +29,9 @@ export class NavbarComponent implements OnInit {
 		}
 	}
 
-	reloadWeather () {
+	reloadWeather() {
 		if (isPlatformBrowser(this.platformId)) {
-			setTimeout(function(){window.location.reload(); }, 100);
+			setTimeout(function () { window.location.reload(); }, 100);
 		}
 	}
 }
