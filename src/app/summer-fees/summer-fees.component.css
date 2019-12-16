@@ -55,6 +55,6 @@
 	text-decoration: line-through;
 }
 
-#dates, #deadlines {
+#deadlines {
 	display: none;
 }

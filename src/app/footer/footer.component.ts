@@ -21,8 +21,8 @@ export class FooterComponent implements OnInit {
 
 	ngOnInit() {
 		if (isPlatformBrowser(this.platformId)) {
-			// this.updateClock();
-			// this.timeinterval = setInterval(this.updateClock, 1000);
+			this.updateClock();
+			this.timeinterval = setInterval(this.updateClock, 1000);
 		}
 	}
 
@@ -33,7 +33,7 @@ export class FooterComponent implements OnInit {
 		this.minutesSpan = clock.querySelector('.minutes');
 		this.secondsSpan = clock.querySelector('.seconds');
 
-		const diff = new Date(2019, 6, 27, 0, 0, 0, 0).getTime() - new Date().getTime();
+		const diff = new Date(2020, 6, 25, 0, 0, 0, 0).getTime() - new Date().getTime();
 		const seconds = Math.floor((diff / 1000) % 60);
 		const minutes = Math.floor((diff / 1000 / 60) % 60);
 		const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
