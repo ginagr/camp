@@ -1,148 +1,145 @@
 <nav class="navbar navbar-expand-xl navbar-light bg-light">
-	<a class="navbar-brand" routerLink="/" (click)="changeActive(-1)">
-		<img src="./assets/camp_logo.png" height="30" alt="">
-	</a>
-	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
-		aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-		<span class="navbar-toggler-icon"></span>
-	</button>
-	<div class="collapse navbar-collapse" id="navbarNavDropdown">
-		<ul class="navbar-nav ml-auto">
-			<li class="nav-item dropdown {{ actives[0] ? 'active' : '' }}">
-				<a class="nav-link dropdown-toggle" id="aboutDropdownMenuLink" data-toggle="dropdown"
-					aria-haspopup="true" aria-expanded="false">
-					About
-				</a>
-				<ul class="dropdown-menu dropdown-menu-right" aria-labelledby="aboutDropdownMenuLink">
-					<li>
-						<a class="dropdown-item" routerLink="/overview" (click)="changeActive(0)">
-							Overview
-						</a>
-					</li>
-					<li>
-						<a class="dropdown-item" routerLink="/mission" (click)="changeActive(0)">
-							Mission/History
-						</a>
-					</li>
-					<li>
-						<a class="dropdown-item" routerLink="/board" (click)="changeActive(0)">
-							Board of Directors
-						</a>
-					</li>
-					<li>
-						<a class="dropdown-item" routerLink="/staff" (click)="changeActive(0)">
-							Staff
-						</a>
-					</li>
-				</ul>
-			</li>
-			<li class="nav-item dropdown {{ actives[1] ? 'active' : '' }}">
-				<a class="nav-link dropdown-toggle" id="programsDropdownMenuLink" data-toggle="dropdown"
-					aria-haspopup="true" aria-expanded="false">
-					Programs
-				</a>
-				<ul class="dropdown-menu dropdown-menu-right" aria-labelledby="programsDropdownMenuLink">
-					<li>
-						<a class="dropdown-item" routerLink="/summer-programs" (click)="changeActive(1)">
-							Summer Camp
-						</a>
-					</li>
-					<li>
-						<a class="dropdown-item" routerLink="/winter-programs" (click)="changeActive(1)">
-							Winter Camp
-						</a>
-					</li>
-				</ul>
-			</li>
-			<li class="nav-item dropdown {{ actives[2] ? 'active' : '' }}">
-				<a class="nav-link dropdown-toggle" id="registrationDropdownMenuLink" data-toggle="dropdown"
-					aria-haspopup="true" aria-expanded="false">
-					Registration
-				</a>
-				<ul class="dropdown-menu dropdown-menu-right" aria-labelledby="registrationDropdownMenuLink">
-					<!-- <li>
-						<a class="dropdown-item"
-							href="https://www.ultracamp.com/info/upcomingsessions.aspx?idCamp=786&campCode=mwf"
-							target="_blank">
-							Future Registration
-						</a>
-					</li> -->
-					<li class="dropdown-item has-sub">
-						<a aria-haspopup="true">
-							Dates and Fees
-						</a>
-						<ul>
-							<li>
-								<a routerLink="/summer-fees" (click)="changeActive(2)">
-									Summer Camp
-								</a>
-							</li>
-							<li>
-								<a routerLink="/winter-fees" (click)="changeActive(2)">
-									Winter Camp
-								</a>
-							</li>
-						</ul>
-					</li>
-					<li class="dropdown-item">
-						<a routerLink="/forms" (click)="changeActive(2)">
-							Forms
-						</a>
-					</li>
-				</ul>
-			</li>
-			<li class="nav-item dropdown {{ actives[3] ? 'active' : '' }}">
-				<a class="nav-link dropdown-toggle" id="donateDropdownMenuLink" data-toggle="dropdown"
-					aria-haspopup="true" aria-expanded="false">
-					Donate
-				</a>
-				<ul class="dropdown-menu dropdown-menu-right" aria-labelledby="donateDropdownMenuLink">
-					<li>
-						<a class="dropdown-item"
-							href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=WUCZ7ZZ5SE27N"
-							target="_blank">
-							Donate Online Now
-						</a>
-					</li>
-					<li>
-						<a class="dropdown-item" routerLink="/pledge-form" (click)="changeActive(3)" target="_blank">
-							Download and Print Mail-In Donation
-						</a>
-					</li>
-					<li>
-						<a class="dropdown-item" routerLink="/campaign" (click)="changeActive(3)">
-							Join the CAMPaign
-						</a>
-					</li>
-					<li>
-						<a class="dropdown-item" routerLink="/non-profit" (click)="changeActive(3)">
-							Non-Profit Status
-						</a>
-					</li>
-				</ul>
-			</li>
-			<li class="nav-item dropdown {{ actives[4] ? 'active' : '' }}">
-				<a class="nav-link dropdown-toggle" id="readyDropdownMenuLink" data-toggle="dropdown"
-					aria-haspopup="true" aria-expanded="false">
-					Getting Ready
-				</a>
-				<ul class="dropdown-menu dropdown-menu-right" aria-labelledby="readyDropdownMenuLink">
-					<li>
-						<a class="dropdown-item" routerLink="/directions" (click)="changeActive(4)">
-							Directions
-						</a>
-					</li>
-					<li>
-						<a class="dropdown-item" routerLink="/weather" (click)="changeActive(4);reloadWeather()">
-							Weather
-						</a>
-					</li>
-					<li>
-						<a class="dropdown-item" routerLink="/what-to-bring" (click)="changeActive(4)">
-							What To Bring
-						</a>
-					</li>
-					<!--
+  <a class="navbar-brand" routerLink="/" (click)="changeActive(-1)">
+    <img src="./assets/camp_logo.png" height="30" alt="">
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+    aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item dropdown {{ actives[0] ? 'active' : '' }}">
+        <a class="nav-link dropdown-toggle" id="aboutDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+          aria-expanded="false">
+          About
+        </a>
+        <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="aboutDropdownMenuLink">
+          <li>
+            <a class="dropdown-item" routerLink="/overview" (click)="changeActive(0)">
+              Overview
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item" routerLink="/mission" (click)="changeActive(0)">
+              Mission/History
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item" routerLink="/board" (click)="changeActive(0)">
+              Board of Directors
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item" routerLink="/staff" (click)="changeActive(0)">
+              Staff
+            </a>
+          </li>
+        </ul>
+      </li>
+      <li class="nav-item dropdown {{ actives[1] ? 'active' : '' }}">
+        <a class="nav-link dropdown-toggle" id="programsDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+          aria-expanded="false">
+          Programs
+        </a>
+        <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="programsDropdownMenuLink">
+          <li>
+            <a class="dropdown-item" routerLink="/summer-programs" (click)="changeActive(1)">
+              Summer Camp
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item" routerLink="/winter-programs" (click)="changeActive(1)">
+              Winter Camp
+            </a>
+          </li>
+        </ul>
+      </li>
+      <li class="nav-item dropdown {{ actives[2] ? 'active' : '' }}">
+        <a class="nav-link dropdown-toggle" id="registrationDropdownMenuLink" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">
+          Registration
+        </a>
+        <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="registrationDropdownMenuLink">
+          <li>
+            <a class="dropdown-item" routerLink="/summer-registration" (click)="changeActive(2)">
+              Summer 2020 Registration
+            </a>
+          </li>
+          <li class="dropdown-item has-sub">
+            <a aria-haspopup="true">
+              Dates and Fees
+            </a>
+            <ul>
+              <li>
+                <a routerLink="/summer-fees" (click)="changeActive(2)">
+                  Summer Camp
+                </a>
+              </li>
+              <li>
+                <a routerLink="/winter-fees" (click)="changeActive(2)">
+                  Winter Camp
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="dropdown-item">
+            <a routerLink="/forms" (click)="changeActive(2)">
+              Forms
+            </a>
+          </li>
+        </ul>
+      </li>
+      <li class="nav-item dropdown {{ actives[3] ? 'active' : '' }}">
+        <a class="nav-link dropdown-toggle" id="donateDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+          aria-expanded="false">
+          Donate
+        </a>
+        <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="donateDropdownMenuLink">
+          <li>
+            <a class="dropdown-item"
+              href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=WUCZ7ZZ5SE27N" target="_blank">
+              Donate Online Now
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item" routerLink="/pledge-form" (click)="changeActive(3)" target="_blank">
+              Download and Print Mail-In Donation
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item" routerLink="/campaign" (click)="changeActive(3)">
+              Join the CAMPaign
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item" routerLink="/non-profit" (click)="changeActive(3)">
+              Non-Profit Status
+            </a>
+          </li>
+        </ul>
+      </li>
+      <li class="nav-item dropdown {{ actives[4] ? 'active' : '' }}">
+        <a class="nav-link dropdown-toggle" id="readyDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+          aria-expanded="false">
+          Getting Ready
+        </a>
+        <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="readyDropdownMenuLink">
+          <li>
+            <a class="dropdown-item" routerLink="/directions" (click)="changeActive(4)">
+              Directions
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item" routerLink="/weather" (click)="changeActive(4);reloadWeather()">
+              Weather
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item" routerLink="/what-to-bring" (click)="changeActive(4)">
+              What To Bring
+            </a>
+          </li>
+          <!--
 <li>
 //TODO: add songs
 <a class="dropdown-item" routerLink="/songs" (click)="changeActive(4)">
@@ -150,31 +147,31 @@ Camp Songs
 </a>
 </li>
 -->
-				</ul>
-			</li>
-			<li class="nav-item {{ actives[5] ? 'active' : '' }}">
-				<a class="nav-link" routerLink="/news" (click)="changeActive(5)">
-					<span>
-						Camp News
-					</span>
-				</a>
-			</li>
-			<!-- <li class="nav-item {{ actives[6] ? 'active' : '' }}">
+        </ul>
+      </li>
+      <li class="nav-item {{ actives[5] ? 'active' : '' }}">
+        <a class="nav-link" routerLink="/news" (click)="changeActive(5)">
+          <span>
+            Camp News
+          </span>
+        </a>
+      </li>
+      <!-- <li class="nav-item {{ actives[6] ? 'active' : '' }}">
 				<a class="nav-link" routerLink="/careers" (click)="changeActive(6)">
 					<span>
 						Join the Team!
 					</span>
 				</a>
 			</li> -->
-			<li class="nav-item {{ actives[7] ? 'active' : '' }}">
-				<a class="nav-link" routerLink="/contact" (click)="changeActive(7)">
-					<span>
-						Contact Us
-					</span>
-				</a>
-			</li>
-		</ul>
-	</div>
+      <li class="nav-item {{ actives[7] ? 'active' : '' }}">
+        <a class="nav-link" routerLink="/contact" (click)="changeActive(7)">
+          <span>
+            Contact Us
+          </span>
+        </a>
+      </li>
+    </ul>
+  </div>
 </nav>
 
 <!-- <div class="banner">
@@ -185,36 +182,27 @@ Camp Songs
 		<span class="fa fa-exclamation" style="margin-right: 10px; color: red;"></span>
 	</h2>
 </div> -->
-<div class="banner">
-	<h2>
-		<a style="color: black;" routerLink="/board">
-			Join us at our next board meeting! On Janurary 26th, 2020 we will meet at 9:30 to nosh and gab and then
-			begin at 10am. Location is 1917 5th Street in Berkeley. No requirements to join, we love seeing both new and
-			old faces!
-		</a>
-	</h2>
-</div>
 <div class="banner amazon">
-	<h2>
-		<strong>Support Camp It Up Inc.</strong>
-		When you shop at
-		<a style="color: darkgreen;"
-			href="https://smile.amazon.com/gp/chpf/homepage/ref=smi_chpf_redirect?ie=UTF8&ein=26-2733972&ref_=smi_ext_ch_26-2733972_cl"
-			target="_blank">smile.amazon.com</a>, Amazon donates.
-		Click
-		<a style="color: darkgreen;"
-			href="https://smile.amazon.com/gp/chpf/homepage/ref=smi_chpf_redirect?ie=UTF8&ein=26-2733972&ref_=smi_ext_ch_26-2733972_cl"
-			target="_blank">here!</a>
-		<img src="./assets/amazon.png">
-	</h2>
+  <h2>
+    <strong>Support Camp It Up Inc.</strong>
+    When you shop at
+    <a style="color: darkgreen;"
+      href="https://smile.amazon.com/gp/chpf/homepage/ref=smi_chpf_redirect?ie=UTF8&ein=26-2733972&ref_=smi_ext_ch_26-2733972_cl"
+      target="_blank">smile.amazon.com</a>, Amazon donates.
+    Click
+    <a style="color: darkgreen;"
+      href="https://smile.amazon.com/gp/chpf/homepage/ref=smi_chpf_redirect?ie=UTF8&ein=26-2733972&ref_=smi_ext_ch_26-2733972_cl"
+      target="_blank">here!</a>
+    <img src="./assets/amazon.png">
+  </h2>
 </div>
 <div class="banner">
-	<h2><a style="color: black;"
-			href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=HZ6SNAXDQPVLU&source=url"
-			target="_blank">
-			In the wake of the passing of John Dalal, a longtime camper and board member, his husband and son, Aaron and
-			Raul, ask that all donations in his honor be made to Camp It Up!. He will be loved and missed. Please click
-		</a><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=HZ6SNAXDQPVLU&source=url"
-			style="color: darkgreen; font-weight: bold" target="_blank">here </a> to donate.
-	</h2>
+  <h2><a style="color: black;"
+      href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=HZ6SNAXDQPVLU&source=url"
+      target="_blank">
+      In the wake of the passing of John Dalal, a longtime camper and board member, his husband and son, Aaron and
+      Raul, ask that all donations in his honor be made to Camp It Up!. He will be loved and missed. Please click
+    </a><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=HZ6SNAXDQPVLU&source=url"
+      style="color: darkgreen; font-weight: bold" target="_blank">here </a> to donate.
+  </h2>
 </div>
