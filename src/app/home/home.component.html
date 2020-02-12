@@ -1,219 +1,222 @@
 <div class="background">
-	<!--
+  <!--
 <div class="banner">
 <h2> <span class="fa fa-exclamation" style="margin-right: 10px; color: green;"></span>Join Us Sunday, Feburary 24th, 2019 from 12:30PM to 2:30PM at New Parkway Theater. Come for a fun afternoon watching a film and seeing all your camp friends and staff. Families who have never been to camp are welcome to join and share in the fun!</h2>
 </div>
 -->
-	<div id="carouselControls" class="carousel slide lazy carousel-fade sCarousel" data-ride="carousel">
-		<div class="carousel-inner" role="listbox">
-			<div *ngFor="let slide of slides; let i = index; let first = first" class="carousel-item"
-				[class.active]="first">
-				<img class="d-block w-100" [src]="slide" alt="Loading image...">
-				<div class="container">
-					<div class="carousel-caption">
-						<h1 class="carousel-title type">
-							<span>Camp It Up!</span>
-						</h1>
-						<!--
-						<a class="header-signup video-btn" data-toggle="modal" data-src="https://www.youtube.com/embed/-j9aAV16cFU" data-target="#myModal">
-							Watch Video
-						</a>
--->
-					</div>
-				</div>
-			</div>
-		</div>
-		<a class="carousel-control-prev" href="#carouselControls" role="button" data-slide="prev">
-			<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-			<span class="sr-only">Previous</span>
-		</a>
-		<a class="carousel-control-next" href="#carouselControls" role="button" data-slide="next">
-			<span class="carousel-control-next-icon" aria-hidden="true"></span>
-			<span class="sr-only">Next</span>
-		</a>
-	</div>
-	<div class="row">
-		<div class="col-6 col-md-3" *ngFor="let g of gallery">
-			<img [src]="g">
-		</div>
-	</div>
+  <div id="carouselControls" class="carousel slide lazy carousel-fade sCarousel" data-ride="carousel">
+    <div class="carousel-inner" role="listbox">
+      <div *ngFor="let slide of slides; let i = index; let first = first" class="carousel-item" [class.active]="first">
+        <img class="d-block w-100" [src]="slide" alt="Loading image...">
+        <div class="container">
+          <div class="carousel-caption">
+            <h1 class="carousel-title type">
+              <span>Camp It Up!</span>
+            </h1>
+            <!--
+            <a class="header-signup video-btn" data-toggle="modal" data-src="https://www.youtube.com/embed/-j9aAV16cFU"
+              data-target="#myModal">
+              Watch Video
+            </a> -->
+
+            <a class="header-signup video-btn" routerLink="/summer-registration">
+              Register for Camp 2020
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselControls" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselControls" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+  <div class="row">
+    <div class="col-6 col-md-3" *ngFor="let g of gallery">
+      <img [src]="g">
+    </div>
+  </div>
 </div>
 <div class="row" style="margin-bottom: 60px;">
-	<div class="col-sm-12 testimonials">
-		<h2>What <b>our campers</b> are saying</h2>
-		<div id="testimonialCarousel" class="carousel slide tCarousel" data-ride="carousel">
-			<div class="carousel-inner">
-				<div class="item carousel-item active">
-					<div class="row">
-						<div class="col-sm-4">
-							<div class="media row">
-								<div class="col-12 col-lg-6">
-									<img src="./assets/kalea.jpg" alt="">
-								</div>
-								<div class="col-12 col-lg-6 media-body">
-									<div class="testimonial">
-										<p>"I like dressing up at camp."</p>
-										<p class="overview"><b>Kalea</b>, Age 4</p>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-sm-8">
-							<div class="media row">
-								<div class="col-12 col-lg-3">
-									<img src="./assets/andrea.png" alt="">
-								</div>
-								<div class="col-12 col-lg-9 media-body">
-									<div class="testimonial">
-										<p>"Camp It Up has been a welcoming community of support for me for most of my
-											adult life. Of course it is fun to hang out in beautiful nature and enjoy
-											group activities, but the foundation of camp is the safe space that it
-											creates for LGBTQ+ youth and adults. As a former counselor and program
-											director, I have a ton of beautiful memories of people coming to camp and
-											discovering a whole new level of safety and ease."</p>
-										<p class="overview"><b> Andrea Prichett</b>, Former Staff</p>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
+  <div class="col-sm-12 testimonials">
+    <h2>What <b>our campers</b> are saying</h2>
+    <div id="testimonialCarousel" class="carousel slide tCarousel" data-ride="carousel">
+      <div class="carousel-inner">
+        <div class="item carousel-item active">
+          <div class="row">
+            <div class="col-sm-4">
+              <div class="media row">
+                <div class="col-12 col-lg-6">
+                  <img src="./assets/kalea.jpg" alt="">
+                </div>
+                <div class="col-12 col-lg-6 media-body">
+                  <div class="testimonial">
+                    <p>"I like dressing up at camp."</p>
+                    <p class="overview"><b>Kalea</b>, Age 4</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-8">
+              <div class="media row">
+                <div class="col-12 col-lg-3">
+                  <img src="./assets/andrea.png" alt="">
+                </div>
+                <div class="col-12 col-lg-9 media-body">
+                  <div class="testimonial">
+                    <p>"Camp It Up has been a welcoming community of support for me for most of my
+                      adult life. Of course it is fun to hang out in beautiful nature and enjoy
+                      group activities, but the foundation of camp is the safe space that it
+                      creates for LGBTQ+ youth and adults. As a former counselor and program
+                      director, I have a ton of beautiful memories of people coming to camp and
+                      discovering a whole new level of safety and ease."</p>
+                    <p class="overview"><b> Andrea Prichett</b>, Former Staff</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
 
-				<div class="item carousel-item">
-					<div class="row">
-						<div class="col-sm-4">
-							<div class="media row">
-								<div class="col-12 col-lg-6">
-									<img src="./assets/cabins.jpg" alt="">
-								</div>
-								<div class="col-12 col-lg-6 media-body">
-									<div class="testimonial">
-										<p>"I like to play in my tent."</p>
-										<p class="overview"><b>Eddy</b>, Age 3</p>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-sm-8">
-							<div class="media row">
-								<div class="col-12 col-lg-3">
-									<img src="./assets/lilah.png" alt="">
-								</div>
-								<div class="col-12 col-lg-9 media-body">
-									<div class="testimonial">
-										<p>"Camp is a magic place with spirit and heart; the best of what an intentional
-											community can be. At Camp everyone is expected to be their highest
-											selves—and it works!"</p>
-										<p class="overview"><b>Kate Kaufman</b>, Camper Mom</p>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="item carousel-item">
-					<div class="row">
-						<div class="col-sm-4">
-							<div class="media row">
-								<div class="col-12 col-lg-6">
-									<img src="./assets/aviva.jpg" alt="">
-								</div>
-								<div class="col-12 col-lg-6 media-body">
-									<div class="testimonial">
-										<p>"I like being with daddy and poppa at camp."</p>
-										<p class="overview"><b>Aviva</b>, Age 3</p>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-sm-8">
-							<div class="media row">
-								<div class="col-12 col-lg-3">
-									<img src="./assets/emma.png" alt="">
-								</div>
-								<div class="col-12 col-lg-9 media-body">
-									<div class="testimonial">
-										<p>"It is amazing to me how one week a year could have had such a significant
-											impact on our family’s life. – and each member of it. Camp It Up is a week
-											of fun, exploration, friends, wonder, music, outdoor activities, and
-											creativity, in the context of LGBTQ+ positive community spirit. Our kids
-											learned how to be leaders, and both wrote their college essays about Camp It
-											Up!"</p>
-										<p class="overview"><b>Judy Schwartz</b>, Camper Mom</p>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="item carousel-item">
-					<div class="row">
-						<div class="col-sm-4">
-							<div class="media row">
-								<div class="col-12 col-lg-6">
-									<img src="./assets/games.jpg" alt="">
-								</div>
-								<div class="col-12 col-lg-6 media-body">
-									<div class="testimonial">
-										<p>"I like everything at Camp It Up!"</p>
-										<p class="overview"><b>Axel</b>, Age 4</p>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-sm-8">
-							<div class="media row">
-								<div class="col-12 col-lg-3">
-									<img src="./assets/kids.jpg" alt="">
-								</div>
-								<div class="col-12 col-lg-9 media-body">
-									<div class="testimonial">
-										<p>"Camp it Up! spells S-U-M-M-E-R for our family. Fun, playful, connective, and
-											most important, community! Our three year-old daughter informed us at the
-											end of last summer, “I want to be a counselor one day!” What more could we
-											ask for?"</p>
-										<p class="overview"><b>Daniel Barash</b>, Camper Dad</p>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="item carousel-item">
-					<div class="row">
-						<div class="col-sm-4">
-							<div class="media row">
-								<div class="col-12 col-lg-6">
-									<img src="./assets/quidditch.jpg" alt="">
-								</div>
-								<div class="col-12 col-lg-6 media-body">
-									<div class="testimonial">
-										<p>"I like seeing all my friends playing Quidditch, Capture the flag and Kick
-											Ball."</p>
-										<p class="overview"><b>Josh</b>, Age 9</p>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-sm-8">
-							<div class="media row">
-								<div class="col-12 col-lg-3">
-									<img src="./assets/shaynasophie.jpg" alt="">
-								</div>
-								<div class="col-12 col-lg-9 media-body">
-									<div class="testimonial">
-										<p>"I love camp because kids see families like theirs. They also see kids older
-											than themselves, a version of their own future that their parents can’t show
-											them."</p>
-										<p class="overview"><b>Parent Camper</b></p>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<!--
+        <div class="item carousel-item">
+          <div class="row">
+            <div class="col-sm-4">
+              <div class="media row">
+                <div class="col-12 col-lg-6">
+                  <img src="./assets/cabins.jpg" alt="">
+                </div>
+                <div class="col-12 col-lg-6 media-body">
+                  <div class="testimonial">
+                    <p>"I like to play in my tent."</p>
+                    <p class="overview"><b>Eddy</b>, Age 3</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-8">
+              <div class="media row">
+                <div class="col-12 col-lg-3">
+                  <img src="./assets/lilah.png" alt="">
+                </div>
+                <div class="col-12 col-lg-9 media-body">
+                  <div class="testimonial">
+                    <p>"Camp is a magic place with spirit and heart; the best of what an intentional
+                      community can be. At Camp everyone is expected to be their highest
+                      selves—and it works!"</p>
+                    <p class="overview"><b>Kate Kaufman</b>, Camper Mom</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="item carousel-item">
+          <div class="row">
+            <div class="col-sm-4">
+              <div class="media row">
+                <div class="col-12 col-lg-6">
+                  <img src="./assets/aviva.jpg" alt="">
+                </div>
+                <div class="col-12 col-lg-6 media-body">
+                  <div class="testimonial">
+                    <p>"I like being with daddy and poppa at camp."</p>
+                    <p class="overview"><b>Aviva</b>, Age 3</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-8">
+              <div class="media row">
+                <div class="col-12 col-lg-3">
+                  <img src="./assets/emma.png" alt="">
+                </div>
+                <div class="col-12 col-lg-9 media-body">
+                  <div class="testimonial">
+                    <p>"It is amazing to me how one week a year could have had such a significant
+                      impact on our family’s life. – and each member of it. Camp It Up is a week
+                      of fun, exploration, friends, wonder, music, outdoor activities, and
+                      creativity, in the context of LGBTQ+ positive community spirit. Our kids
+                      learned how to be leaders, and both wrote their college essays about Camp It
+                      Up!"</p>
+                    <p class="overview"><b>Judy Schwartz</b>, Camper Mom</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="item carousel-item">
+          <div class="row">
+            <div class="col-sm-4">
+              <div class="media row">
+                <div class="col-12 col-lg-6">
+                  <img src="./assets/games.jpg" alt="">
+                </div>
+                <div class="col-12 col-lg-6 media-body">
+                  <div class="testimonial">
+                    <p>"I like everything at Camp It Up!"</p>
+                    <p class="overview"><b>Axel</b>, Age 4</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-8">
+              <div class="media row">
+                <div class="col-12 col-lg-3">
+                  <img src="./assets/kids.jpg" alt="">
+                </div>
+                <div class="col-12 col-lg-9 media-body">
+                  <div class="testimonial">
+                    <p>"Camp it Up! spells S-U-M-M-E-R for our family. Fun, playful, connective, and
+                      most important, community! Our three year-old daughter informed us at the
+                      end of last summer, “I want to be a counselor one day!” What more could we
+                      ask for?"</p>
+                    <p class="overview"><b>Daniel Barash</b>, Camper Dad</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="item carousel-item">
+          <div class="row">
+            <div class="col-sm-4">
+              <div class="media row">
+                <div class="col-12 col-lg-6">
+                  <img src="./assets/quidditch.jpg" alt="">
+                </div>
+                <div class="col-12 col-lg-6 media-body">
+                  <div class="testimonial">
+                    <p>"I like seeing all my friends playing Quidditch, Capture the flag and Kick
+                      Ball."</p>
+                    <p class="overview"><b>Josh</b>, Age 9</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-8">
+              <div class="media row">
+                <div class="col-12 col-lg-3">
+                  <img src="./assets/shaynasophie.jpg" alt="">
+                </div>
+                <div class="col-12 col-lg-9 media-body">
+                  <div class="testimonial">
+                    <p>"I love camp because kids see families like theirs. They also see kids older
+                      than themselves, a version of their own future that their parents can’t show
+                      them."</p>
+                    <p class="overview"><b>Parent Camper</b></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--
 <ol class="carousel-indicators">
 <li data-target="#testimonialCarousel" data-slide-to="0" class="active"></li>
 <li data-target="#testimonialCarousel" data-slide-to="1"></li>
@@ -222,20 +225,20 @@
 <li data-target="#testimonialCarousel" data-slide-to="4"></li>
 </ol>
 -->
-		</div>
-	</div>
+    </div>
+  </div>
 </div>
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-hidden="true">
-	<div class="modal-dialog" role="document">
-		<div class="modal-content">
-			<div class="modal-body">
-				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-					<span aria-hidden="true">&times;</span>
-				</button>
-				<div class="embed-responsive embed-responsive-16by9">
-					<iframe class="embed-responsive-item" src="" id="video" allowscriptaccess="always">></iframe>
-				</div>
-			</div>
-		</div>
-	</div>
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <div class="embed-responsive embed-responsive-16by9">
+          <iframe class="embed-responsive-item" src="" id="video" allowscriptaccess="always">></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

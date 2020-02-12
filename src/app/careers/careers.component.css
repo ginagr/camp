@@ -1,27 +1,26 @@
 strong {
-	color: #27974E;
+  color: #27974E;
 }
 
 .card-header:hover {
-	cursor: pointer;
+  cursor: pointer;
 }
 
 .italics {
-	font-style: italic;
-	margin-right: 2px;
+  font-style: italic;
+  margin-right: 2px;
 }
 
 a {
-	color: white;
+  color: white;
 }
 
 a:hover {
-	color: white;
+  color: white;
 }
 
 .btn {
-	text-align: center;
-	width: 50%;
-	margin: 1em 25% 0;
-	display: none;
+  text-align: center;
+  width: 50%;
+  margin: 1em 25% 0;
 }
