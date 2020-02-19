@@ -1,15 +1,23 @@
 .app {
-	background: rgba(255, 255, 255, 0.45);
-	border-radius: .5em;
-	padding: .25em 2em;
-	margin-bottom: 1em;
+  background: rgba(255, 255, 255, 0.45);
+  border-radius: .5em;
+  padding: .25em 2em;
+  margin-bottom: 1em;
 }
+
 .container-fluid {
-	width: 90%;
+  width: 90%;
 }
+
 .form-group {
-	margin-bottom: 0;
+  margin-bottom: 0;
 }
+
 h3 {
-	margin-top: 0;
+  margin-top: 0;
+}
+
+.btn {
+  width: 40%;
+  margin: 1em 5%;
 }
