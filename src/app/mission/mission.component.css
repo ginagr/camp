@@ -1,6 +1,14 @@
 img {
-	margin: 1% auto;
-	display: block;
-	width: 90%;
-	margin-left: 1vw;
+  width: 90%;
+  margin: 1% 5%;
+}
+
+p {
+  text-align: justify;
+}
+
+@media (max-width: 991px) {
+  img {
+    width: 40%
+  }
 }
