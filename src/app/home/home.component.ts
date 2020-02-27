@@ -14,7 +14,7 @@ export class HomeComponent implements OnInit {
   i = 0;
   txt = [
     ' Summer Dates: July 25 - August 2, 2020',
-    ' is an LGBTQ+ camp for families and friends',
+    ' is an LGBTQ+ camp for families and allies',
     ' is for families like yours',
     ' is a place to be yourself',
   ];
