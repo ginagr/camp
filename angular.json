@@ -14,7 +14,7 @@
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
             "aot": true,
-            "outputPath": "dist.nosync/camp",
+            "outputPath": "dist/camp",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -118,8 +118,8 @@
         "server": {
           "builder": "@angular-devkit/build-angular:server",
           "options": {
-            "outputPath": "dist.nosync/camp-server",
-            "main": "src/main.server.ts",
+            "outputPath": "dist/camp-server",
+            "main": "server.ts",
             "tsConfig": "src/tsconfig.server.json"
           },
           "configurations": {
@@ -132,6 +132,32 @@
               ]
             ,              "optimization": true
 }
+          }
+        },
+        "serve-ssr": {
+          "builder": "@nguniversal/builders:ssr-dev-server",
+          "options": {
+            "browserTarget": "camp:build",
+            "serverTarget": "camp:server"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "camp:build:production",
+              "serverTarget": "camp:server:production"
+            }
+          }
+        },
+        "prerender": {
+          "builder": "@nguniversal/builders:prerender",
+          "options": {
+            "browserTarget": "camp:build:production",
+            "serverTarget": "camp:server:production",
+            "routes": [
+              "/"
+            ]
+          },
+          "configurations": {
+            "production": {}
           }
         }
       }

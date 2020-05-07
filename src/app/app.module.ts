@@ -11,7 +11,7 @@ import { AuthGuard } from './auth.guard';
 import { AuthService } from './auth.service';
 
 import { AngularFireModule } from '@angular/fire';
-import { AngularFirestoreModule, FirestoreSettingsToken } from '@angular/fire/firestore';
+import { AngularFirestoreModule, SETTINGS } from '@angular/fire/firestore';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 
 import { PdfViewerModule } from 'ng2-pdf-viewer';
@@ -115,7 +115,7 @@ import { ChangePasswordComponent } from './change-password/change-password.compo
     AuthService,
     AuthGuard,
     Title,
-    { provide: FirestoreSettingsToken, useValue: {} }
+    { provide: SETTINGS, useValue: {} }
   ],
   bootstrap: [AppComponent]
 })

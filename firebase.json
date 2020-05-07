@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "dist.nosync/camp",
+    "public": "dist/camp",
     "ignore": [
       "firebase.json",
       "**/.*",

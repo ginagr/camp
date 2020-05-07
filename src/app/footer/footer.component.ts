@@ -21,8 +21,8 @@ export class FooterComponent implements OnInit {
 
   ngOnInit() {
     if (isPlatformBrowser(this.platformId)) {
-      this.updateClock();
-      this.timeinterval = setInterval(this.updateClock, 1000);
+      // this.updateClock();
+      // this.timeinterval = setInterval(this.updateClock, 1000);
     }
   }
 
